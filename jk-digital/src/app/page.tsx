@@ -1,11 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
-import WhyChooseUs from "@/components/WhyChooseUs";
 import Services from "@/components/Services";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import Portfolio from "@/components/Portfolio";
-import BeforeAfter from "@/components/BeforeAfter";
-import CaseStudies from "@/components/CaseStudies";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
@@ -20,11 +18,9 @@ export default function Home() {
       <main>
         <Hero />
         <TrustedBy />
-        <WhyChooseUs />
         <Services />
+        <WhyChooseUs />
         <Portfolio />
-        <BeforeAfter />
-        <CaseStudies />
         <Testimonials />
         <Pricing />
         <FAQ />

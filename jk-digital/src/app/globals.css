@@ -1,100 +1,77 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #ffffff;
-  --color-foreground: #0f172a;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 body {
-  background: #ffffff;
-  color: #0f172a;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+  background: #fff;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  line-height: 1.6;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+/* ── Gradient text ── */
+.g-text {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.section-alt { background: #f8fafc; }
-
-.card-shadow {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+/* ── Section backgrounds ── */
+.bg-grid {
+  background-color: #f9fafb;
+  background-image: linear-gradient(rgba(37,99,235,0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(37,99,235,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
-.card-shadow:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 16px 40px rgba(37,99,235,0.1);
+
+/* ── Cards ── */
+.c {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+}
+.c:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  border-color: #bfdbfe;
   transform: translateY(-3px);
 }
 
-.card-premium {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 4px 16px rgba(0,0,0,0.05);
-  transition: all 0.25s ease;
-  border: 1px solid #e2e8f0;
+/* ── Inputs ── */
+.inp {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #111827;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
 }
-.card-premium:hover {
-  box-shadow: 0 8px 30px rgba(37,99,235,0.1);
-  border-color: #bfdbfe;
-  transform: translateY(-4px);
-}
+.inp:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
+.inp::placeholder { color: #9ca3af; }
 
-.nav-scrolled {
-  background: rgba(255,255,255,0.96);
+/* ── Nav scroll ── */
+.nav-s {
+  background: rgba(255,255,255,0.95);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid #f1f5f9;
-  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+  border-bottom: 1px solid #f3f4f6;
+  box-shadow: 0 1px 16px rgba(0,0,0,0.06);
 }
 
-.input-premium {
-  border: 1.5px solid #e2e8f0;
-  background: white;
-  transition: all 0.2s ease;
-  color: #0f172a;
-}
-.input-premium:focus {
-  outline: none;
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
-}
-.input-premium::placeholder { color: #94a3b8; }
+/* ── Accordion ── */
+.acc { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.acc.open { max-height: 500px; }
 
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease;
-}
-.accordion-content.open { max-height: 400px; }
-
-.pricing-popular {
+/* ── Pricing highlight ── */
+.plan-pop {
   border: 2px solid #2563eb;
-  position: relative;
-}
-.badge-popular {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, #2563eb, #4f46e5);
-  color: white;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 4px 16px;
-  border-radius: 100px;
-  white-space: nowrap;
-}
-
-.gradient-bg-card {
-  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
-}
-
-.gradient-bg-subtle {
-  background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.08);
 }

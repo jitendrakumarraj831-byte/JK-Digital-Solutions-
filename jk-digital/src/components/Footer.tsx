@@ -1,100 +1,77 @@
-import { Globe, TrendingUp, MapPin, Megaphone, Mail, Phone, MessageCircle, ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-950 text-white">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 py-16">
-          <div className="lg:col-span-2 space-y-5">
-            <a href="#home" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-sm">JK</span>
+          {/* Brand */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center">
+                <span className="text-white font-black text-xs">JK</span>
               </div>
-              <div>
-                <p className="font-bold text-white text-lg leading-none">JK Digital Solutions</p>
-                <p className="text-blue-400 text-xs tracking-widest uppercase">Digital Marketing Agency</p>
-              </div>
-            </a>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              Forbesganj, Araria के local businesses को Google पर grow करने वाली trusted agency। Website, SEO, GMB और Google Ads — सब एक जगह।
+              <span className="font-bold text-white">JK Digital Solutions</span>
+            </div>
+            <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-6">
+              Forbesganj, Bihar के local businesses को Google पर grow करने वाली trusted digital marketing agency।
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex gap-3">
               <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#25D366]/15 border border-[#25D366]/25 text-[#4ade80] text-sm font-semibold hover:bg-[#25D366]/25 transition-all">
-                <MessageCircle className="w-4 h-4" /> WhatsApp
+                className="px-4 py-2 rounded-full bg-[#25D366]/10 border border-[#25D366]/20 text-[#4ade80] text-sm font-semibold hover:bg-[#25D366]/20 transition-all">
+                💬 WhatsApp
               </a>
               <a href="mailto:jkdigitalsolutionfbg@gmail.com"
-                className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 text-sm font-semibold hover:bg-blue-500/20 transition-all">
-                <Mail className="w-4 h-4" /> Email
+                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm font-semibold hover:bg-white/10 transition-all">
+                ✉️ Email
               </a>
             </div>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="text-white font-bold">Services</h4>
+          {/* Services */}
+          <div>
+            <h4 className="text-white font-bold text-sm mb-4">Services</h4>
             <ul className="space-y-2.5">
-              {[
-                { icon: Globe, label: "Website Development" },
-                { icon: TrendingUp, label: "Google SEO" },
-                { icon: MapPin, label: "Google Business Profile" },
-                { icon: Megaphone, label: "Google Ads" },
-              ].map(({ icon: Icon, label }) => (
-                <li key={label}>
-                  <a href="#services" className="flex items-center gap-2 text-slate-400 hover:text-blue-400 transition-colors text-sm group">
-                    <Icon className="w-3.5 h-3.5 text-slate-600 group-hover:text-blue-400 flex-shrink-0" />{label}
-                  </a>
+              {["Website Development","Google SEO","Google Business Profile","Google Ads"].map(s => (
+                <li key={s}>
+                  <a href="#services" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">{s}</a>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="text-white font-bold">Contact</h4>
-            <ul className="space-y-4">
+          {/* Contact */}
+          <div>
+            <h4 className="text-white font-bold text-sm mb-4">Contact</h4>
+            <ul className="space-y-3">
               <li>
-                <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
-                  <Phone className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-slate-300 text-sm group-hover:text-blue-400 transition-colors">+91 86510 70831</p>
-                    <p className="text-slate-300 text-sm group-hover:text-blue-400 transition-colors">+91 85418 49118</p>
-                  </div>
+                <a href="tel:+918651070831" className="text-gray-500 text-sm hover:text-white transition-colors">
+                  📞 +91 86510 70831
                 </a>
               </li>
               <li>
-                <a href="mailto:jkdigitalsolutionfbg@gmail.com" className="flex items-start gap-3 group">
-                  <Mail className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <p className="text-slate-300 text-sm break-all group-hover:text-blue-400">jkdigitalsolutionfbg@gmail.com</p>
+                <a href="tel:+918541849118" className="text-gray-500 text-sm hover:text-white transition-colors">
+                  📞 +91 85418 49118
                 </a>
               </li>
               <li>
-                <a href="https://maps.google.com/?q=Forbesganj,Bihar,India" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
-                  <MapPin className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-slate-300 text-sm group-hover:text-blue-400">Forbesganj, Araria</p>
-                    <p className="text-slate-500 text-xs">Bihar, India — 854318</p>
-                  </div>
+                <a href="mailto:jkdigitalsolutionfbg@gmail.com" className="text-gray-500 text-sm hover:text-white transition-colors break-all">
+                  ✉️ jkdigitalsolutionfbg<br />@gmail.com
                 </a>
               </li>
-              <li className="pt-1">
-                <p className="text-slate-500 text-xs font-semibold uppercase tracking-wide mb-1.5">Business Hours</p>
-                <p className="text-slate-400 text-xs">Mon–Sat: 9AM – 8PM</p>
-                <p className="text-slate-400 text-xs">Sunday: 10AM – 6PM</p>
+              <li>
+                <span className="text-gray-500 text-sm">📍 Forbesganj, Araria, Bihar</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-slate-800 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-slate-500 text-xs text-center sm:text-left">
-            © 2025 JK Digital Solutions, Forbesganj, Bihar. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4">
-            <span className="text-slate-600 text-xs">Made for Bihar Local Businesses 🇮🇳</span>
-            <a href="#home" aria-label="Back to top"
-              className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-all">
-              <ArrowUp className="w-4 h-4" />
-            </a>
-          </div>
+        <div className="border-t border-white/5 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-gray-600 text-xs">© 2025 JK Digital Solutions. Made for Bihar 🇮🇳</p>
+          <a href="#" aria-label="Back to top"
+            className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-500 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
+            <ArrowUp className="w-4 h-4" />
+          </a>
         </div>
       </div>
     </footer>

@@ -1,63 +1,72 @@
-import { Shield, TrendingUp, Clock, HeadphonesIcon, Target, Award } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 const reasons = [
   {
-    icon: Target,
-    title: "Result-Oriented Approach",
-    desc: "हम सिर्फ काम नहीं करते — Results deliver करते हैं। हर campaign का goal होता है: More Calls, More Leads, More Sales।",
+    emoji: "📍",
+    title: "Local Experts",
+    desc: "हम Forbesganj में ही हैं। आपके market को, आपकी language को, आपके customers को हम personally जानते हैं।",
   },
   {
-    icon: TrendingUp,
-    title: "Proven Track Record",
-    desc: "150+ local businesses को हमने successfully grow किया है। Restaurants, Hospitals, Coaching Centres — सभी को Google पर top ranking मिली।",
+    emoji: "📊",
+    title: "Result-First Approach",
+    desc: "हम vanity metrics में नहीं, real results में believe करते हैं — Calls, Leads, और actual Customers।",
   },
   {
-    icon: Clock,
-    title: "Fast Delivery",
-    desc: "Website 30 दिनों में। GMB optimization 7 दिनों में। हम deadlines का सम्मान करते हैं और समय पर deliver करते हैं।",
+    emoji: "🔒",
+    title: "Transparent & Honest",
+    desc: "हर महीने detailed reports। कोई jargon नहीं, कोई hidden fees नहीं। सब कुछ clear और simple।",
   },
   {
-    icon: HeadphonesIcon,
-    title: "Dedicated Support",
-    desc: "आपका काम होने के बाद भी हम available हैं। WhatsApp, Call, Email — जब चाहें हमसे बात करें।",
-  },
-  {
-    icon: Shield,
-    title: "Transparent Reporting",
-    desc: "Monthly detailed reports जिसमें होता है: Visitors, Rankings, Calls, Leads — सब कुछ clearly explain किया जाता है।",
-  },
-  {
-    icon: Award,
-    title: "Local Market Expertise",
-    desc: "Forbesganj, Araria और Bihar के local market को हम deeply समझते हैं। आपके competitors से एक कदम आगे रहें।",
+    emoji: "⚡",
+    title: "Fast Execution",
+    desc: "Website 30 days में। GMB 7 days में। Google Ads same day। बात करने से ज्यादा, काम करने में believe करते हैं।",
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section id="why" className="py-20 lg:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-blue-600 text-sm font-bold uppercase tracking-widest mb-3">Why Choose Us</p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 leading-tight mb-4">
-            दूसरे Agencies से हम{" "}
-            <span className="gradient-text">क्यों अलग हैं?</span>
-          </h2>
-          <p className="text-slate-500 text-lg">
-            हर agency यही कहती है कि वो बेस्ट है। हम इसे Prove करते हैं।
-          </p>
-        </div>
+    <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
+      {/* subtle pattern */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "32px 32px" }} />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reasons.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="card-premium bg-white rounded-2xl p-7">
-              <div className="w-12 h-12 rounded-xl gradient-bg-subtle border border-blue-100 flex items-center justify-center mb-5">
-                <Icon className="w-5 h-5 text-blue-600" />
-              </div>
-              <h3 className="text-slate-900 font-bold text-lg mb-2.5">{title}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left */}
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-blue-400 mb-4">Why Us</p>
+            <h2 className="text-4xl sm:text-5xl font-black leading-tight mb-6">
+              दूसरे agencies से<br />
+              हम क्यों{" "}
+              <span className="g-text">अलग हैं?</span>
+            </h2>
+            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+              हर agency यही कहती है कि वो best है। हम आपको results से prove करते हैं।
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a href="#contact"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-blue-600 text-white font-bold text-sm hover:bg-blue-500 transition-all">
+                Free Audit लें →
+              </a>
+              <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/10 text-white font-bold text-sm hover:bg-white/20 transition-all border border-white/10">
+                WhatsApp करें
+              </a>
             </div>
-          ))}
+          </div>
+
+          {/* Right */}
+          <div className="grid grid-cols-1 gap-4">
+            {reasons.map(r => (
+              <div key={r.title} className="flex items-start gap-4 p-5 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/8 transition-colors">
+                <span className="text-2xl flex-shrink-0">{r.emoji}</span>
+                <div>
+                  <h3 className="font-bold text-white text-base mb-1">{r.title}</h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{r.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

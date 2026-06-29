@@ -1,147 +1,75 @@
-import { ArrowRight, MessageCircle, Star, CheckCircle, TrendingUp } from "lucide-react";
-
-const stats = [
-  { value: "150+", label: "Projects Completed" },
-  { value: "120+", label: "Happy Clients" },
-  { value: "4.9★", label: "Google Rating" },
-  { value: "3+", label: "Years Experience" },
-];
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative pt-20 bg-white overflow-hidden">
-      {/* Subtle gradient backdrop */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] pointer-events-none"
-        style={{ background: "radial-gradient(circle at top right, rgba(37,99,235,0.06) 0%, transparent 65%)" }} />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] pointer-events-none"
-        style={{ background: "radial-gradient(circle at bottom left, rgba(79,70,229,0.04) 0%, transparent 65%)" }} />
+    <section className="relative min-h-screen flex flex-col justify-center bg-white pt-16 overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 pointer-events-none select-none">
+        <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%)" }} />
+        <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(124,58,237,0.04) 0%, transparent 70%)" }} />
+      </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-          {/* ── LEFT ── */}
-          <div className="space-y-7">
-            {/* Trust badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-100 rounded-full">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-amber-400 text-amber-400" />)}
-              </div>
-              <span className="text-blue-700 text-xs font-semibold">Forbesganj & Araria का Trusted Agency</span>
-            </div>
-
-            {/* Headline */}
-            <div>
-              <h1 className="text-[2.6rem] sm:text-5xl lg:text-[3.5rem] font-bold text-slate-900 leading-[1.1] tracking-tight">
-                अपने Business को{" "}
-                <span className="gradient-text">Google पर</span>{" "}
-                Grow करें
-              </h1>
-              <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-                हम Professional <strong className="text-slate-800">Website</strong>,{" "}
-                <strong className="text-slate-800">Google SEO</strong>,{" "}
-                <strong className="text-slate-800">GMB</strong> और{" "}
-                <strong className="text-slate-800">Google Ads</strong> के माध्यम से
-                आपके Business के लिए अधिक Leads, Calls और Customers लाते हैं।
-              </p>
-            </div>
-
-            {/* Mini badges */}
-            <div className="flex flex-wrap gap-2">
-              {["Free Website Audit", "30 Days Delivery", "24/7 Support"].map((b) => (
-                <span key={b} className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-full text-slate-700 text-xs font-semibold">
-                  <CheckCircle className="w-3.5 h-3.5 text-emerald-500 flex-shrink-0" />{b}
-                </span>
-              ))}
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-base shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all">
-                Get Free Website Audit
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <a href="https://wa.me/918651070831?text=नमस्ते! मुझे अपने Business के लिए Digital Marketing की जरूरत है।"
-                target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-[#25D366] text-white font-bold text-base shadow-lg shadow-green-500/25 hover:shadow-xl hover:bg-[#1fbd5c] hover:-translate-y-0.5 transition-all">
-                <MessageCircle className="w-5 h-5" />
-                Chat on WhatsApp
-              </a>
-            </div>
-
-            <p className="text-sm text-slate-400 flex items-center gap-1.5">
-              <CheckCircle className="w-4 h-4 text-emerald-500" />
-              No commitment required • Response within 30 minutes
-            </p>
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-20">
+        <div className="max-w-4xl">
+          {/* Label */}
+          <div className="inline-flex items-center gap-2 mb-8">
+            <span className="flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span className="text-sm font-semibold text-gray-500 tracking-wide">Forbesganj, Bihar का #1 Digital Agency</span>
           </div>
 
-          {/* ── RIGHT — Dashboard Card (hidden on small mobile, shown md+) ── */}
-          <div className="hidden md:block">
-            <div className="relative">
-              <div className="bg-white rounded-2xl card-premium p-6 space-y-5">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Monthly Overview</p>
-                    <p className="text-xl font-bold text-slate-900">Business Growth Dashboard</p>
-                  </div>
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-white" />
-                  </div>
-                </div>
+          {/* Big headline */}
+          <h1 className="text-[2.6rem] sm:text-5xl lg:text-7xl font-black text-gray-900 leading-[1.08] tracking-tight mb-5">
+            अपना Business<br />
+            Google पर{" "}
+            <span className="g-text">Top</span><br />
+            पर लाएं।
+          </h1>
 
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    { label: "Website Visitors", value: "+340%", bg: "bg-blue-50", text: "text-blue-600" },
-                    { label: "Google Calls", value: "+180%", bg: "bg-emerald-50", text: "text-emerald-600" },
-                    { label: "New Customers", value: "+95", bg: "bg-violet-50", text: "text-violet-600" },
-                    { label: "Google Rating", value: "4.9 ★", bg: "bg-amber-50", text: "text-amber-600" },
-                  ].map((m) => (
-                    <div key={m.label} className={`${m.bg} rounded-xl p-3`}>
-                      <p className={`text-xl font-bold ${m.text}`}>{m.value}</p>
-                      <p className="text-slate-600 text-xs font-medium mt-0.5">{m.label}</p>
-                    </div>
-                  ))}
-                </div>
+          <p className="text-base sm:text-lg text-gray-500 leading-relaxed max-w-2xl mb-8">
+            हम Website बनाते हैं, Google पर Rank कराते हैं, और Google Ads से नए Customers दिलाते हैं।
+            बिना confusion, बिना hidden charges।
+          </p>
 
-                <div className="space-y-3">
-                  {[{ label: "SEO Ranking", pct: 85 }, { label: "Lead Generation", pct: 92 }, { label: "GMB Visibility", pct: 78 }].map((p) => (
-                    <div key={p.label}>
-                      <div className="flex justify-between text-xs font-semibold text-slate-600 mb-1.5">
-                        <span>{p.label}</span><span>{p.pct}%</span>
-                      </div>
-                      <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
-                        <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full" style={{ width: `${p.pct}%` }} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-xs text-slate-400 text-center">Live results for a local Forbesganj client</p>
-              </div>
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-3 mb-10">
+            <a href="#contact"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-blue-600 text-white font-bold text-base hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/25">
+              Free Website Audit लें
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a href="https://wa.me/918651070831?text=नमस्ते! मुझे Digital Marketing में help चाहिए।"
+              target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#25D366] text-white font-bold text-base hover:bg-[#20c45e] transition-all shadow-lg shadow-green-500/20">
+              <MessageCircle className="w-5 h-5" />
+              WhatsApp पर बात करें
+            </a>
+          </div>
 
-              <div className="absolute -top-4 -right-4 bg-white rounded-xl shadow-lg border border-slate-100 px-4 py-2.5">
-                <p className="text-xs font-semibold text-slate-500">Avg. First Call</p>
-                <p className="text-lg font-bold text-slate-900">7 Days 🎯</p>
+          {/* Social proof numbers */}
+          <div className="flex flex-wrap gap-x-10 gap-y-5">
+            {[
+              { n: "150+", l: "Projects Done" },
+              { n: "4.9 ★", l: "Google Rating" },
+              { n: "3+ Years", l: "Experience" },
+              { n: "₹0", l: "Consultation Fee" },
+            ].map(s => (
+              <div key={s.l}>
+                <p className="text-2xl font-black text-gray-900">{s.n}</p>
+                <p className="text-sm text-gray-400 font-medium">{s.l}</p>
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg border border-slate-100 px-4 py-2.5">
-                <p className="text-xs font-semibold text-slate-500">Client Satisfaction</p>
-                <div className="flex items-center gap-1">
-                  <span className="text-lg font-bold text-slate-900">4.9</span>
-                  <div className="flex">{[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />)}</div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
+      </div>
 
-        {/* Stats row */}
-        <div className="mt-14 pt-10 border-t border-slate-100 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <p className="text-3xl font-bold gradient-text">{s.value}</p>
-              <p className="text-slate-500 text-sm mt-1 font-medium">{s.label}</p>
-            </div>
-          ))}
-        </div>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
+        <div className="w-px h-8 bg-gradient-to-b from-gray-200 to-transparent" />
       </div>
     </section>
   );

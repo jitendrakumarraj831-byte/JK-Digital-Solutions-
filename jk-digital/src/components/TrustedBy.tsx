@@ -1,34 +1,40 @@
-import { Stethoscope, UtensilsCrossed, GraduationCap, Building2, Scissors, ShoppingBag, Hotel, Wrench } from "lucide-react";
-
-const businessTypes = [
-  { icon: Stethoscope, label: "Hospitals & Clinics" },
-  { icon: UtensilsCrossed, label: "Restaurants" },
-  { icon: GraduationCap, label: "Coaching Institutes" },
-  { icon: Building2, label: "Real Estate" },
-  { icon: Scissors, label: "Beauty & Salon" },
-  { icon: ShoppingBag, label: "Retail Shops" },
-  { icon: Hotel, label: "Hotels" },
-  { icon: Wrench, label: "Service Providers" },
+const industries = [
+  "🏥 Hospitals & Clinics",
+  "🍽️ Restaurants",
+  "🎓 Coaching Centres",
+  "🏠 Real Estate",
+  "💇 Beauty & Salon",
+  "🛒 Retail Shops",
+  "🏨 Hotels",
+  "⚙️ Service Providers",
+  "🏗️ Builders",
+  "📱 Electronics",
+  "🚗 Auto Dealers",
+  "📚 Schools",
 ];
 
 export default function TrustedBy() {
+  const doubled = [...industries, ...industries];
   return (
-    <section className="py-14 border-y border-slate-100 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-slate-500 text-sm font-semibold uppercase tracking-widest mb-8">
-          इन Businesses को हम Google पर Grow करते हैं
-        </p>
-        <div className="grid grid-cols-4 lg:grid-cols-8 gap-4 lg:gap-6">
-          {businessTypes.map(({ icon: Icon, label }) => (
-            <div key={label} className="flex flex-col items-center gap-2.5 group">
-              <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center group-hover:border-blue-200 group-hover:bg-blue-50 transition-all shadow-sm">
-                <Icon className="w-5 h-5 text-slate-500 group-hover:text-blue-600 transition-colors" />
-              </div>
-              <span className="text-slate-500 text-xs font-medium text-center leading-tight">{label}</span>
-            </div>
+    <section className="py-14 bg-gray-50 border-y border-gray-100 overflow-hidden">
+      <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">
+        इन Businesses को हम Google पर Grow करते हैं
+      </p>
+      <div className="relative">
+        <div className="flex gap-6 animate-[scroll_30s_linear_infinite] whitespace-nowrap">
+          {doubled.map((item, i) => (
+            <span key={i} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-gray-200 text-gray-700 text-sm font-semibold flex-shrink-0 shadow-sm">
+              {item}
+            </span>
           ))}
         </div>
       </div>
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
     </section>
   );
 }
