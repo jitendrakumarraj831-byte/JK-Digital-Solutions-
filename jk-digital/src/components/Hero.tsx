@@ -36,17 +36,17 @@ export default function Hero() {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-10">
+          <div className="flex flex-col xs:flex-row gap-3 mb-10 max-w-lg">
             <a href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-blue-600 text-white font-bold text-base hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/25">
-              Free Website Audit लें
-              <ArrowRight className="w-4 h-4" />
+              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-blue-600 text-white font-bold text-sm sm:text-base hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/25">
+              Free Audit लें
+              <ArrowRight className="w-4 h-4 flex-shrink-0" />
             </a>
             <a href="https://wa.me/918651070831?text=नमस्ते! मुझे Digital Marketing में help चाहिए।"
               target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[#25D366] text-white font-bold text-base hover:bg-[#20c45e] transition-all shadow-lg shadow-green-500/20">
-              <MessageCircle className="w-5 h-5" />
-              WhatsApp पर बात करें
+              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[#25D366] text-white font-bold text-sm sm:text-base hover:bg-[#20c45e] transition-all shadow-lg shadow-green-500/20">
+              <MessageCircle className="w-4 h-4 flex-shrink-0" />
+              WhatsApp करें
             </a>
           </div>
 
