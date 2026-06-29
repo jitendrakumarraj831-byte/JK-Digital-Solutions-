@@ -1,131 +1,146 @@
-import { Globe, MapPin, TrendingUp, Megaphone, CheckCircle } from "lucide-react";
+import { Globe, TrendingUp, MapPin, Megaphone, CheckCircle, ArrowRight } from "lucide-react";
 
 const services = [
   {
     icon: Globe,
-    title: "Website Development",
-    tagline: "आपकी ऑनलाइन दुकान — 24/7 खुली!",
-    description: "Fast, beautiful, responsive, और secure full-stack web applications जो आपके बिजनेस को professional look देती हैं और ग्राहकों का भरोसा जीतती हैं।",
-    features: ["Mobile Responsive Design", "Fast Loading Speed", "SEO-Friendly Structure", "Contact Form & Leads"],
-    color: "cyan",
     badge: "Most Popular",
-  },
-  {
-    icon: MapPin,
-    title: "Google My Business (GMB)",
-    tagline: "गूगल मैप्स पर चमकेगा आपका बिजनेस!",
-    description: "Local shops को Google Maps पर top पर rank करवाकर direct customer calls दिलाएंगे। जब भी कोई आपके area में search करे — आपका नाम पहले आए।",
-    features: ["Google Maps Ranking", "Profile Optimization", "Reviews Management", "Direct Customer Calls"],
-    color: "emerald",
-    badge: "High ROI",
+    title: "Website Development",
+    tagline: "आपकी Professional Online Identity",
+    desc: "एक Fast, Beautiful और SEO-Friendly Website जो आपके Business को 24/7 नए customers दिलाती है।",
+    benefits: [
+      "Mobile-First Responsive Design",
+      "Google Page Speed Optimized",
+      "Contact Form & WhatsApp Integration",
+      "SEO-Ready Structure",
+      "1 Year Free Maintenance",
+    ],
+    process: ["Requirement Discussion", "Design Mockup", "Development", "Testing & Launch"],
+    result: "Website launch के 30 दिनों में Google पर appear होना शुरू",
+    color: "blue",
+    href: "#contact",
   },
   {
     icon: TrendingUp,
-    title: "SEO (Search Engine Optimization)",
-    tagline: "बिना विज्ञापन दिए गूगल के पहले पेज पर आएं!",
-    description: "Long-term organic traffic के लिए permanent Google ranking। एक बार rank होने के बाद बिना extra पैसे लगाए लगातार ग्राहक मिलते रहते हैं।",
-    features: ["Keyword Research", "On-Page SEO", "Local SEO", "Monthly Ranking Reports"],
-    color: "cyan",
-    badge: "Long-term Growth",
+    badge: "Best ROI",
+    title: "Google SEO",
+    tagline: "बिना Ads के Google पर #1",
+    desc: "Organic Search से permanent traffic। एक बार rank होने के बाद free में नए customers आते रहते हैं।",
+    benefits: [
+      "Local & National SEO",
+      "Keyword Research & Strategy",
+      "On-Page + Off-Page Optimization",
+      "Monthly Ranking Reports",
+      "Competitor Analysis",
+    ],
+    process: ["Audit & Research", "Strategy Planning", "Optimization", "Monitor & Improve"],
+    result: "3-6 महीनों में Google के पहले page पर आएं",
+    color: "indigo",
+    href: "#contact",
+  },
+  {
+    icon: MapPin,
+    badge: "Get More Calls",
+    title: "Google Business Profile",
+    tagline: "Google Maps पर Top पर आएं",
+    desc: "जब कोई nearby आपकी service search करे, तो सबसे पहले आपका नाम और number दिखे।",
+    benefits: [
+      "GMB Profile Complete Setup",
+      "Photo & Video Optimization",
+      "Review Management Strategy",
+      "Local Citations Building",
+      "Weekly Posts & Updates",
+    ],
+    process: ["Profile Setup", "Content Upload", "Optimization", "Review Strategy"],
+    result: "7 दिनों में Google Maps पर visible होना शुरू",
+    color: "emerald",
+    href: "#contact",
   },
   {
     icon: Megaphone,
-    title: "Paid Ads (Google & Meta)",
-    tagline: "आज ही विज्ञापन चलाएं, आज से ही ग्राहक पाएं!",
-    description: "Facebook, Instagram, और Google पर laser-targeted campaigns। सिर्फ उन लोगों को दिखाएं जो genuinely आपकी service लेना चाहते हैं।",
-    features: ["Facebook & Instagram Ads", "Google Search Ads", "Budget Optimization", "ROI Tracking"],
-    color: "emerald",
     badge: "Instant Results",
+    title: "Google Ads",
+    tagline: "आज Ads चलाएं, आज Customers पाएं",
+    desc: "Targeted Google Campaigns जो सिर्फ उन्हें दिखते हैं जो पहले से आपकी service ढूंढ रहे हैं।",
+    benefits: [
+      "Search & Display Campaigns",
+      "Keyword Bidding Strategy",
+      "Ad Copywriting in Hindi/English",
+      "Daily Budget Management",
+      "Conversion Tracking",
+    ],
+    process: ["Campaign Setup", "Ad Creation", "Launch", "Optimize & Scale"],
+    result: "Ads activate होने के 24 घंटे में calls आने शुरू",
+    color: "violet",
+    href: "#contact",
   },
 ];
 
+const colorMap: Record<string, string> = {
+  blue: "text-blue-600 bg-blue-50 border-blue-100",
+  indigo: "text-indigo-600 bg-indigo-50 border-indigo-100",
+  emerald: "text-emerald-600 bg-emerald-50 border-emerald-100",
+  violet: "text-violet-600 bg-violet-50 border-violet-100",
+};
+const badgeColor: Record<string, string> = {
+  blue: "bg-blue-100 text-blue-700",
+  indigo: "bg-indigo-100 text-indigo-700",
+  emerald: "bg-emerald-100 text-emerald-700",
+  violet: "bg-violet-100 text-violet-700",
+};
+
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/30 to-transparent" />
-      <div className="absolute top-1/2 left-0 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl" />
-      <div className="absolute top-1/3 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16 space-y-4">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/5 text-cyan-400 text-sm font-semibold tracking-wide uppercase">
-            Our Services
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            हमारी <span className="glow-text text-cyan-400">सर्विसेज</span>
+    <section id="services" className="py-20 lg:py-28 section-alt">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <p className="text-blue-600 text-sm font-bold uppercase tracking-widest mb-3">Our Services</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 leading-tight mb-4">
+            हम क्या करते हैं?
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            आपके बिजनेस की हर डिजिटल ज़रूरत — एक ही जगह।
+          <p className="text-slate-500 text-lg">
+            चार powerful services — एक goal: आपके Business की Growth।
           </p>
         </div>
 
-        {/* Services Grid */}
         <div className="grid sm:grid-cols-2 gap-6">
-          {services.map((service) => {
-            const Icon = service.icon;
-            const isCyan = service.color === "cyan";
+          {services.map((s) => {
+            const Icon = s.icon;
+            const iconCls = colorMap[s.color] || colorMap.blue;
+            const bdg = badgeColor[s.color] || badgeColor.blue;
             return (
-              <div key={service.title} className="service-card rounded-2xl p-8 relative overflow-hidden group">
-                {/* Corner Glow */}
-                <div
-                  className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
-                    isCyan ? "bg-cyan-500/15" : "bg-emerald-500/15"
-                  }`}
-                />
-
-                {/* Badge */}
-                <span
-                  className={`inline-block mb-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide border ${
-                    isCyan
-                      ? "bg-cyan-500/10 border-cyan-500/20 text-cyan-300"
-                      : "bg-emerald-500/10 border-emerald-500/20 text-emerald-300"
-                  }`}
-                >
-                  {service.badge}
-                </span>
-
-                {/* Icon + Title */}
-                <div className="flex items-start gap-4 mb-4">
-                  <div
-                    className={`w-14 h-14 rounded-xl flex items-center justify-center border flex-shrink-0 group-hover:scale-110 transition-transform ${
-                      isCyan
-                        ? "bg-cyan-500/10 border-cyan-500/25 text-cyan-400"
-                        : "bg-emerald-500/10 border-emerald-500/25 text-emerald-400"
-                    }`}
-                  >
-                    <Icon className="w-7 h-7" />
+              <div key={s.title} className="card-premium bg-white rounded-2xl overflow-hidden">
+                <div className="p-7 pb-5">
+                  <div className="flex items-start justify-between mb-5">
+                    <div className={`w-12 h-12 rounded-xl border flex items-center justify-center flex-shrink-0 ${iconCls}`}>
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <span className={`px-3 py-1 rounded-full text-xs font-bold ${bdg}`}>{s.badge}</span>
                   </div>
-                  <div>
-                    <h3 className="text-white font-bold text-xl leading-tight">{service.title}</h3>
-                    <p className={`text-sm font-semibold mt-0.5 ${isCyan ? "text-cyan-400" : "text-emerald-400"}`}>
-                      {service.tagline}
-                    </p>
-                  </div>
+
+                  <h3 className="text-slate-900 font-bold text-xl mb-1">{s.title}</h3>
+                  <p className="text-blue-600 font-semibold text-sm mb-3">{s.tagline}</p>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-5">{s.desc}</p>
+
+                  <ul className="space-y-2">
+                    {s.benefits.map((b) => (
+                      <li key={b} className="flex items-center gap-2.5 text-slate-600 text-sm">
+                        <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                {/* Description */}
-                <p className="text-slate-400 text-base leading-relaxed mb-6">{service.description}</p>
+                <div className="border-t border-slate-100 bg-slate-50 px-7 py-4">
+                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Expected Result</p>
+                  <p className="text-slate-700 text-sm font-medium">✅ {s.result}</p>
+                </div>
 
-                {/* Features */}
-                <ul className="space-y-2">
-                  {service.features.map((feat) => (
-                    <li key={feat} className="flex items-center gap-2.5 text-slate-300 text-sm">
-                      <CheckCircle className={`w-4 h-4 flex-shrink-0 ${isCyan ? "text-cyan-400" : "text-emerald-400"}`} />
-                      {feat}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA */}
-                <div className="mt-6 pt-6 border-t border-white/5">
-                  <a
-                    href="#contact"
-                    className={`inline-flex items-center gap-2 text-sm font-semibold transition-all group-hover:gap-3 ${
-                      isCyan ? "text-cyan-400 hover:text-cyan-300" : "text-emerald-400 hover:text-emerald-300"
-                    }`}
-                  >
-                    अभी शुरू करें →
+                <div className="px-7 pb-7 pt-4">
+                  <a href={s.href}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors group">
+                    Get Started
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                   </a>
                 </div>
               </div>

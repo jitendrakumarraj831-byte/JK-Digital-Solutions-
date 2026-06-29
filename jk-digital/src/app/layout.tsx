@@ -2,19 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "JK Digital Solutions | डिजिटल मार्केटिंग एजेंसी - Forbesganj, Bihar",
-  description: "JK Digital Solutions - अपने बिजनेस को ऑनलाइन ब्रांड बनाएं। Website Development, SEO, Google My Business, और Paid Ads सर्विसेज। Forbesganj, Araria, Bihar।",
-  keywords: "digital marketing, SEO, website development, Google Ads, Meta Ads, Forbesganj, Araria, Bihar",
+  title: "JK Digital Solutions | Website, SEO, GMB & Google Ads — Forbesganj, Bihar",
+  description: "JK Digital Solutions — Professional Digital Marketing Agency in Forbesganj, Araria, Bihar. Website Development, Google SEO, Google Business Profile (GMB), Google Ads. अपने Business को Google पर Grow करें।",
+  keywords: "digital marketing agency Forbesganj, website development Bihar, Google SEO Araria, GMB optimization, Google Ads Bihar, JK Digital Solutions",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="hi" className="h-full">
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="hi" className="h-full scroll-smooth">
+      <body className="min-h-full antialiased">{children}</body>
     </html>
   );
 }

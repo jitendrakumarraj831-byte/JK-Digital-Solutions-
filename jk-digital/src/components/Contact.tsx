@@ -1,271 +1,156 @@
 "use client";
 import { useState } from "react";
-import { Send, MessageCircle, Phone, Mail, MapPin, Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import { Send, MessageCircle, Phone, Mail, MapPin, Clock, Loader2, CheckCircle, AlertCircle } from "lucide-react";
 
-interface FormData {
-  name: string;
-  phone: string;
-  businessType: string;
-  message: string;
-}
-
+interface FormData { name: string; phone: string; businessType: string; message: string; }
 type Status = "idle" | "loading" | "success" | "error";
+
+const businessTypes = ["Medical / Clinic / Hospital","Restaurant / Hotel / Dhaba","Coaching / School / Institute","Real Estate / Property","Beauty / Salon / Spa","Hardware / Retail Shop","Interior Design","Service Provider","Other / अन्य"];
+const hours = [{ day: "Monday – Saturday", time: "9:00 AM – 8:00 PM" }, { day: "Sunday", time: "10:00 AM – 6:00 PM" }];
 
 export default function Contact() {
   const [form, setForm] = useState<FormData>({ name: "", phone: "", businessType: "", message: "" });
   const [status, setStatus] = useState<Status>("idle");
-  const [responseMsg, setResponseMsg] = useState("");
+  const [msg, setMsg] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+    setForm(p => ({ ...p, [e.target.name]: e.target.value }));
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
-    setResponseMsg("");
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
       const data = await res.json();
-      if (data.success) {
-        setStatus("success");
-        setResponseMsg(data.message);
-        setForm({ name: "", phone: "", businessType: "", message: "" });
-      } else {
-        setStatus("error");
-        setResponseMsg(data.error || "कुछ गड़बड़ी हुई। दोबारा कोशिश करें।");
-      }
-    } catch {
-      setStatus("error");
-      setResponseMsg("नेटवर्क एरर। कृपया दोबारा कोशिश करें।");
-    }
+      if (data.success) { setStatus("success"); setMsg(data.message); setForm({ name: "", phone: "", businessType: "", message: "" }); }
+      else { setStatus("error"); setMsg(data.error || "Something went wrong."); }
+    } catch { setStatus("error"); setMsg("Network error. Please try again."); }
   };
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      label: "WhatsApp / Call",
-      value: "+91 8651070831",
-      href: "https://wa.me/918651070831",
-      color: "cyan",
-    },
-    {
-      icon: Phone,
-      label: "WhatsApp / Call",
-      value: "+91 8541849118",
-      href: "https://wa.me/918541849118",
-      color: "cyan",
-    },
-    {
-      icon: Mail,
-      label: "Email",
-      value: "jkdigitalsolutionfbg@gmail.com",
-      href: "mailto:jkdigitalsolutionfbg@gmail.com",
-      color: "emerald",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Forbesganj, Araria, Bihar, India",
-      href: "https://maps.google.com/?q=Forbesganj,Bihar,India",
-      color: "emerald",
-    },
-  ];
-
-  const businessTypes = [
-    "Retail Shop / दुकान",
-    "Restaurant / Hotel",
-    "Medical / Pharmacy",
-    "Education / Coaching",
-    "Real Estate",
-    "Manufacturing",
-    "Service Business",
-    "Other / अन्य",
-  ];
-
   return (
-    <section id="contact" className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0 grid-bg opacity-40" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16 space-y-4">
-          <span className="inline-block px-4 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/5 text-cyan-400 text-sm font-semibold tracking-wide uppercase">
-            Contact Us
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-            <span className="glow-text text-cyan-400">फ्री कंसल्टेशन</span> लें आज ही!
+    <section id="contact" className="py-20 lg:py-28 section-alt">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <p className="text-blue-600 text-sm font-bold uppercase tracking-widest mb-3">Contact Us</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 leading-tight mb-4">
+            आज ही बात करें —{" "}
+            <span className="gradient-text">Free Consultation</span>
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            अपना नाम और नंबर भरें — हम 30 मिनट में वापस call करेंगे।
+          <p className="text-slate-500 text-lg">
+            Form भरें या directly WhatsApp करें। हम 30 minutes में reply करते हैं।
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-10">
-          {/* Left: Contact Info */}
-          <div className="lg:col-span-2 space-y-6">
-            <div className="why-card rounded-2xl p-6 space-y-5">
-              <h3 className="text-white font-bold text-xl">सीधे संपर्क करें</h3>
-              {contactInfo.map((item) => {
-                const Icon = item.icon;
-                const isCyan = item.color === "cyan";
-                return (
-                  <a
-                    key={item.value}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-start gap-3 p-3 rounded-xl border transition-all hover:-translate-y-0.5 group ${
-                      isCyan
-                        ? "border-cyan-500/10 hover:border-cyan-500/30 hover:bg-cyan-500/5"
-                        : "border-emerald-500/10 hover:border-emerald-500/30 hover:bg-emerald-500/5"
-                    }`}
-                  >
-                    <div
-                      className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                        isCyan ? "bg-cyan-500/15 text-cyan-400" : "bg-emerald-500/15 text-emerald-400"
-                      }`}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <p className="text-slate-500 text-xs font-medium uppercase tracking-wide">{item.label}</p>
-                      <p className={`font-semibold text-sm mt-0.5 ${isCyan ? "text-cyan-300" : "text-emerald-300"}`}>
-                        {item.value}
-                      </p>
-                    </div>
-                  </a>
-                );
-              })}
+        <div className="grid lg:grid-cols-5 gap-8">
+          {/* Left Info */}
+          <div className="lg:col-span-2 space-y-5">
+            {/* Quick contact cards */}
+            {[
+              { icon: MessageCircle, label: "WhatsApp", value: "+91 86510 70831", sub: "Instant Response", href: "https://wa.me/918651070831", color: "emerald" },
+              { icon: Phone, label: "Call Now", value: "+91 86510 70831", sub: "+91 85418 49118", href: "tel:+918651070831", color: "blue" },
+              { icon: Mail, label: "Email", value: "jkdigitalsolutionfbg@gmail.com", sub: "Reply in 2 hours", href: "mailto:jkdigitalsolutionfbg@gmail.com", color: "violet" },
+              { icon: MapPin, label: "Office", value: "Forbesganj, Araria, Bihar", sub: "India — 854318", href: "https://maps.google.com/?q=Forbesganj,Bihar,India", color: "slate" },
+            ].map((c) => {
+              const Icon = c.icon;
+              const colors: Record<string,string> = { emerald:"bg-emerald-50 border-emerald-100 text-emerald-600", blue:"bg-blue-50 border-blue-100 text-blue-600", violet:"bg-violet-50 border-violet-100 text-violet-600", slate:"bg-slate-50 border-slate-200 text-slate-600" };
+              return (
+                <a key={c.label} href={c.href} target={c.label !== "Call Now" ? "_blank" : undefined} rel="noopener noreferrer"
+                  className="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-200 hover:border-blue-200 hover:shadow-sm transition-all group">
+                  <div className={`w-10 h-10 rounded-xl border flex items-center justify-center flex-shrink-0 ${colors[c.color]}`}>
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-slate-400 text-xs font-semibold uppercase tracking-wide">{c.label}</p>
+                    <p className="text-slate-900 font-semibold text-sm mt-0.5 break-all">{c.value}</p>
+                    <p className="text-slate-400 text-xs mt-0.5">{c.sub}</p>
+                  </div>
+                </a>
+              );
+            })}
+
+            {/* Business Hours */}
+            <div className="bg-white rounded-xl border border-slate-200 p-5">
+              <div className="flex items-center gap-2 mb-4">
+                <Clock className="w-4 h-4 text-blue-600" />
+                <span className="text-slate-800 font-bold text-sm">Business Hours</span>
+              </div>
+              <div className="space-y-2.5">
+                {hours.map((h) => (
+                  <div key={h.day} className="flex justify-between text-sm">
+                    <span className="text-slate-500 font-medium">{h.day}</span>
+                    <span className="text-slate-800 font-semibold">{h.time}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* WhatsApp CTA */}
-            <a
-              href="https://wa.me/918651070831?text=नमस्ते! मुझे JK Digital Solutions की सर्विसेज के बारे में जानना है।"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-glow flex items-center justify-center gap-3 w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500/20 to-emerald-600/20 border border-emerald-500/30 text-emerald-300 font-bold hover:from-emerald-500/30 hover:to-emerald-600/30 transition-all"
-            >
-              <MessageCircle className="w-5 h-5" />
-              WhatsApp पर चैट करें
-            </a>
+            {/* Google Map embed placeholder */}
+            <div className="bg-white rounded-xl border border-slate-200 overflow-hidden h-40">
+              <iframe
+                src="https://maps.google.com/maps?q=Forbesganj,Bihar,India&output=embed"
+                width="100%" height="100%" style={{ border: 0 }} loading="lazy"
+                title="JK Digital Solutions Office Location"
+              />
+            </div>
           </div>
 
-          {/* Right: Form */}
+          {/* Right Form */}
           <div className="lg:col-span-3">
-            <div className="service-card rounded-2xl p-8">
-              <h3 className="text-white font-bold text-xl mb-6">फ्री ऑडिट फॉर्म भरें</h3>
-              <form onSubmit={handleSubmit} className="space-y-5">
-                {/* Name */}
-                <div>
-                  <label className="block text-slate-400 text-sm font-medium mb-2">
-                    नाम (Name) <span className="text-cyan-400">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                    placeholder="आपका पूरा नाम"
-                    className="input-field w-full px-4 py-3 rounded-xl text-sm"
-                  />
+            <div className="bg-white rounded-2xl border border-slate-200 p-7 lg:p-9 shadow-sm">
+              <h3 className="text-slate-900 font-bold text-xl mb-1">Free Website Audit Request</h3>
+              <p className="text-slate-500 text-sm mb-6">Form भरें — हम personally analyze करके बताएंगे कि आपके business के लिए क्या best है।</p>
+
+              <form onSubmit={onSubmit} className="space-y-4">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-slate-700 text-sm font-semibold mb-1.5">Full Name <span className="text-red-400">*</span></label>
+                    <input type="text" name="name" value={form.name} onChange={onChange} required placeholder="आपका पूरा नाम"
+                      className="input-premium w-full px-4 py-3 rounded-xl text-sm" />
+                  </div>
+                  <div>
+                    <label className="block text-slate-700 text-sm font-semibold mb-1.5">WhatsApp Number <span className="text-red-400">*</span></label>
+                    <input type="tel" name="phone" value={form.phone} onChange={onChange} required placeholder="10-digit mobile number" maxLength={10}
+                      className="input-premium w-full px-4 py-3 rounded-xl text-sm" />
+                  </div>
                 </div>
 
-                {/* Phone */}
                 <div>
-                  <label className="block text-slate-400 text-sm font-medium mb-2">
-                    मोबाइल नंबर (WhatsApp) <span className="text-cyan-400">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={form.phone}
-                    onChange={handleChange}
-                    required
-                    placeholder="10-digit mobile number"
-                    maxLength={10}
-                    className="input-field w-full px-4 py-3 rounded-xl text-sm"
-                  />
-                </div>
-
-                {/* Business Type */}
-                <div>
-                  <label className="block text-slate-400 text-sm font-medium mb-2">
-                    बिजनेस का प्रकार <span className="text-cyan-400">*</span>
-                  </label>
-                  <select
-                    name="businessType"
-                    value={form.businessType}
-                    onChange={handleChange}
-                    required
-                    className="input-field w-full px-4 py-3 rounded-xl text-sm appearance-none cursor-pointer"
-                  >
-                    <option value="">-- अपना बिजनेस चुनें --</option>
-                    {businessTypes.map((type) => (
-                      <option key={type} value={type} className="bg-slate-900">
-                        {type}
-                      </option>
-                    ))}
+                  <label className="block text-slate-700 text-sm font-semibold mb-1.5">Business Type <span className="text-red-400">*</span></label>
+                  <select name="businessType" value={form.businessType} onChange={onChange} required
+                    className="input-premium w-full px-4 py-3 rounded-xl text-sm appearance-none cursor-pointer bg-white">
+                    <option value="">-- Select your business type --</option>
+                    {businessTypes.map(t => <option key={t} value={t}>{t}</option>)}
                   </select>
                 </div>
 
-                {/* Message */}
                 <div>
-                  <label className="block text-slate-400 text-sm font-medium mb-2">
-                    संदेश (Message) <span className="text-cyan-400">*</span>
-                  </label>
-                  <textarea
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    required
-                    rows={4}
-                    placeholder="आप क्या जानना चाहते हैं? अपनी ज़रूरत बताएं..."
-                    className="input-field w-full px-4 py-3 rounded-xl text-sm resize-none"
-                  />
+                  <label className="block text-slate-700 text-sm font-semibold mb-1.5">Message / Requirements <span className="text-red-400">*</span></label>
+                  <textarea name="message" value={form.message} onChange={onChange} required rows={4}
+                    placeholder="आप क्या चाहते हैं? Website, SEO, GMB, Ads — या सब कुछ? बताएं..."
+                    className="input-premium w-full px-4 py-3 rounded-xl text-sm resize-none" />
                 </div>
 
-                {/* Status Messages */}
                 {status === "success" && (
-                  <div className="flex items-start gap-3 p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/25">
-                    <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                    <p className="text-emerald-300 text-sm font-medium">{responseMsg}</p>
+                  <div className="flex items-start gap-3 p-4 rounded-xl bg-emerald-50 border border-emerald-100">
+                    <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <p className="text-emerald-700 text-sm font-medium">{msg}</p>
                   </div>
                 )}
                 {status === "error" && (
-                  <div className="flex items-start gap-3 p-4 rounded-xl bg-red-500/10 border border-red-500/25">
-                    <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
-                    <p className="text-red-300 text-sm font-medium">{responseMsg}</p>
+                  <div className="flex items-start gap-3 p-4 rounded-xl bg-red-50 border border-red-100">
+                    <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                    <p className="text-red-600 text-sm font-medium">{msg}</p>
                   </div>
                 )}
 
-                {/* Submit */}
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="btn-glow w-full flex items-center justify-center gap-3 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-cyan-600 text-white font-bold text-base border border-cyan-400/30 shadow-lg shadow-cyan-500/20 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
-                >
-                  {status === "loading" ? (
-                    <>
-                      <Loader2 className="w-5 h-5 animate-spin" />
-                      भेजा जा रहा है...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      फ्री ऑडिट के लिए भेजें 🚀
-                    </>
-                  )}
+                <button type="submit" disabled={status === "loading"}
+                  className="btn-primary w-full flex items-center justify-center gap-2 py-3.5 rounded-xl font-semibold text-base disabled:opacity-60 disabled:cursor-not-allowed">
+                  {status === "loading" ? <><Loader2 className="w-5 h-5 animate-spin" /> Sending...</>
+                    : <><Send className="w-4 h-4" /> Send Free Audit Request 🚀</>}
                 </button>
 
-                <p className="text-slate-500 text-xs text-center">
-                  आपकी जानकारी पूरी तरह सुरक्षित है। हम spam नहीं करते।
+                <p className="text-slate-400 text-xs text-center">
+                  🔒 Your information is 100% secure. No spam, ever.
                 </p>
               </form>
             </div>

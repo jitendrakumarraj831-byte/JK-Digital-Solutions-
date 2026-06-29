@@ -1,87 +1,173 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #020617;
-  --color-foreground: #e2e8f0;
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-background: #ffffff;
+  --color-foreground: #0f172a;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 body {
-  background: #020617;
-  color: #e2e8f0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
+  line-height: 1.6;
 }
-.glow-text { text-shadow: 0 0 20px rgba(6,182,212,0.6), 0 0 40px rgba(6,182,212,0.3); }
-.glow-text-emerald { text-shadow: 0 0 20px rgba(52,211,153,0.6), 0 0 40px rgba(52,211,153,0.3); }
-.glassmorphism {
-  background: rgba(2,6,23,0.78);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(6,182,212,0.15);
-}
-.grid-bg {
-  background-image:
-    linear-gradient(rgba(6,182,212,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6,182,212,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-.btn-glow { transition: all 0.3s ease; position: relative; overflow: hidden; }
-.btn-glow::before {
-  content: ""; position: absolute; top: 0; left: -100%;
-  width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  transition: left 0.5s ease;
-}
-.btn-glow:hover::before { left: 100%; }
-.btn-glow:hover { box-shadow: 0 0 30px rgba(6,182,212,0.5); transform: translateY(-2px); }
-.btn-glow-emerald { transition: all 0.3s ease; }
-.btn-glow-emerald:hover { box-shadow: 0 0 30px rgba(52,211,153,0.4); transform: translateY(-2px); }
-.service-card {
-  background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(2,6,23,0.95));
-  border: 1px solid rgba(6,182,212,0.12);
-  transition: all 0.35s ease;
-}
-.service-card:hover {
-  border-color: rgba(6,182,212,0.5);
-  box-shadow: 0 0 40px rgba(6,182,212,0.12), 0 20px 40px rgba(0,0,0,0.4);
-  transform: translateY(-8px);
-}
-.why-card {
-  background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(2,6,23,0.9));
-  border: 1px solid rgba(52,211,153,0.12);
-  transition: all 0.35s ease;
-}
-.why-card:hover {
-  border-color: rgba(52,211,153,0.4);
-  box-shadow: 0 0 30px rgba(52,211,153,0.08), 0 16px 32px rgba(0,0,0,0.4);
-  transform: translateY(-5px);
-}
+
 .gradient-text {
-  background: linear-gradient(135deg, #06b6d4, #34d399);
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.hero-glow {
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(6,182,212,0.1) 0%, transparent 70%);
+
+.gradient-bg {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
 }
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
+
+.gradient-bg-subtle {
+  background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
 }
-.float-animation { animation: float 5s ease-in-out infinite; }
-.input-field {
-  background: rgba(15,23,42,0.8);
-  border: 1px solid rgba(6,182,212,0.2);
-  transition: all 0.3s ease;
-  color: #e2e8f0;
+
+.section-alt {
+  background: #f8fafc;
 }
-.input-field:focus {
+
+.card-shadow {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 16px 40px rgba(37,99,235,0.1);
+  transform: translateY(-3px);
+}
+
+.card-premium {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.card-premium:hover {
+  box-shadow: 0 8px 30px rgba(37,99,235,0.12);
+  border-color: #bfdbfe;
+  transform: translateY(-4px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  border: none;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 25px rgba(37,99,235,0.35);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: white;
+  color: #0f172a;
+  border: 1.5px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #1fb855;
+  box-shadow: 0 8px 25px rgba(37,211,102,0.35);
+  transform: translateY(-1px);
+}
+
+.nav-scrolled {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #f1f5f9;
+  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+}
+
+.input-premium {
+  border: 1.5px solid #e2e8f0;
+  background: white;
+  transition: all 0.2s ease;
+  color: #0f172a;
+}
+
+.input-premium:focus {
   outline: none;
-  border-color: rgba(6,182,212,0.6);
-  box-shadow: 0 0 0 3px rgba(6,182,212,0.1);
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
 }
-.input-field::placeholder { color: rgba(148,163,184,0.5); }
+
+.input-premium::placeholder { color: #94a3b8; }
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.accordion-content.open {
+  max-height: 400px;
+}
+
+.star-rating { color: #F59E0B; }
+
+.before-after-divider {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #e2e8f0;
+  z-index: 10;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fade-up 0.5s ease forwards;
+}
+
+.pricing-popular {
+  border: 2px solid #2563eb;
+  position: relative;
+}
+
+.badge-popular {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.divider-gradient {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}

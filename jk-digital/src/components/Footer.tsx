@@ -1,66 +1,72 @@
-import { Zap, Mail, MessageCircle, MapPin, Phone, Globe, TrendingUp, Search, Megaphone, ArrowUp } from "lucide-react";
+import { Globe, TrendingUp, MapPin, Megaphone, Mail, Phone, MessageCircle, ArrowUp } from "lucide-react";
 
 export default function Footer() {
   const services = [
-    { icon: Globe, label: "Website Development" },
-    { icon: MapPin, label: "Google My Business" },
-    { icon: Search, label: "SEO Optimization" },
-    { icon: TrendingUp, label: "Google Ads" },
-    { icon: Megaphone, label: "Meta Ads (Facebook/Instagram)" },
+    { icon: Globe, label: "Website Development", href: "#services" },
+    { icon: TrendingUp, label: "Google SEO", href: "#services" },
+    { icon: MapPin, label: "Google Business Profile", href: "#services" },
+    { icon: Megaphone, label: "Google Ads", href: "#services" },
+  ];
+
+  const links = [
+    { label: "Why Choose Us", href: "#why" },
+    { label: "Portfolio", href: "#portfolio" },
+    { label: "Case Studies", href: "#case-studies" },
+    { label: "Testimonials", href: "#testimonials" },
+    { label: "Pricing", href: "#pricing" },
+    { label: "FAQ", href: "#faq" },
   ];
 
   return (
-    <footer className="relative border-t border-cyan-500/10 bg-slate-950/80">
-      <div className="absolute inset-0 grid-bg opacity-20" />
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Grid */}
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 py-16">
-          {/* Brand Column */}
+          {/* Brand */}
           <div className="lg:col-span-2 space-y-5">
-            <a href="#home" className="flex items-center gap-3 group w-fit">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-emerald-400 flex items-center justify-center shadow-lg shadow-cyan-500/30">
-                <Zap className="w-6 h-6 text-white" />
+            <a href="#home" className="flex items-center gap-2.5">
+              <div className="w-9 h-9 rounded-lg gradient-bg flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-sm">JK</span>
               </div>
               <div>
-                <p className="text-white font-bold text-xl leading-tight">JK Digital Solutions</p>
-                <p className="text-cyan-400 text-xs font-medium tracking-widest uppercase">Digital Marketing Agency</p>
+                <p className="font-bold text-white text-lg leading-none">JK Digital Solutions</p>
+                <p className="text-blue-400 text-xs tracking-widest uppercase">Digital Marketing Agency</p>
               </div>
             </a>
-            <p className="text-slate-400 text-base leading-relaxed max-w-sm">
-              Forbesganj, Araria के local businesses को online brand बनाने वाली trusted digital marketing agency। हम आपके बिजनेस को Google पर top पर लाते हैं।
+            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
+              Forbesganj, Araria के local businesses को Google पर grow करने वाली trusted digital marketing agency। Website, SEO, GMB और Google Ads — सब एक जगह।
             </p>
-            <div className="flex gap-3 flex-wrap">
-              <a
-                href="https://wa.me/918651070831"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-sm font-semibold hover:bg-emerald-500/20 transition-all"
-              >
-                <MessageCircle className="w-4 h-4" />
-                WhatsApp करें
+            <div className="flex flex-wrap gap-2.5">
+              <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-semibold hover:bg-green-500/20 transition-all">
+                <MessageCircle className="w-4 h-4" /> WhatsApp
               </a>
-              <a
-                href="mailto:jkdigitalsolutionfbg@gmail.com"
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-cyan-400 text-sm font-semibold hover:bg-cyan-500/20 transition-all"
-              >
-                <Mail className="w-4 h-4" />
-                Email करें
+              <a href="mailto:jkdigitalsolutionfbg@gmail.com"
+                className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-semibold hover:bg-blue-500/20 transition-all">
+                <Mail className="w-4 h-4" /> Email
               </a>
             </div>
           </div>
 
-          {/* Services Column */}
+          {/* Services */}
           <div className="space-y-4">
-            <h4 className="text-white font-bold text-lg">हमारी सर्विसेज</h4>
-            <ul className="space-y-3">
-              {services.map(({ icon: Icon, label }) => (
+            <h4 className="text-white font-bold">Services</h4>
+            <ul className="space-y-2.5">
+              {services.map(({ icon: Icon, label, href }) => (
                 <li key={label}>
-                  <a
-                    href="#services"
-                    className="flex items-center gap-2.5 text-slate-400 hover:text-cyan-400 transition-colors group text-sm"
-                  >
-                    <Icon className="w-4 h-4 text-cyan-500/60 group-hover:text-cyan-400 transition-colors flex-shrink-0" />
+                  <a href={href} className="flex items-center gap-2 text-slate-400 hover:text-blue-400 transition-colors text-sm group">
+                    <Icon className="w-3.5 h-3.5 text-slate-600 group-hover:text-blue-400 transition-colors flex-shrink-0" />
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <h4 className="text-white font-bold pt-3">Quick Links</h4>
+            <ul className="space-y-2.5">
+              {links.map(({ label, href }) => (
+                <li key={label}>
+                  <a href={href} className="text-slate-400 hover:text-blue-400 transition-colors text-sm block">
                     {label}
                   </a>
                 </li>
@@ -68,76 +74,53 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Column */}
+          {/* Contact */}
           <div className="space-y-4">
-            <h4 className="text-white font-bold text-lg">संपर्क जानकारी</h4>
+            <h4 className="text-white font-bold">Contact Info</h4>
             <ul className="space-y-4">
               <li>
-                <a
-                  href="https://wa.me/918651070831"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 group"
-                >
-                  <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-400 hover:text-cyan-300 transition-colors text-sm">
-                    +91 8651070831
-                  </span>
+                <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
+                  <Phone className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-slate-300 text-sm font-medium group-hover:text-blue-400 transition-colors">+91 86510 70831</p>
+                    <p className="text-slate-300 text-sm font-medium group-hover:text-blue-400 transition-colors">+91 85418 49118</p>
+                  </div>
                 </a>
               </li>
               <li>
-                <a
-                  href="https://wa.me/918541849118"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 group"
-                >
-                  <Phone className="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-400 hover:text-cyan-300 transition-colors text-sm">
-                    +91 8541849118
-                  </span>
+                <a href="mailto:jkdigitalsolutionfbg@gmail.com" className="flex items-start gap-3 group">
+                  <Mail className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <p className="text-slate-300 text-sm break-all group-hover:text-blue-400 transition-colors">jkdigitalsolutionfbg@gmail.com</p>
                 </a>
               </li>
               <li>
-                <a
-                  href="mailto:jkdigitalsolutionfbg@gmail.com"
-                  className="flex items-start gap-3 group"
-                >
-                  <Mail className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-400 hover:text-emerald-300 transition-colors text-sm break-all">
-                    jkdigitalsolutionfbg@gmail.com
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://maps.google.com/?q=Forbesganj,Bihar,India"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 group"
-                >
-                  <MapPin className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-slate-400 hover:text-emerald-300 transition-colors text-sm">
-                    Forbesganj, Araria,<br />Bihar, India
-                  </span>
+                <a href="https://maps.google.com/?q=Forbesganj,Bihar,India" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 group">
+                  <MapPin className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-slate-300 text-sm group-hover:text-blue-400 transition-colors">Forbesganj, Araria</p>
+                    <p className="text-slate-500 text-xs">Bihar, India — 854318</p>
+                  </div>
                 </a>
               </li>
             </ul>
+
+            <div className="pt-2">
+              <p className="text-slate-500 text-xs font-semibold uppercase tracking-wide mb-2">Business Hours</p>
+              <p className="text-slate-400 text-xs">Mon–Sat: 9AM – 8PM</p>
+              <p className="text-slate-400 text-xs">Sunday: 10AM – 6PM</p>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-cyan-500/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-sm text-center sm:text-left">
-            © 2025 JK Digital Solutions. All rights reserved. | Forbesganj, Bihar
+        {/* Bottom bar */}
+        <div className="border-t border-slate-800 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-slate-500 text-xs text-center sm:text-left">
+            © 2025 JK Digital Solutions, Forbesganj, Bihar. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <span className="text-slate-600 text-xs">Made with ❤️ for Bihar businesses</span>
-            <a
-              href="#home"
-              className="w-9 h-9 rounded-full border border-cyan-500/25 bg-cyan-500/5 flex items-center justify-center text-cyan-400 hover:bg-cyan-500/15 transition-all hover:-translate-y-1"
-              aria-label="Back to top"
-            >
+            <span className="text-slate-600 text-xs">Made for Bihar Local Businesses 🇮🇳</span>
+            <a href="#home" aria-label="Back to top"
+              className="w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 hover:border-blue-600 transition-all">
               <ArrowUp className="w-4 h-4" />
             </a>
           </div>

@@ -1,104 +1,95 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
+
+const links = [
+  { label: "Services", href: "#services" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "Case Studies", href: "#case-studies" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    const fn = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", fn);
+    return () => window.removeEventListener("scroll", fn);
   }, []);
 
-  const links = [
-    { label: "होम", href: "#home" },
-    { label: "डिजिटल क्यों?", href: "#why-digital" },
-    { label: "सर्विसेज", href: "#services" },
-    { label: "संपर्क करें", href: "#contact" },
-  ];
-
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glassmorphism shadow-lg shadow-cyan-500/5" : "bg-transparent"
-      }`}
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "nav-scrolled" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-16 lg:h-18">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-cyan-500 to-emerald-400 flex items-center justify-center shadow-lg shadow-cyan-500/30 group-hover:scale-110 transition-transform">
-              <Zap className="w-5 h-5 text-white" />
+          <a href="#home" className="flex items-center gap-2.5 group">
+            <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center flex-shrink-0">
+              <span className="text-white font-bold text-sm">JK</span>
             </div>
-            <div>
-              <span className="text-white font-bold text-lg leading-tight">JK Digital</span>
-              <span className="block text-cyan-400 text-xs font-medium tracking-widest uppercase leading-tight">Solutions</span>
+            <div className="leading-tight">
+              <p className="font-bold text-slate-900 text-base leading-none">JK Digital</p>
+              <p className="text-blue-600 text-xs font-medium tracking-wide">Solutions</p>
             </div>
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
-            {links.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium relative group"
-              >
-                {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-300" />
+          <nav className="hidden lg:flex items-center gap-8">
+            {links.map((l) => (
+              <a key={l.href} href={l.href}
+                className="text-slate-600 hover:text-blue-600 text-sm font-medium transition-colors relative group">
+                {l.label}
+                <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-200" />
               </a>
             ))}
-          </div>
+          </nav>
 
-          {/* CTA */}
-          <div className="hidden md:block">
-            <a
-              href="#contact"
-              className="btn-glow px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-white text-sm font-semibold border border-cyan-400/30"
-            >
-              फ्री ऑडिट 🎯
+          {/* CTAs */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a href="tel:+918651070831"
+              className="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">
+              <Phone className="w-4 h-4" />
+              +91 86510 70831
+            </a>
+            <a href="https://wa.me/918651070831?text=नमस्ते! मुझे Free Website Audit चाहिए।"
+              target="_blank" rel="noopener noreferrer"
+              className="btn-primary px-5 py-2.5 rounded-full text-sm font-semibold">
+              Free Audit
             </a>
           </div>
 
           {/* Mobile Toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-slate-300 hover:text-cyan-400 transition-colors p-2"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <button onClick={() => setOpen(!open)}
+            className="lg:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors">
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="glassmorphism border-t border-cyan-500/10 px-4 py-4 space-y-3">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="block text-slate-300 hover:text-cyan-400 py-2 px-3 rounded-lg hover:bg-cyan-500/5 transition-all text-sm font-medium"
-            >
-              {link.label}
+      <div className={`lg:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-screen" : "max-h-0"}`}>
+        <div className="bg-white border-t border-slate-100 px-4 py-4 space-y-1 shadow-lg">
+          {links.map((l) => (
+            <a key={l.href} href={l.href} onClick={() => setOpen(false)}
+              className="block px-3 py-2.5 rounded-lg text-slate-700 hover:bg-blue-50 hover:text-blue-600 text-sm font-medium transition-all">
+              {l.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            onClick={() => setIsOpen(false)}
-            className="block w-full text-center mt-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-600 text-white text-sm font-semibold"
-          >
-            फ्री ऑडिट 🎯
-          </a>
+          <div className="pt-3 pb-1 flex flex-col gap-2">
+            <a href="tel:+918651070831"
+              className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-full border border-slate-200 text-slate-700 text-sm font-semibold btn-secondary">
+              <Phone className="w-4 h-4" /> Call Now
+            </a>
+            <a href="https://wa.me/918651070831?text=नमस्ते! मुझे Free Website Audit चाहिए।"
+              target="_blank" rel="noopener noreferrer" onClick={() => setOpen(false)}
+              className="btn-primary text-center px-4 py-2.5 rounded-full text-sm font-semibold">
+              Get Free Audit
+            </a>
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
