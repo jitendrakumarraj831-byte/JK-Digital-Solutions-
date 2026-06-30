@@ -9,7 +9,7 @@ export default function Hero() {
       justifyContent: "center",
       position: "relative",
       overflow: "hidden",
-      background: "#FFFFFF",
+      background: "#FCFCFD",
     }}>
 
       {/* ── Background ── */}
@@ -17,21 +17,21 @@ export default function Hero() {
         {/* Subtle dot grid */}
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "radial-gradient(circle, #CBD5E1 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(circle, #D1D9E4 1px, transparent 1px)",
           backgroundSize: "32px 32px",
-          opacity: 0.22,
+          opacity: 0.15,
         }} />
-        {/* Top-right blue glow */}
+        {/* Top-right blue glow — reduced */}
         <div style={{
           position: "absolute", top: "-20%", right: "-12%",
-          width: "680px", height: "680px", borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(37,99,235,0.07) 0%, transparent 68%)",
+          width: "640px", height: "640px", borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(37,99,235,0.042) 0%, transparent 65%)",
         }} />
-        {/* Bottom-left subtle glow */}
+        {/* Bottom-left subtle glow — reduced */}
         <div style={{
           position: "absolute", bottom: "-10%", left: "-8%",
-          width: "480px", height: "480px", borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(79,70,229,0.05) 0%, transparent 65%)",
+          width: "440px", height: "440px", borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(79,70,229,0.03) 0%, transparent 62%)",
         }} />
       </div>
 
