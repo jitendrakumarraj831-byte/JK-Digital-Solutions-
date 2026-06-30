@@ -130,7 +130,7 @@ export default function Portfolio() {
                       background: p.accentBg,
                       border: `1px solid ${p.accentColor}18`,
                     }}>
-                      <div style={{ fontSize: "22px", fontWeight: 800, color: p.accentColor, letterSpacing: "-0.03em" }}>{r.n}</div>
+                      <div style={{ fontSize: "22px", fontWeight: 700, color: p.accentColor, letterSpacing: "-0.02em" }}>{r.n}</div>
                       <div style={{ fontSize: "11px", color: "#94A3B8", marginTop: "3px", fontWeight: 500 }}>{r.l}</div>
                     </div>
                   ))}

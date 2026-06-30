@@ -98,7 +98,7 @@ export default function Pricing() {
                 <p style={{ fontSize: "13px", color: plan.popular ? "rgba(255,255,255,0.65)" : "#94A3B8", marginBottom: "24px", lineHeight: 1.6 }}>{plan.desc}</p>
 
                 <div style={{ paddingBottom: "24px", borderBottom: `1px solid ${plan.popular ? "rgba(255,255,255,0.12)" : "#F1F5F9"}`, marginBottom: "24px" }}>
-                  <div style={{ fontSize: "44px", fontWeight: 800, color: plan.popular ? "#fff" : "#111827", letterSpacing: "-0.05em", lineHeight: 1 }}>{plan.price}</div>
+                  <div style={{ fontSize: "44px", fontWeight: 700, color: plan.popular ? "#fff" : "#111827", letterSpacing: "-0.02em", lineHeight: 1 }}>{plan.price}</div>
                   <div style={{ fontSize: "13px", color: plan.popular ? "rgba(255,255,255,0.5)" : "#94A3B8", marginTop: "6px" }}>{plan.period} · GST extra</div>
                 </div>
 

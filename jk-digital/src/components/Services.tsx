@@ -158,7 +158,7 @@ export default function Services() {
               }}>
                 <div>
                   <div style={{ fontSize: "11px", color: "#94A3B8", fontWeight: 600, marginBottom: "2px", textTransform: "uppercase", letterSpacing: "0.06em" }}>{s.priceNote}</div>
-                  <div style={{ fontSize: "28px", fontWeight: 800, color: "#111827", letterSpacing: "-0.04em", lineHeight: 1 }}>{s.price}</div>
+                  <div style={{ fontSize: "28px", fontWeight: 700, color: "#111827", letterSpacing: "-0.02em", lineHeight: 1 }}>{s.price}</div>
                 </div>
                 <a href="#contact" style={{
                   padding: "10px 20px", borderRadius: "10px",

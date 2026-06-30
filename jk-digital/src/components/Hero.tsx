@@ -63,8 +63,8 @@ export default function Hero() {
             {/* Headline */}
             <h1 style={{
               fontSize: "clamp(38px, 5vw, 58px)",
-              fontWeight: 900,
-              letterSpacing: "-0.04em",
+              fontWeight: 700,
+              letterSpacing: "-0.02em",
               lineHeight: 1.05,
               color: "#111827",
               marginBottom: "22px",
@@ -354,7 +354,7 @@ export default function Hero() {
                   fontSize: "18px",
                 }}>⭐</div>
                 <div>
-                  <div style={{ fontSize: "18px", fontWeight: 900, color: "#111827", letterSpacing: "-0.04em", lineHeight: 1 }}>4.9 / 5</div>
+                  <div style={{ fontSize: "18px", fontWeight: 700, color: "#111827", letterSpacing: "-0.02em", lineHeight: 1 }}>4.9 / 5</div>
                   <div style={{ fontSize: "11px", color: "#94A3B8", marginTop: "1px" }}>Google Rating</div>
                 </div>
               </div>
@@ -401,7 +401,7 @@ export default function Hero() {
               background: "#fff",
             }}>
               <div style={{ fontSize: "22px", marginBottom: "6px" }}>{s.i}</div>
-              <div style={{ fontSize: "26px", fontWeight: 900, color: "#111827", letterSpacing: "-0.05em", lineHeight: 1 }}>{s.n}</div>
+              <div style={{ fontSize: "26px", fontWeight: 700, color: "#111827", letterSpacing: "-0.02em", lineHeight: 1 }}>{s.n}</div>
               <div style={{ fontSize: "12px", color: "#94A3B8", marginTop: "5px", fontWeight: 500 }}>{s.l}</div>
             </div>
           ))}
