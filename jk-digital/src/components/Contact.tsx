@@ -96,12 +96,12 @@ export default function Contact() {
 
           {/* Left — info */}
           <div>
-            <p className="t-label" style={{ marginBottom: "14px" }}>Contact</p>
+            <p className="t-label" style={{ marginBottom: "14px" }}>संपर्क करें</p>
             <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-              Let's <span className="accent">talk</span>.
+              आइए <span className="accent">बात</span> करें।
             </h2>
             <p className="t-body" style={{ marginBottom: "48px", maxWidth: "380px" }}>
-              Get a free audit in 30 minutes. We'll analyse your business and show you exactly what's missing.
+              30 minutes में free audit पाएं। हम आपके business को analyse करके बताएंगे exactly क्या missing है।
             </p>
 
             {/* Contact cards */}
@@ -152,9 +152,9 @@ export default function Contact() {
             borderRadius: "24px", padding: "clamp(28px, 5vw, 44px)",
             boxShadow: "0 4px 24px rgba(0,0,0,0.05)",
           }}>
-            <h3 className="t-h3" style={{ marginBottom: "6px" }}>Free Audit Request</h3>
+            <h3 className="t-h3" style={{ marginBottom: "6px" }}>Free Audit Request — मुफ्त जांच</h3>
             <p style={{ fontSize: "14px", color: "#64748B", marginBottom: "28px" }}>
-              We'll personally review your business and share what to fix.
+              हम personally आपके business को review करेंगे और बताएंगे क्या fix करना है।
             </p>
 
             <div style={{ height: "1px", background: "#F1F5F9", marginBottom: "24px" }} />
@@ -201,7 +201,7 @@ export default function Contact() {
                 width: "100%", cursor: status === "loading" ? "not-allowed" : "pointer",
                 opacity: status === "loading" ? 0.6 : 1,
               }}>
-                {status === "loading" ? "Sending..." : "Send free audit request →"}
+                {status === "loading" ? "भेज रहे हैं..." : "Free Audit Request भेजें →"}
               </button>
 
               <p style={{ textAlign: "center", fontSize: "12px", color: "#94A3B8", fontWeight: 500 }}>

@@ -62,12 +62,12 @@ export default function Pricing() {
     <section id="pricing" style={{ padding: "112px 0", background: "#FFFFFF" }}>
       <div className="wrap">
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>Pricing</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>हमारी कीमत</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            Simple, honest <span className="accent">pricing</span>.
+            Simple और honest <span className="accent">pricing</span>।
           </h2>
           <p className="t-body" style={{ maxWidth: "380px", margin: "0 auto" }}>
-            No lock-in contracts. No hidden fees. Cancel any time.
+            No lock-in। No hidden fees। कभी भी cancel करें।
           </p>
         </div>
 
@@ -154,8 +154,8 @@ export default function Pricing() {
           display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "20px",
         }}>
           <div>
-            <div style={{ fontSize: "17px", fontWeight: 700, color: "#111827", marginBottom: "4px" }}>Need a custom plan?</div>
-            <p style={{ fontSize: "14px", color: "#64748B" }}>Tell us your budget and goals — we'll build something that fits.</p>
+            <div style={{ fontSize: "17px", fontWeight: 700, color: "#111827", marginBottom: "4px" }}>Custom plan चाहिए?</div>
+            <p style={{ fontSize: "14px", color: "#64748B" }}>अपना budget और goals बताएं — हम आपके लिए कुछ बनाएंगे।</p>
           </div>
           <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer" className="btn btn-wa">
             WhatsApp करें →

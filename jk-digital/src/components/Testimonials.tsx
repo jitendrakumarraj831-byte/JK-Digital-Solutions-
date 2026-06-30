@@ -62,9 +62,9 @@ export default function Testimonials() {
     <section id="testimonials" style={{ padding: "112px 0", background: "#F8FAFC" }}>
       <div className="wrap">
         <div style={{ marginBottom: "72px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>Testimonials</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>ग्राहक क्या कहते हैं</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            Our clients' <span className="accent">growth</span> stories.
+            हमारे clients की <span className="accent">growth</span> कहानियां।
           </h2>
           <a href="https://g.page/jkdigital" target="_blank" rel="noopener noreferrer" style={{
             display: "inline-flex", alignItems: "center", gap: "8px",

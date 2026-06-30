@@ -8,7 +8,7 @@ const services = [
     badgeBg: "#EFF6FF",
     badgeColor: "#2563EB",
     title: "Website Development",
-    tagline: "Your 24/7 sales representative.",
+    tagline: "आपका 24/7 online salesman।",
     desc: "Fast, mobile-first websites built to convert visitors into customers. SEO-ready from day one.",
     features: ["Mobile-first design", "SEO architecture", "30-day delivery", "1 year free support"],
     price: "₹8,999",
@@ -28,7 +28,7 @@ const services = [
     badgeBg: "#F0FDF4",
     badgeColor: "#16A34A",
     title: "Google SEO",
-    tagline: "Rank higher. Pay nothing for clicks.",
+    tagline: "ऊपर rank करें। Clicks पर कुछ न दें।",
     desc: "Get your business to the top of Google search results organically — and stay there.",
     features: ["Local + national SEO", "Keyword research", "Monthly reports", "Competitor analysis"],
     price: "₹4,999",
@@ -48,7 +48,7 @@ const services = [
     badgeBg: "#ECFEFF",
     badgeColor: "#0891B2",
     title: "Google Business Profile",
-    tagline: "Own local search. Get found nearby.",
+    tagline: "Local search जीतें। पास के लोग ढूंढें।",
     desc: "Optimise your GMB listing so customers searching near you find your business first.",
     features: ["Complete GMB setup", "Review management", "Photo optimisation", "Local ranking"],
     price: "₹2,499",
@@ -68,7 +68,7 @@ const services = [
     badgeBg: "#EEF2FF",
     badgeColor: "#4F46E5",
     title: "Google Ads",
-    tagline: "Pay only for results, not visibility.",
+    tagline: "नतीजों के लिए pay करें, दिखावे के लिए नहीं।",
     desc: "Targeted campaigns that bring qualified leads within days. Expert management, measurable ROI.",
     features: ["Campaign setup", "Bid optimisation", "Ad copywriting", "Weekly reports"],
     price: "₹3,999",
@@ -89,12 +89,12 @@ export default function Services() {
       <div className="wrap">
         {/* Section header */}
         <div style={{ marginBottom: "72px", maxWidth: "520px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>Services</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>हमारी सेवाएं</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            Four services. <span className="accent">One</span> agency.
+            चार सेवाएं। <span className="accent">एक</span> Agency।
           </h2>
           <p className="t-body">
-            Everything your business needs to dominate online — nothing you don't.
+            आपके business को online grow करने के लिए सब कुछ — एक ही जगह।
           </p>
         </div>
 
@@ -169,7 +169,7 @@ export default function Services() {
                 }}
                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.8"}
                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}>
-                  Get started →
+                  शुरू करें →
                 </a>
               </div>
             </div>

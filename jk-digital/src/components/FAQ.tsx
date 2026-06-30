@@ -35,15 +35,15 @@ export default function FAQ() {
     <section id="faq" style={{ padding: "112px 0", background: "#F8FAFC" }}>
       <div className="wrap-sm">
         <div style={{ marginBottom: "64px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>FAQ</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>अक्सर पूछे सवाल</p>
           <h2 className="t-h2" style={{ marginBottom: "12px" }}>
-            Common <span className="accent">questions</span>.
+            आम <span className="accent">सवाल</span>।
           </h2>
           <p className="t-body">
-            Still have questions?{" "}
+            और सवाल हैं?{" "}
             <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer"
               style={{ color: "#2563EB", fontWeight: 600, textDecoration: "none" }}>
-              Ask on WhatsApp →
+              WhatsApp पर पूछें →
             </a>
           </p>
         </div>

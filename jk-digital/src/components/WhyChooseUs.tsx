@@ -51,12 +51,12 @@ export default function WhyChooseUs() {
     <section id="why" style={{ padding: "112px 0", background: "#FFFFFF" }}>
       <div className="wrap">
         <div style={{ marginBottom: "72px", maxWidth: "520px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>Why us</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>हम क्यों?</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            Built for Bihar's <span className="accent">market</span>.
+            Bihar के <span className="accent">market</span> के लिए बना।
           </h2>
           <p className="t-body">
-            We know your customers, your competitors, and your city.
+            आपके customers, competitors, और शहर को हम जानते हैं — सिर्फ digital theory नहीं।
           </p>
         </div>
 

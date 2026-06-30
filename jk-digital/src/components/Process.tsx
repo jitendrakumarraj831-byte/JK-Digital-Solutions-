@@ -3,32 +3,32 @@
 const steps = [
   {
     num: "01",
-    title: "Free Audit",
-    desc: "We analyse your current online presence — website, Google ranking, GMB, and competitors — in 30 minutes.",
+    title: "Free Audit — मुफ्त जांच",
+    desc: "30 minutes में आपकी online presence देखते हैं — website, Google ranking, GMB, और competitors।",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>,
     color: "#2563EB",
     bg: "#EFF6FF",
   },
   {
     num: "02",
-    title: "Custom Strategy",
-    desc: "We build a tailored 90-day digital plan based on your goals, budget, and competitive landscape.",
+    title: "Custom Strategy — आपकी योजना",
+    desc: "आपके goals, budget, और competition के हिसाब से 90-दिन का digital plan तैयार करते हैं।",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>,
     color: "#4F46E5",
     bg: "#EEF2FF",
   },
   {
     num: "03",
-    title: "Execution",
-    desc: "Our team gets to work — website, campaigns, SEO, GMB — all live within the agreed timeline.",
+    title: "Execution — काम शुरू",
+    desc: "हमारी team काम में लग जाती है — website, campaigns, SEO, GMB — सब agreed timeline में live।",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
     color: "#0891B2",
     bg: "#ECFEFF",
   },
   {
     num: "04",
-    title: "Growth & Reporting",
-    desc: "Monthly reports, WhatsApp updates, and ongoing optimisation — so you see results, not just activity.",
+    title: "Growth & Reporting — नतीजे देखें",
+    desc: "Monthly reports, WhatsApp updates, और ongoing optimisation — results दिखते हैं, सिर्फ activity नहीं।",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>,
     color: "#16A34A",
     bg: "#F0FDF4",
@@ -40,12 +40,12 @@ export default function Process() {
     <section id="process" style={{ padding: "112px 0", background: "#F8FAFC" }}>
       <div className="wrap">
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>How we work</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>हम कैसे काम करते हैं</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            From audit to <span className="accent">results</span> in weeks.
+            Audit से <span className="accent">नतीजे</span> तक — हफ्तों में।
           </h2>
           <p className="t-body" style={{ maxWidth: "440px", margin: "0 auto" }}>
-            A simple, transparent process designed to get your business growing fast.
+            Simple और transparent process — आपका business जल्दी grow करे।
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export default function Process() {
 
         <div style={{ textAlign: "center", marginTop: "56px" }}>
           <a href="#contact" className="btn btn-primary btn-lg">
-            Start your free audit today →
+            आज Free Audit शुरू करें →
           </a>
         </div>
       </div>

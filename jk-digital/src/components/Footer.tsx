@@ -58,7 +58,7 @@ export default function Footer() {
             </a>
 
             <p style={{ fontSize: "14px", color: "#64748B", lineHeight: 1.7, maxWidth: "240px", marginBottom: "28px" }}>
-              Bihar's digital marketing agency helping local businesses grow on Google.
+              Bihar की digital marketing agency — local businesses को Google पर grow कराते हैं।
             </p>
 
             <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>

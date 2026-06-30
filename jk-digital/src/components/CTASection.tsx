@@ -34,24 +34,24 @@ export default function CTASection() {
                 background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)",
                 fontSize: "12px", fontWeight: 600, color: "rgba(255,255,255,0.85)", letterSpacing: "0.06em",
               }}>
-                Free consultation · No commitment
+                Free consultation · कोई contract नहीं
               </div>
 
               <h2 style={{
                 fontSize: "clamp(30px, 4.5vw, 48px)", fontWeight: 700,
                 letterSpacing: "-0.02em", lineHeight: 1.05, color: "#fff", marginBottom: "16px",
               }}>
-                Ready to <span style={{
+                Grow करने के लिए <span style={{
                   background: "linear-gradient(135deg, #FDE68A, #FCD34D)",
                   WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
-                }}>grow</span>?
+                }}>तैयार</span> हैं?
               </h2>
 
               <p style={{
                 fontSize: "17px", lineHeight: 1.7, color: "rgba(255,255,255,0.7)",
                 fontWeight: 400, maxWidth: "440px",
               }}>
-                Get a free audit — we'll analyse your business and tell you exactly what to fix to start getting leads from Google.
+                Free audit लें — हम आपके business को analyse करेंगे और बताएंगे exactly क्या fix करना है ताकि Google से leads आने लगें।
               </p>
             </div>
 
@@ -67,7 +67,7 @@ export default function CTASection() {
               }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 32px rgba(0,0,0,0.2)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 20px rgba(0,0,0,0.15)"; }}>
-                Start free audit
+                Free Audit शुरू करें
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
               <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer" style={{

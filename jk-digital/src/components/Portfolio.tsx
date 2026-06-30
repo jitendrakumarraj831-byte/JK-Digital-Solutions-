@@ -80,12 +80,12 @@ export default function Portfolio() {
     <section id="portfolio" style={{ padding: "112px 0", background: "#FFFFFF" }}>
       <div className="wrap">
         <div style={{ marginBottom: "72px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>Results</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>हमारे नतीजे</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            Real businesses. Real <span className="accent-cyan">results</span>.
+            असली बिज़नेस। असली <span className="accent-cyan">नतीजे</span>।
           </h2>
           <p className="t-body" style={{ maxWidth: "400px" }}>
-            From clinics to coaching centres — measured growth, not promises.
+            Clinics से coaching centres तक — measured growth, सिर्फ वादे नहीं।
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export default function Portfolio() {
 
         <div style={{ marginTop: "56px", textAlign: "center" }}>
           <a href="#contact" className="btn btn-primary btn-lg">
-            Start your success story →
+            अपनी success story शुरू करें →
           </a>
         </div>
       </div>
