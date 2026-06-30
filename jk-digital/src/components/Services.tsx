@@ -1,58 +1,135 @@
-import { Globe, TrendingUp, MapPin, Megaphone, ArrowRight } from "lucide-react";
+"use client";
+import { ArrowRight, Globe, TrendingUp, MapPin, Megaphone } from "lucide-react";
 
 const services = [
-  { icon: Globe, color: "#eff6ff", iconColor: "#2563eb", badge: "Most Popular",
-    title: "Website Development", sub: "आपकी 24/7 Online Shop",
-    desc: "Fast, beautiful और mobile-friendly website जो Google पर rank करे और visitors को customers में convert करे।",
-    points: ["Mobile-First Design", "SEO-Ready Code", "30 Days Delivery", "1 Year Maintenance"] },
-  { icon: TrendingUp, color: "#f5f3ff", iconColor: "#7c3aed", badge: "Best ROI",
-    title: "Google SEO", sub: "बिना Ads के Free Traffic",
-    desc: "Organic search results में top पर आएं। एक बार rank होने के बाद free में customers आते रहते हैं।",
-    points: ["Local + National SEO", "Keyword Research", "Monthly Reports", "Competitor Analysis"] },
-  { icon: MapPin, color: "#ecfdf5", iconColor: "#059669", badge: "Get More Calls",
-    title: "Google Business Profile", sub: "Google Maps पर Top पर",
-    desc: "जब कोई nearby service search करे तो सबसे पहले आपका नाम और number दिखे।",
-    points: ["Profile Complete Setup", "Photos Optimization", "Review Management", "Weekly Posts"] },
-  { icon: Megaphone, color: "#fff7ed", iconColor: "#ea580c", badge: "Instant Results",
-    title: "Google Ads", sub: "आज Ads, आज Customers",
-    desc: "Targeted campaigns जो सिर्फ उन्हें दिखते हैं जो पहले से आपकी service ढूंढ रहे हैं।",
-    points: ["Search & Display Ads", "Daily Optimization", "Conversion Tracking", "₹5K Budget से शुरू"] },
+  {
+    icon: Globe, gradient: "linear-gradient(135deg, #1e3a8a, #2563eb, #06b6d4)",
+    glow: "rgba(37,99,235,0.3)",
+    badge: "Most Popular",
+    title: "Website Development",
+    sub: "आपकी 24/7 Digital Presence",
+    desc: "Fast, beautiful और SEO-optimized websites जो visitors को loyal customers में convert करे। Mobile-first, lightning-fast.",
+    points: ["Mobile-First Design", "SEO-Ready Architecture", "30-Day Delivery", "1 Year Free Support"],
+  },
+  {
+    icon: TrendingUp, gradient: "linear-gradient(135deg, #4c1d95, #7c3aed, #a78bfa)",
+    glow: "rgba(124,58,237,0.3)",
+    badge: "Best Long-term ROI",
+    title: "Google SEO",
+    sub: "बिना Ads Free Organic Traffic",
+    desc: "बिना ads खर्च किए Google के top results में आएं। Sustainable growth जो महीनों-सालों तक काम करे।",
+    points: ["Local + National SEO", "Keyword Strategy", "Monthly Reporting", "Competitor Analysis"],
+  },
+  {
+    icon: MapPin, gradient: "linear-gradient(135deg, #064e3b, #059669, #34d399)",
+    glow: "rgba(5,150,105,0.3)",
+    badge: "More Calls Daily",
+    title: "Google Business Profile",
+    sub: "Maps पर #1 Position",
+    desc: "जब कोई nearby service खोजे, आपका नाम सबसे पहले दिखे। More calls, more walk-ins, more revenue.",
+    points: ["Complete Profile Setup", "Photo Optimization", "Review Management", "Rank on Google Maps"],
+  },
+  {
+    icon: Megaphone, gradient: "linear-gradient(135deg, #78350f, #d97706, #fbbf24)",
+    glow: "rgba(217,119,6,0.3)",
+    badge: "Instant Results",
+    title: "Google Ads",
+    sub: "आज Invest, आज Results",
+    desc: "Targeted PPC campaigns जो केवल ready-to-buy customers को दिखें। हर rupee काम करे, हर click convert करे।",
+    points: ["Search & Display Ads", "Daily Budget Optimization", "Conversion Tracking", "Starts at ₹5K/month"],
+  },
 ];
 
 export default function Services() {
   return (
-    <section id="services" style={{ background: "#fff", padding: "80px 0" }}>
+    <section id="services" style={{ background: "#060b18", padding: "100px 0" }}>
       <div className="wrap">
-        <div style={{ marginBottom: "48px" }}>
-          <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#2563eb", marginBottom: "12px" }}>Services</p>
-          <h2 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 900, color: "#111827", marginBottom: "12px" }}>हम क्या करते हैं</h2>
-          <p style={{ color: "#6b7280", fontSize: "16px" }}>चार services, एक goal — आपके business की growth।</p>
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: "72px" }}>
+          <span className="section-label" style={{ display: "block", marginBottom: "16px" }}>Our Services</span>
+          <h2 className="font-display" style={{
+            fontSize: "clamp(1.9rem, 4.5vw, 3rem)", fontWeight: 900, color: "#fff",
+            letterSpacing: "-0.03em", lineHeight: 1.15, marginBottom: "16px"
+          }}>
+            एक Agency, चार Powerful <span className="grad-text">Solutions</span>
+          </h2>
+          <p style={{ color: "rgba(255,255,255,0.45)", fontSize: "16px", maxWidth: "500px", margin: "0 auto", lineHeight: 1.7 }}>
+            आपके business को online dominate करने के लिए सभी tools एक जगह।
+          </p>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 460px), 1fr))", gap: "20px" }}>
-          {services.map(s => {
+
+        {/* Service grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 500px), 1fr))", gap: "20px" }}>
+          {services.map((s) => {
             const Icon = s.icon;
             return (
-              <div key={s.title} className="c" style={{ padding: "28px" }}>
-                <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "20px" }}>
-                  <div style={{ width: "44px", height: "44px", borderRadius: "12px", background: s.color, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                    <Icon style={{ width: "20px", height: "20px", color: s.iconColor }} />
-                  </div>
-                  <span style={{ fontSize: "11px", fontWeight: 700, color: "#9ca3af", background: "#f9fafb", border: "1px solid #e5e7eb", padding: "4px 12px", borderRadius: "100px" }}>{s.badge}</span>
-                </div>
-                <h3 style={{ fontSize: "18px", fontWeight: 900, color: "#111827", marginBottom: "4px" }}>{s.title}</h3>
-                <p style={{ fontSize: "13px", fontWeight: 600, color: "#2563eb", marginBottom: "12px" }}>{s.sub}</p>
-                <p style={{ color: "#6b7280", fontSize: "14px", lineHeight: 1.65, marginBottom: "20px" }}>{s.desc}</p>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", marginBottom: "20px" }}>
-                  {s.points.map(p => (
-                    <div key={p} style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "12px", color: "#374151", fontWeight: 500 }}>
-                      <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#93c5fd", flexShrink: 0 }} />
-                      {p}
+              <div key={s.title} style={{
+                background: "rgba(255,255,255,0.03)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                borderRadius: "24px",
+                padding: "32px",
+                transition: "all 0.35s cubic-bezier(0.4,0,0.2,1)",
+                cursor: "default",
+                position: "relative",
+                overflow: "hidden"
+              }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.055)";
+                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.14)";
+                  e.currentTarget.style.transform = "translateY(-6px)";
+                  e.currentTarget.style.boxShadow = `0 20px 60px ${s.glow}`;
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = "rgba(255,255,255,0.03)";
+                  e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)";
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}>
+
+                {/* Background glow */}
+                <div style={{ position: "absolute", top: "-60px", right: "-60px", width: "200px", height: "200px", borderRadius: "50%", background: `radial-gradient(circle, ${s.glow} 0%, transparent 70%)`, pointerEvents: "none", opacity: 0.5 }} />
+
+                <div style={{ position: "relative", zIndex: 1 }}>
+                  {/* Icon + Badge */}
+                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "24px" }}>
+                    <div style={{
+                      width: "52px", height: "52px", borderRadius: "14px",
+                      background: s.gradient, display: "flex", alignItems: "center", justifyContent: "center",
+                      flexShrink: 0, boxShadow: `0 8px 24px ${s.glow}`
+                    }}>
+                      <Icon style={{ width: "22px", height: "22px", color: "#fff" }} />
                     </div>
-                  ))}
+                    <span style={{
+                      fontSize: "10px", fontWeight: 700, color: "rgba(255,255,255,0.45)",
+                      background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)",
+                      padding: "5px 12px", borderRadius: "100px", letterSpacing: "0.05em", textTransform: "uppercase"
+                    }}>{s.badge}</span>
+                  </div>
+
+                  <h3 style={{ fontSize: "20px", fontWeight: 800, color: "#fff", marginBottom: "4px", letterSpacing: "-0.02em" }}>{s.title}</h3>
+                  <p style={{ fontSize: "13px", fontWeight: 600, color: "rgba(255,255,255,0.4)", marginBottom: "16px" }}>{s.sub}</p>
+                  <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "14px", lineHeight: 1.7, marginBottom: "24px" }}>{s.desc}</p>
+
+                  {/* Feature points */}
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "28px" }}>
+                    {s.points.map(p => (
+                      <div key={p} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                        <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#3b82f6", flexShrink: 0 }} />
+                        <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.55)", fontWeight: 500 }}>{p}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <a href="#contact" style={{
+                    display: "inline-flex", alignItems: "center", gap: "6px",
+                    fontSize: "14px", fontWeight: 700, color: "#60a5fa",
+                    textDecoration: "none", transition: "gap 0.2s"
+                  }}
+                    onMouseEnter={e => { e.currentTarget.style.gap = "10px"; }}
+                    onMouseLeave={e => { e.currentTarget.style.gap = "6px"; }}>
+                    Get Started <ArrowRight style={{ width: "14px", height: "14px" }} />
+                  </a>
                 </div>
-                <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "14px", fontWeight: 700, color: "#2563eb", textDecoration: "none" }}>
-                  Get Started <ArrowRight style={{ width: "14px", height: "14px" }} />
-                </a>
               </div>
             );
           })}
