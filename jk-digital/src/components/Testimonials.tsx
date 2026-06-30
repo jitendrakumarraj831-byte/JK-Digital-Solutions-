@@ -64,7 +64,7 @@ export default function Testimonials() {
         <div style={{ marginBottom: "72px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>Testimonials</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            200+ businesses <span className="accent">trust</span> us.
+            Our clients' <span className="accent">growth</span> stories.
           </h2>
           <a href="https://g.page/jkdigital" target="_blank" rel="noopener noreferrer" style={{
             display: "inline-flex", alignItems: "center", gap: "8px",

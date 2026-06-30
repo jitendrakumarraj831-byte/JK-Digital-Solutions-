@@ -16,6 +16,9 @@
   }
 }
 
+/* ─── SCROLL OFFSET (fixed navbar = 68px) ─── */
+section[id] { scroll-margin-top: 88px; }
+
 /* ─── CONTAINER ─── */
 .wrap {
   max-width: 1160px;

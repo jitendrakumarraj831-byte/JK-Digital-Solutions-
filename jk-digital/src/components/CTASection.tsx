@@ -38,8 +38,8 @@ export default function CTASection() {
               </div>
 
               <h2 style={{
-                fontSize: "clamp(30px, 4.5vw, 48px)", fontWeight: 800,
-                letterSpacing: "-0.04em", lineHeight: 1.05, color: "#fff", marginBottom: "16px",
+                fontSize: "clamp(30px, 4.5vw, 48px)", fontWeight: 700,
+                letterSpacing: "-0.02em", lineHeight: 1.05, color: "#fff", marginBottom: "16px",
               }}>
                 Ready to <span style={{
                   background: "linear-gradient(135deg, #FDE68A, #FCD34D)",

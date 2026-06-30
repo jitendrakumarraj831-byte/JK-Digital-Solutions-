@@ -1,10 +1,10 @@
 "use client";
 
 const stats = [
-  { n: "200+", l: "Businesses served",    icon: "🏢" },
-  { n: "4.9",  l: "Google rating",        icon: "⭐" },
+  { n: "Bihar", l: "Local expertise",     icon: "📍" },
+  { n: "Free",  l: "Audit, no strings",   icon: "🎯" },
   { n: "3×",   l: "Average lead growth",  icon: "📈" },
-  { n: "5 yr", l: "In the market",        icon: "🏆" },
+  { n: "₹0",   l: "Lock-in fees",         icon: "✅" },
 ];
 
 const reasons = [
@@ -16,8 +16,8 @@ const reasons = [
   },
   {
     iconBg: "#F0FDF4", iconColor: "#16A34A",
-    title: "Results Guaranteed",
-    desc: "We measure success in leads and revenue — not impressions. 30-day visible improvement or free extension.",
+    title: "Results-Focused",
+    desc: "We measure success in leads and revenue — not impressions. Monthly reports show exactly what's working.",
     icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
   },
   {
@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
               boxShadow: "0 1px 4px rgba(0,0,0,0.03)",
             }}>
               <div style={{ fontSize: "28px", marginBottom: "8px" }}>{s.icon}</div>
-              <div style={{ fontSize: "clamp(28px,3.5vw,36px)", fontWeight: 800, color: "#111827", letterSpacing: "-0.04em", lineHeight: 1 }}>{s.n}</div>
+              <div style={{ fontSize: "clamp(28px,3.5vw,36px)", fontWeight: 700, color: "#111827", letterSpacing: "-0.02em", lineHeight: 1 }}>{s.n}</div>
               <div style={{ fontSize: "13px", color: "#94A3B8", marginTop: "6px", fontWeight: 500 }}>{s.l}</div>
             </div>
           ))}

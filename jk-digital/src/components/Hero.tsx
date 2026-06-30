@@ -57,7 +57,7 @@ export default function Hero() {
               letterSpacing: "-0.01em",
             }}>
               <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#2563EB", display: "inline-block" }} />
-              Bihar's #1 Digital Marketing Agency
+              Forbesganj, Bihar · Digital Marketing
             </div>
 
             {/* Headline */}
@@ -141,7 +141,7 @@ export default function Hero() {
                   {[1,2,3,4,5].map(i => <span key={i} style={{ color: "#F59E0B", fontSize: "14px" }}>★</span>)}
                 </div>
                 <p style={{ fontSize: "13px", color: "#64748B", margin: 0, fontWeight: 500 }}>
-                  Trusted by <strong style={{ color: "#111827" }}>200+ businesses</strong> across Bihar
+                  Helping local businesses <strong style={{ color: "#111827" }}>grow online</strong> across Bihar
                 </p>
               </div>
             </div>
@@ -389,10 +389,10 @@ export default function Hero() {
           boxShadow: "0 1px 8px rgba(0,0,0,0.04)",
         }}>
           {[
-            { n: "200+",   l: "Businesses Served", i: "🏢" },
-            { n: "4.9 ★",  l: "Google Rating",     i: "⭐" },
-            { n: "3×",     l: "Avg. Lead Growth",   i: "📈" },
-            { n: "5 Years",l: "Trusted Agency",     i: "🏆" },
+            { n: "Local",   l: "Bihar Focused",      i: "📍" },
+            { n: "Free",   l: "First Audit",        i: "🎯" },
+            { n: "48hr",   l: "Ads Go Live",        i: "📈" },
+            { n: "0",      l: "Lock-in Contract",   i: "✅" },
           ].map((s, idx) => (
             <div key={idx} style={{
               padding: "26px 16px",
