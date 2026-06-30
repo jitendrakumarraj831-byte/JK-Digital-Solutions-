@@ -94,11 +94,11 @@ export default function Pricing() {
               )}
 
               <div style={{ padding: "32px 28px" }}>
-                <h3 style={{ fontSize: "20px", fontWeight: 700, color: plan.popular ? "#fff" : "#0F172A", marginBottom: "8px" }}>{plan.name}</h3>
+                <h3 style={{ fontSize: "20px", fontWeight: 700, color: plan.popular ? "#fff" : "#111827", marginBottom: "8px" }}>{plan.name}</h3>
                 <p style={{ fontSize: "13px", color: plan.popular ? "rgba(255,255,255,0.65)" : "#94A3B8", marginBottom: "24px", lineHeight: 1.6 }}>{plan.desc}</p>
 
                 <div style={{ paddingBottom: "24px", borderBottom: `1px solid ${plan.popular ? "rgba(255,255,255,0.12)" : "#F1F5F9"}`, marginBottom: "24px" }}>
-                  <div style={{ fontSize: "44px", fontWeight: 800, color: plan.popular ? "#fff" : "#0F172A", letterSpacing: "-0.05em", lineHeight: 1 }}>{plan.price}</div>
+                  <div style={{ fontSize: "44px", fontWeight: 800, color: plan.popular ? "#fff" : "#111827", letterSpacing: "-0.05em", lineHeight: 1 }}>{plan.price}</div>
                   <div style={{ fontSize: "13px", color: plan.popular ? "rgba(255,255,255,0.5)" : "#94A3B8", marginTop: "6px" }}>{plan.period} · GST extra</div>
                 </div>
 
@@ -154,7 +154,7 @@ export default function Pricing() {
           display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "20px",
         }}>
           <div>
-            <div style={{ fontSize: "17px", fontWeight: 700, color: "#0F172A", marginBottom: "4px" }}>Need a custom plan?</div>
+            <div style={{ fontSize: "17px", fontWeight: 700, color: "#111827", marginBottom: "4px" }}>Need a custom plan?</div>
             <p style={{ fontSize: "14px", color: "#64748B" }}>Tell us your budget and goals — we'll build something that fits.</p>
           </div>
           <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer" className="btn btn-wa">

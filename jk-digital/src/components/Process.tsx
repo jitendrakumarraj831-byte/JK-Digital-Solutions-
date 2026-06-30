@@ -75,7 +75,7 @@ export default function Process() {
                   display: "flex", alignItems: "center", justifyContent: "center",
                   marginBottom: "16px",
                 }}>{s.icon}</div>
-                <h3 style={{ fontSize: "18px", fontWeight: 700, color: "#0F172A", marginBottom: "10px", letterSpacing: "-0.02em" }}>{s.title}</h3>
+                <h3 style={{ fontSize: "18px", fontWeight: 700, color: "#111827", marginBottom: "10px", letterSpacing: "-0.02em" }}>{s.title}</h3>
                 <p style={{ fontSize: "14px", color: "#64748B", lineHeight: 1.7 }}>{s.desc}</p>
               </div>
               {/* Connector arrow */}

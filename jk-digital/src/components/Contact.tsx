@@ -123,7 +123,7 @@ export default function Contact() {
                   }}>{c.icon}</div>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: "11px", fontWeight: 700, color: "#94A3B8", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "2px" }}>{c.label}</div>
-                    <div style={{ fontSize: "14px", fontWeight: 600, color: "#0F172A", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.value}</div>
+                    <div style={{ fontSize: "14px", fontWeight: 600, color: "#111827", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.value}</div>
                   </div>
                   <div style={{ fontSize: "12px", color: c.iconColor, fontWeight: 600, flexShrink: 0, opacity: 0.8 }}>{c.note}</div>
                 </a>
@@ -136,7 +136,7 @@ export default function Contact() {
               background: "#fff", border: "1px solid #E2E8F0",
               boxShadow: "0 1px 4px rgba(0,0,0,0.03)",
             }}>
-              <p style={{ fontSize: "12px", fontWeight: 700, color: "#0F172A", marginBottom: "8px", textTransform: "uppercase", letterSpacing: "0.08em" }}>Business hours</p>
+              <p style={{ fontSize: "12px", fontWeight: 700, color: "#111827", marginBottom: "8px", textTransform: "uppercase", letterSpacing: "0.08em" }}>Business hours</p>
               <p style={{ fontSize: "14px", color: "#64748B", lineHeight: 1.8 }}>
                 Mon – Sat: 9:00 AM – 8:00 PM<br />
                 Sunday: 10:00 AM – 6:00 PM<br />

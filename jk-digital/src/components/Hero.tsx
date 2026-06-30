@@ -66,16 +66,11 @@ export default function Hero() {
               fontWeight: 900,
               letterSpacing: "-0.04em",
               lineHeight: 1.05,
-              color: "#0F172A",
+              color: "#111827",
               marginBottom: "22px",
             }}>
               Get More{" "}
-              <span style={{
-                background: "linear-gradient(135deg, #2563EB 0%, #4F46E5 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}>Customers</span>
+              <span style={{ color: "#1D4ED8" }}>Customers</span>
               <br />
               From Google.
             </h1>
@@ -110,7 +105,7 @@ export default function Hero() {
               <a href="https://wa.me/918651070831?text=Hello! I want to grow my business online." target="_blank" rel="noopener noreferrer" style={{
                 display: "inline-flex", alignItems: "center", gap: "9px",
                 padding: "15px 24px", borderRadius: "10px",
-                background: "#fff", color: "#0F172A",
+                background: "#fff", color: "#111827",
                 fontWeight: 600, fontSize: "15px", textDecoration: "none",
                 border: "1.5px solid #E2E8F0",
                 transition: "border-color 0.15s, transform 0.15s",
@@ -146,7 +141,7 @@ export default function Hero() {
                   {[1,2,3,4,5].map(i => <span key={i} style={{ color: "#F59E0B", fontSize: "14px" }}>★</span>)}
                 </div>
                 <p style={{ fontSize: "13px", color: "#64748B", margin: 0, fontWeight: 500 }}>
-                  Trusted by <strong style={{ color: "#0F172A" }}>200+ businesses</strong> across Bihar
+                  Trusted by <strong style={{ color: "#111827" }}>200+ businesses</strong> across Bihar
                 </p>
               </div>
             </div>
@@ -319,7 +314,7 @@ export default function Hero() {
               animation: "heroFloat 6s ease-in-out infinite 0.5s",
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
-                <span style={{ fontSize: "12px", fontWeight: 700, color: "#0F172A" }}>Monthly Leads</span>
+                <span style={{ fontSize: "12px", fontWeight: 700, color: "#111827" }}>Monthly Leads</span>
                 <span style={{ fontSize: "11px", fontWeight: 700, color: "#16A34A", background: "#F0FDF4", padding: "2px 8px", borderRadius: "100px" }}>↑ 180%</span>
               </div>
               {/* Bar chart */}
@@ -333,7 +328,7 @@ export default function Hero() {
                 ))}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                {[["40+","Leads/mo","#0F172A"],["5×","ROI","#4F46E5"],["₹2L+","Revenue","#16A34A"]].map(([v, l, c]) => (
+                {[["40+","Leads/mo","#111827"],["5×","ROI","#4F46E5"],["₹2L+","Revenue","#16A34A"]].map(([v, l, c]) => (
                   <div key={l} style={{ textAlign: "center" }}>
                     <div style={{ fontSize: "14px", fontWeight: 800, color: c }}>{v}</div>
                     <div style={{ fontSize: "9px", color: "#94A3B8", marginTop: "1px" }}>{l}</div>
@@ -359,7 +354,7 @@ export default function Hero() {
                   fontSize: "18px",
                 }}>⭐</div>
                 <div>
-                  <div style={{ fontSize: "18px", fontWeight: 900, color: "#0F172A", letterSpacing: "-0.04em", lineHeight: 1 }}>4.9 / 5</div>
+                  <div style={{ fontSize: "18px", fontWeight: 900, color: "#111827", letterSpacing: "-0.04em", lineHeight: 1 }}>4.9 / 5</div>
                   <div style={{ fontSize: "11px", color: "#94A3B8", marginTop: "1px" }}>Google Rating</div>
                 </div>
               </div>
@@ -406,7 +401,7 @@ export default function Hero() {
               background: "#fff",
             }}>
               <div style={{ fontSize: "22px", marginBottom: "6px" }}>{s.i}</div>
-              <div style={{ fontSize: "26px", fontWeight: 900, color: "#0F172A", letterSpacing: "-0.05em", lineHeight: 1 }}>{s.n}</div>
+              <div style={{ fontSize: "26px", fontWeight: 900, color: "#111827", letterSpacing: "-0.05em", lineHeight: 1 }}>{s.n}</div>
               <div style={{ fontSize: "12px", color: "#94A3B8", marginTop: "5px", fontWeight: 500 }}>{s.l}</div>
             </div>
           ))}

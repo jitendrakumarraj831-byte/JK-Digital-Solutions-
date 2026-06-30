@@ -51,7 +51,7 @@ export default function Navbar() {
             <span style={{ color: "#fff", fontWeight: 800, fontSize: "11px", letterSpacing: "-0.01em" }}>JK</span>
           </div>
           <span style={{
-            fontWeight: 700, fontSize: "14px", color: "#0F172A",
+            fontWeight: 700, fontSize: "14px", color: "#111827",
             letterSpacing: "-0.02em", lineHeight: 1,
           }}>
             JK Digital
@@ -77,7 +77,7 @@ export default function Navbar() {
             }}
               onMouseEnter={e => {
                 const el = e.currentTarget as HTMLElement;
-                el.style.color = "#0F172A";
+                el.style.color = "#111827";
                 el.style.background = "#F1F5F9";
               }}
               onMouseLeave={e => {
@@ -101,7 +101,7 @@ export default function Navbar() {
             padding: "6px 4px",
             transition: "color 0.14s",
           }}
-            onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#0F172A"}
+            onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#111827"}
             onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#64748B"}>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             +91 86510 70831
@@ -185,7 +185,7 @@ export default function Navbar() {
               display: "flex", alignItems: "center", justifyContent: "space-between",
               padding: "13px 0",
               borderBottom: i < links.length - 1 ? "1px solid #F8FAFC" : "none",
-              fontSize: "15px", fontWeight: 500, color: "#0F172A",
+              fontSize: "15px", fontWeight: 500, color: "#111827",
               textDecoration: "none",
             }}>
               {l.label}

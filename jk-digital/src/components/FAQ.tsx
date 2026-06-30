@@ -68,7 +68,7 @@ export default function FAQ() {
                 }}>
                   <span style={{
                     fontSize: "15px", fontWeight: 600, lineHeight: 1.4,
-                    color: isOpen ? "#0F172A" : "#374151",
+                    color: isOpen ? "#111827" : "#374151",
                     letterSpacing: "-0.01em",
                   }}>{f.q}</span>
                   <div style={{

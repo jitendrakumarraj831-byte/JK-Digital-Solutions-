@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
               boxShadow: "0 1px 4px rgba(0,0,0,0.03)",
             }}>
               <div style={{ fontSize: "28px", marginBottom: "8px" }}>{s.icon}</div>
-              <div style={{ fontSize: "clamp(28px,3.5vw,36px)", fontWeight: 800, color: "#0F172A", letterSpacing: "-0.04em", lineHeight: 1 }}>{s.n}</div>
+              <div style={{ fontSize: "clamp(28px,3.5vw,36px)", fontWeight: 800, color: "#111827", letterSpacing: "-0.04em", lineHeight: 1 }}>{s.n}</div>
               <div style={{ fontSize: "13px", color: "#94A3B8", marginTop: "6px", fontWeight: 500 }}>{s.l}</div>
             </div>
           ))}
@@ -92,7 +92,7 @@ export default function WhyChooseUs() {
                 display: "flex", alignItems: "center", justifyContent: "center",
                 marginBottom: "16px",
               }}>{r.icon}</div>
-              <h3 style={{ fontSize: "16px", fontWeight: 700, color: "#0F172A", letterSpacing: "-0.01em", marginBottom: "8px" }}>{r.title}</h3>
+              <h3 style={{ fontSize: "16px", fontWeight: 700, color: "#111827", letterSpacing: "-0.01em", marginBottom: "8px" }}>{r.title}</h3>
               <p style={{ fontSize: "14px", color: "#64748B", lineHeight: 1.7 }}>{r.desc}</p>
             </div>
           ))}

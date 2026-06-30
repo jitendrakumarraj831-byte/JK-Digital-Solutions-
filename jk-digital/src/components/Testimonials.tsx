@@ -71,7 +71,7 @@ export default function Testimonials() {
             fontSize: "14px", fontWeight: 600, color: "#64748B",
             textDecoration: "none", transition: "color 0.15s",
           }}
-            onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#0F172A"}
+            onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#111827"}
             onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#64748B"}>
             <span style={{ color: "#F59E0B" }}>★★★★★</span>
             4.9 on Google Reviews →
@@ -110,7 +110,7 @@ export default function Testimonials() {
                     border: `1px solid ${r.avatarColor}20`,
                   }}>{r.initials}</div>
                   <div>
-                    <div style={{ fontSize: "14px", fontWeight: 700, color: "#0F172A" }}>{r.name}</div>
+                    <div style={{ fontSize: "14px", fontWeight: 700, color: "#111827" }}>{r.name}</div>
                     <div style={{ fontSize: "12px", color: "#94A3B8", marginTop: "1px" }}>{r.role}</div>
                   </div>
                 </div>

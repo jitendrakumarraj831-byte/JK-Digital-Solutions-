@@ -110,7 +110,7 @@ export default function Portfolio() {
                 display: "flex", alignItems: "center", justifyContent: "space-between",
               }}>
                 <div>
-                  <div style={{ fontSize: "15px", fontWeight: 700, color: "#0F172A", letterSpacing: "-0.01em", marginBottom: "3px" }}>{p.name}</div>
+                  <div style={{ fontSize: "15px", fontWeight: 700, color: "#111827", letterSpacing: "-0.01em", marginBottom: "3px" }}>{p.name}</div>
                   <p style={{ fontSize: "12px", color: "#94A3B8", fontWeight: 500 }}>{p.location}</p>
                 </div>
                 <span style={{
