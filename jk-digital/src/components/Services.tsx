@@ -2,170 +2,186 @@
 
 const services = [
   {
-    gradient: "linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #06b6d4 100%)",
-    glow: "rgba(37,99,235,0.3)",
-    iconBg: "rgba(59,130,246,0.15)",
-    badge: "Most Popular",
-    badgeColor: "#60a5fa",
+    bg: "linear-gradient(145deg, #1a0f4f 0%, #2d1b8e 50%, #1e40af 100%)",
+    border: "rgba(129,140,248,0.4)",
+    glow: "rgba(99,102,241,0.3)",
+    badge: "MOST POPULAR",
+    badgeBg: "rgba(129,140,248,0.2)",
+    badgeColor: "#a5b4fc",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
       </svg>
     ),
+    iconBg: "linear-gradient(135deg, #6366f1, #818cf8)",
     title: "Website Development",
     sub: "24/7 Digital Presence जो Convert करे",
     desc: "Fast, beautiful और SEO-optimized websites जो visitors को loyal customers बनाए। Mobile-first, lightning-fast loading, और conversion के लिए optimize।",
-    points: ["Mobile-First Design", "SEO-Ready Architecture", "30-Day Delivery", "1 Year Free Support"],
+    features: ["Mobile-First Design", "SEO-Ready Architecture", "30-Day Delivery", "1 Year Free Support", "Custom Domain Setup", "SSL Certificate"],
+    price: "₹8,999",
+    label: "से शुरू",
   },
   {
-    gradient: "linear-gradient(135deg, #3b0764 0%, #7c3aed 50%, #a78bfa 100%)",
-    glow: "rgba(124,58,237,0.28)",
-    iconBg: "rgba(139,92,246,0.15)",
-    badge: "Best Long-term ROI",
-    badgeColor: "#a78bfa",
+    bg: "linear-gradient(145deg, #0c2340 0%, #1e4d8c 50%, #0e7490 100%)",
+    border: "rgba(56,189,248,0.4)",
+    glow: "rgba(14,165,233,0.28)",
+    badge: "BEST LONG-TERM ROI",
+    badgeBg: "rgba(56,189,248,0.18)",
+    badgeColor: "#7dd3fc",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
       </svg>
     ),
+    iconBg: "linear-gradient(135deg, #0284c7, #06b6d4)",
     title: "Google SEO",
     sub: "Ads खर्च किए बिना Organic Traffic",
     desc: "Paid ads के बिना Google के top results में rank करें। Sustainable growth strategy जो महीनों-सालों तक काम करे और ROI देती रहे।",
-    points: ["Local + National SEO", "Keyword Research Strategy", "Monthly Performance Report", "Competitor Analysis"],
+    features: ["Local + National SEO", "Keyword Research Strategy", "Monthly Performance Report", "Competitor Analysis", "On-Page Optimization", "Backlink Building"],
+    price: "₹4,999",
+    label: "/ month से",
   },
   {
-    gradient: "linear-gradient(135deg, #064e3b 0%, #059669 50%, #34d399 100%)",
-    glow: "rgba(5,150,105,0.28)",
-    iconBg: "rgba(16,185,129,0.15)",
-    badge: "More Calls Daily",
-    badgeColor: "#34d399",
+    bg: "linear-gradient(145deg, #0d2a1f 0%, #0f5132 50%, #065f46 100%)",
+    border: "rgba(52,211,153,0.4)",
+    glow: "rgba(16,185,129,0.28)",
+    badge: "FREE SETUP",
+    badgeBg: "rgba(52,211,153,0.18)",
+    badgeColor: "#6ee7b7",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
       </svg>
     ),
+    iconBg: "linear-gradient(135deg, #059669, #34d399)",
     title: "Google Business Profile",
-    sub: "Google Maps पर #1 Position",
-    desc: "जब कोई आपकी nearby service खोजे, आपका business सबसे पहले दिखे। More calls, more walk-ins, और consistent revenue growth।",
-    points: ["Complete Profile Setup", "Photo & Post Optimization", "Review Management", "Top Google Maps Rank"],
+    sub: "Local Search में #1 Position",
+    desc: "Google Maps और Local Search में dominate करें। आपका business address, reviews, photos — सब optimize होगा। Nearby customers directly आपको find करें।",
+    features: ["GMB Complete Setup", "Photo Optimization", "Review Management", "Local Ranking", "Q&A Management", "Monthly Updates"],
+    price: "₹2,499",
+    label: "/ month से",
   },
   {
-    gradient: "linear-gradient(135deg, #78350f 0%, #d97706 50%, #fbbf24 100%)",
-    glow: "rgba(217,119,6,0.28)",
-    iconBg: "rgba(245,158,11,0.15)",
-    badge: "Instant Results",
-    badgeColor: "#fbbf24",
+    bg: "linear-gradient(145deg, #2d0a3a 0%, #6d28d9 40%, #9333ea 100%)",
+    border: "rgba(216,180,254,0.4)",
+    glow: "rgba(168,85,247,0.3)",
+    badge: "FASTEST RESULTS",
+    badgeBg: "rgba(216,180,254,0.18)",
+    badgeColor: "#e9d5ff",
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
       </svg>
     ),
+    iconBg: "linear-gradient(135deg, #7c3aed, #a855f7)",
     title: "Google Ads",
-    sub: "आज Invest, आज Results",
-    desc: "Targeted PPC campaigns जो केवल ready-to-buy customers को दिखें। हर rupee strategically खर्च हो और हर click conversion में बदले।",
-    points: ["Search & Display Ads", "Daily Budget Optimization", "Conversion Tracking", "Starts at ₹5K/month"],
+    sub: "हर रुपये पर Maximum Return",
+    desc: "Targeted Google Ads campaigns जो सही customers तक पहुँचे। Minimum budget में maximum leads। Expert management और ROI-focused strategy।",
+    features: ["Campaign Setup & Management", "Keyword Bidding Strategy", "Ad Copywriting", "Landing Page Optimization", "Budget Optimization", "Weekly Reports"],
+    price: "₹3,999",
+    label: "/ month से",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" style={{ background: "#080d1f", padding: "112px 0" }}>
-      <div className="wrap">
+    <section id="services" style={{
+      padding: "112px 0",
+      background: "linear-gradient(180deg, #0a0118 0%, #080025 50%, #060018 100%)",
+      position: "relative", overflow: "hidden",
+    }}>
+      {/* Background orb */}
+      <div style={{
+        position: "absolute", top: "20%", right: "-20%",
+        width: "600px", height: "600px", borderRadius: "50%",
+        background: "radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%)",
+        pointerEvents: "none",
+      }} />
 
-        {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "80px" }}>
-          <span className="section-label" style={{ display: "block", marginBottom: "16px" }}>Our Services</span>
+      <div className="wrap">
+        <div style={{ textAlign: "center", marginBottom: "72px" }}>
+          <span className="section-label" style={{ display: "block", marginBottom: "14px" }}>Our Services</span>
           <h2 className="font-display" style={{
-            fontSize: "clamp(2rem, 4.5vw, 3.2rem)", fontWeight: 900, color: "#fff",
-            letterSpacing: "-0.03em", lineHeight: 1.12, marginBottom: "18px",
+            fontSize: "clamp(2rem,5vw,3.5rem)", fontWeight: 900, color: "#fff",
+            letterSpacing: "-0.03em", lineHeight: 1.1, marginBottom: "16px",
           }}>
-            एक Agency,{" "}
-            <span className="grad-text">चार Powerful Solutions</span>
+            एक Agency, <span className="grad-text">चार Powerful Solutions</span>
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.42)", fontSize: "17px", maxWidth: "480px", margin: "0 auto", lineHeight: 1.75 }}>
+          <p style={{ color: "rgba(228,220,255,0.5)", fontSize: "17px", maxWidth: "520px", margin: "0 auto", lineHeight: 1.7 }}>
             आपके business को online dominate करने के लिए सभी tools एक ही छत के नीचे।
           </p>
         </div>
 
-        {/* Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 520px), 1fr))", gap: "20px" }}>
-          {services.map((s) => (
-            <div key={s.title}
-              style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                borderRadius: "24px", padding: "36px",
-                position: "relative", overflow: "hidden",
-                transition: "all 0.35s cubic-bezier(0.4,0,0.2,1)",
-                cursor: "default",
-              }}
-              onMouseEnter={e => {
-                const el = e.currentTarget as HTMLElement;
-                el.style.background = "rgba(255,255,255,0.055)";
-                el.style.borderColor = "rgba(255,255,255,0.13)";
-                el.style.transform = "translateY(-6px)";
-                el.style.boxShadow = `0 24px 64px ${s.glow}`;
-              }}
-              onMouseLeave={e => {
-                const el = e.currentTarget as HTMLElement;
-                el.style.background = "rgba(255,255,255,0.03)";
-                el.style.borderColor = "rgba(255,255,255,0.08)";
-                el.style.transform = "translateY(0)";
-                el.style.boxShadow = "none";
-              }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,480px),1fr))", gap: "24px" }}>
+          {services.map((s, i) => (
+            <div key={i} style={{
+              background: s.bg,
+              border: `1px solid ${s.border}`,
+              borderRadius: "28px",
+              padding: "36px",
+              position: "relative",
+              overflow: "hidden",
+              transition: "all 0.32s",
+              boxShadow: `0 8px 40px ${s.glow}`,
+            }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = `0 20px 60px ${s.glow}`; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = `0 8px 40px ${s.glow}`; }}>
 
-              {/* Background gradient accent */}
-              <div style={{ position: "absolute", top: "-60px", right: "-60px", width: "220px", height: "220px", borderRadius: "50%", background: `radial-gradient(circle, ${s.glow} 0%, transparent 70%)`, pointerEvents: "none", opacity: 0.55 }} />
+              {/* Glow spot */}
+              <div style={{
+                position: "absolute", top: "-60px", right: "-60px",
+                width: "200px", height: "200px", borderRadius: "50%",
+                background: `radial-gradient(circle, ${s.glow} 0%, transparent 70%)`,
+                pointerEvents: "none",
+              }} />
 
-              <div style={{ position: "relative", zIndex: 1 }}>
-                {/* Icon row */}
-                <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", marginBottom: "28px" }}>
-                  <div style={{
-                    width: "56px", height: "56px", borderRadius: "16px",
-                    background: s.gradient,
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    flexShrink: 0, boxShadow: `0 8px 28px ${s.glow}`,
-                  }}>
-                    {s.icon}
-                  </div>
-                  <span style={{
-                    fontSize: "10px", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase",
-                    padding: "5px 12px", borderRadius: "100px",
-                    background: `${s.iconBg}`,
-                    color: s.badgeColor,
-                    border: `1px solid ${s.glow}`,
-                  }}>{s.badge}</span>
-                </div>
+              {/* Badge */}
+              <div style={{
+                position: "absolute", top: "24px", right: "24px",
+                padding: "4px 12px", borderRadius: "50px",
+                background: s.badgeBg, border: `1px solid ${s.border}`,
+                fontSize: "10px", fontWeight: 700, color: s.badgeColor, letterSpacing: "0.08em",
+              }}>{s.badge}</div>
 
-                {/* Text */}
-                <h3 style={{ fontSize: "21px", fontWeight: 800, color: "#fff", letterSpacing: "-0.02em", marginBottom: "5px" }}>{s.title}</h3>
-                <p style={{ fontSize: "13px", fontWeight: 600, color: "rgba(255,255,255,0.38)", marginBottom: "18px" }}>{s.sub}</p>
-                <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "14px", lineHeight: 1.75, marginBottom: "28px" }}>{s.desc}</p>
+              {/* Icon */}
+              <div style={{
+                width: "58px", height: "58px", borderRadius: "16px",
+                background: s.iconBg, color: "#fff",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                marginBottom: "22px", boxShadow: `0 6px 24px ${s.glow}`,
+              }}>{s.icon}</div>
 
-                {/* Feature list */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "28px" }}>
-                  {s.points.map(p => (
-                    <div key={p} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                      <span style={{ width: "18px", height: "18px", borderRadius: "6px", background: s.iconBg, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                        <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                          <path d="M2 6l3 3 5-5" stroke={s.badgeColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </span>
-                      <span style={{ fontSize: "12px", color: "rgba(255,255,255,0.52)", fontWeight: 500 }}>{p}</span>
+              <h3 className="font-display" style={{ fontSize: "22px", fontWeight: 800, color: "#fff", marginBottom: "6px", letterSpacing: "-0.02em" }}>{s.title}</h3>
+              <p style={{ fontSize: "13px", color: s.badgeColor, fontWeight: 600, marginBottom: "14px", opacity: 0.85 }}>{s.sub}</p>
+              <p style={{ color: "rgba(228,220,255,0.62)", fontSize: "14px", lineHeight: 1.75, marginBottom: "24px" }}>{s.desc}</p>
+
+              {/* Features */}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", marginBottom: "28px" }}>
+                {s.features.map(f => (
+                  <div key={f} style={{ display: "flex", alignItems: "center", gap: "7px" }}>
+                    <div style={{ width: "16px", height: "16px", borderRadius: "50%", background: s.iconBg, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
-                  ))}
-                </div>
+                    <span style={{ fontSize: "12px", color: "rgba(228,220,255,0.65)", fontWeight: 500 }}>{f}</span>
+                  </div>
+                ))}
+              </div>
 
-                {/* CTA link */}
+              {/* Price + CTA */}
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: "20px", borderTop: `1px solid ${s.border}` }}>
+                <div>
+                  <p style={{ fontSize: "11px", color: "rgba(228,220,255,0.4)", fontWeight: 600, marginBottom: "2px" }}>{s.label}</p>
+                  <p className="font-display" style={{ fontSize: "26px", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em" }}>{s.price}</p>
+                </div>
                 <a href="#contact" style={{
-                  display: "inline-flex", alignItems: "center", gap: "6px",
-                  fontSize: "14px", fontWeight: 700, color: s.badgeColor,
-                  textDecoration: "none", transition: "gap 0.2s",
+                  padding: "10px 20px", borderRadius: "12px",
+                  background: `rgba(255,255,255,0.12)`, border: `1px solid ${s.border}`,
+                  color: "#fff", fontWeight: 700, fontSize: "13px", textDecoration: "none",
+                  transition: "all 0.2s",
                 }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.gap = "11px"}
-                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.gap = "6px"}>
-                  Get Started
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.22)"}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.12)"}>
+                  Get Started →
                 </a>
               </div>
             </div>
