@@ -18,21 +18,21 @@ const doubled = [...items, ...items];
 export default function TrustedBy() {
   return (
     <div style={{
-      borderTop: "1px solid rgba(167,139,250,0.08)",
-      borderBottom: "1px solid rgba(167,139,250,0.08)",
-      background: "rgba(124,58,237,0.03)",
-      padding: "24px 0",
+      borderTop: "1px solid #E2E8F0",
+      borderBottom: "1px solid #E2E8F0",
+      background: "#F8FAFC",
+      padding: "28px 0",
       overflow: "hidden",
     }}>
       <p style={{
         textAlign: "center",
         fontSize: "11px",
-        fontWeight: 600,
-        color: "rgba(196,181,253,0.35)",
+        fontWeight: 700,
+        color: "#94A3B8",
         textTransform: "uppercase",
-        letterSpacing: "0.1em",
-        marginBottom: "18px",
-      }}>Serving businesses across Bihar</p>
+        letterSpacing: "0.12em",
+        marginBottom: "20px",
+      }}>Serving 200+ businesses across Bihar</p>
 
       <div className="marquee-wrap" style={{
         maskImage: "linear-gradient(90deg, transparent, black 8%, black 92%, transparent)",
@@ -41,15 +41,16 @@ export default function TrustedBy() {
         <div className="marquee-track" style={{ display: "flex", gap: "8px", width: "max-content" }}>
           {doubled.map((item, i) => (
             <div key={i} style={{
-              padding: "7px 16px",
+              padding: "7px 18px",
               borderRadius: "100px",
-              background: "rgba(124,58,237,0.08)",
-              border: "1px solid rgba(167,139,250,0.12)",
+              background: "#fff",
+              border: "1px solid #E2E8F0",
               fontSize: "13px",
               fontWeight: 500,
-              color: "rgba(230,220,255,0.5)",
+              color: "#475569",
               whiteSpace: "nowrap",
               flexShrink: 0,
+              boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
             }}>
               {item}
             </div>

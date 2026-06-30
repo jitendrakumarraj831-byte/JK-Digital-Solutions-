@@ -32,69 +32,62 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" style={{
-      padding: "128px 0",
-      background: "linear-gradient(180deg, #080020 0%, #060011 100%)",
-      position: "relative", overflow: "hidden",
-    }}>
+    <section id="faq" style={{ padding: "112px 0", background: "#F8FAFC" }}>
       <div className="wrap-sm">
         <div style={{ marginBottom: "64px" }}>
-          <p className="t-label" style={{ marginBottom: "16px" }}>FAQ</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>FAQ</p>
           <h2 className="t-h2" style={{ marginBottom: "12px" }}>
-            Common <span className="accent-warm">questions</span>.
+            Common <span className="accent">questions</span>.
           </h2>
           <p className="t-body">
             Still have questions?{" "}
             <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer"
-              style={{ color: "#a78bfa", fontWeight: 600, textDecoration: "none" }}>
+              style={{ color: "#2563EB", fontWeight: 600, textDecoration: "none" }}>
               Ask on WhatsApp →
             </a>
           </p>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
           {faqs.map((f, i) => {
             const isOpen = open === i;
             return (
               <div key={i} style={{
-                borderRadius: "14px",
-                background: isOpen
-                  ? "linear-gradient(145deg,rgba(124,58,237,0.14),rgba(99,102,241,0.08))"
-                  : "rgba(255,255,255,0.03)",
-                border: isOpen
-                  ? "1px solid rgba(167,139,250,0.3)"
-                  : "1px solid rgba(255,255,255,0.06)",
+                borderRadius: "16px",
+                background: isOpen ? "#fff" : "#fff",
+                border: isOpen ? "1.5px solid #2563EB" : "1px solid #E2E8F0",
                 overflow: "hidden",
-                transition: "border-color 0.2s, background 0.2s",
+                boxShadow: isOpen ? "0 4px 20px rgba(37,99,235,0.08)" : "0 1px 4px rgba(0,0,0,0.03)",
+                transition: "border-color 0.2s, box-shadow 0.2s",
               }}>
                 <button onClick={() => setOpen(isOpen ? null : i)} style={{
                   width: "100%", display: "flex", alignItems: "center",
                   justifyContent: "space-between", gap: "12px",
-                  padding: "20px 22px", background: "none", border: "none",
+                  padding: "20px 24px", background: "none", border: "none",
                   cursor: "pointer", textAlign: "left",
                 }}>
                   <span style={{
                     fontSize: "15px", fontWeight: 600, lineHeight: 1.4,
-                    color: isOpen ? "#fff" : "rgba(230,220,255,0.78)",
+                    color: isOpen ? "#0F172A" : "#374151",
                     letterSpacing: "-0.01em",
                   }}>{f.q}</span>
                   <div style={{
-                    width: "28px", height: "28px", borderRadius: "50%", flexShrink: 0,
-                    background: isOpen ? "linear-gradient(135deg,#7c3aed,#6366f1)" : "rgba(255,255,255,0.05)",
-                    border: isOpen ? "none" : "1px solid rgba(255,255,255,0.08)",
+                    width: "30px", height: "30px", borderRadius: "50%", flexShrink: 0,
+                    background: isOpen ? "#EFF6FF" : "#F1F5F9",
+                    border: isOpen ? "1px solid #BFDBFE" : "1px solid #E2E8F0",
                     display: "flex", alignItems: "center", justifyContent: "center",
                     transform: isOpen ? "rotate(45deg)" : "none",
                     transition: "transform 0.22s, background 0.22s",
                   }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={isOpen ? "#fff" : "rgba(230,220,255,0.45)"} strokeWidth="2.5" strokeLinecap="round">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={isOpen ? "#2563EB" : "#94A3B8"} strokeWidth="2.5" strokeLinecap="round">
                       <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
                     </svg>
                   </div>
                 </button>
                 <div className={`acc${isOpen ? " open" : ""}`}>
                   <p style={{
-                    padding: "0 22px 20px",
-                    fontSize: "15px", color: "rgba(230,220,255,0.55)", lineHeight: 1.75, fontWeight: 400,
+                    padding: "0 24px 20px",
+                    fontSize: "15px", color: "#64748B", lineHeight: 1.75, fontWeight: 400,
                   }}>{f.a}</p>
                 </div>
               </div>
