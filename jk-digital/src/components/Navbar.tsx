@@ -42,19 +42,22 @@ export default function Navbar() {
 
         {/* ── Logo ── */}
         <a href="#" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none", flexShrink: 0 }}>
-          <div style={{
-            width: "30px", height: "30px", borderRadius: "8px", flexShrink: 0,
-            background: "linear-gradient(135deg, #2563EB, #4F46E5)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            boxShadow: "0 2px 8px rgba(37,99,235,0.28)",
-          }}>
-            <span style={{ color: "#fff", fontWeight: 800, fontSize: "11px", letterSpacing: "-0.01em" }}>JK</span>
-          </div>
+          <img
+            src="/jk-icon.png"
+            alt="JK Digital Solutions"
+            style={{
+              width: "34px",
+              height: "34px",
+              borderRadius: "9px",
+              flexShrink: 0,
+              display: "block",
+            }}
+          />
           <span style={{
             fontWeight: 700, fontSize: "14px", color: "#111827",
             letterSpacing: "-0.02em", lineHeight: 1,
           }}>
-            JK Digital
+            JK Digital Solutions
           </span>
         </a>
 
