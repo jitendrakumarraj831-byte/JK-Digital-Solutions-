@@ -1,54 +1,46 @@
 const projects = [
-  { emoji: "🦷", title: "Araria Dental Care", type: "Clinic", result: "+220%", metric: "Appointments", tags: ["Website","GMB","SEO"], bg: "bg-blue-600" },
-  { emoji: "🍰", title: "Forbesganj Sweet House", type: "Restaurant", result: "+180%", metric: "Orders", tags: ["Website","Ads"], bg: "bg-orange-500" },
-  { emoji: "🎓", title: "Success Coaching Centre", type: "Education", result: "+95", metric: "Admissions", tags: ["Website","SEO","GMB"], bg: "bg-violet-600" },
-  { emoji: "🏠", title: "Araria Real Estate", type: "Property", result: "+300%", metric: "Inquiries", tags: ["Website","Ads","SEO"], bg: "bg-emerald-600" },
-  { emoji: "🏨", title: "Bihar Hotel & Resort", type: "Hospitality", result: "+150%", metric: "Bookings", tags: ["Website","GMB","SEO"], bg: "bg-cyan-600" },
-  { emoji: "🛋️", title: "Modern Interior Studio", type: "Design", result: "+85", metric: "New Clients", tags: ["Website","Ads"], bg: "bg-rose-600" },
+  { emoji:"🦷", title:"Araria Dental Care", type:"Clinic", result:"+220%", metric:"Appointments", tags:["Website","GMB","SEO"], bg:"#2563eb" },
+  { emoji:"🍰", title:"Forbesganj Sweet House", type:"Restaurant", result:"+180%", metric:"Orders", tags:["Website","Ads"], bg:"#f97316" },
+  { emoji:"🎓", title:"Success Coaching Centre", type:"Education", result:"+95", metric:"Admissions", tags:["Website","SEO","GMB"], bg:"#7c3aed" },
+  { emoji:"🏠", title:"Araria Real Estate", type:"Property", result:"+300%", metric:"Inquiries", tags:["Website","Ads","SEO"], bg:"#059669" },
+  { emoji:"🏨", title:"Bihar Hotel & Resort", type:"Hospitality", result:"+150%", metric:"Bookings", tags:["Website","GMB","SEO"], bg:"#0891b2" },
+  { emoji:"🛋️", title:"Modern Interior Studio", type:"Design", result:"+85", metric:"New Clients", tags:["Website","Ads"], bg:"#e11d48" },
 ];
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="max-w-2xl mb-16">
-          <p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4">Our Work</p>
-          <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-4">
-            Real Results,<br />Real Businesses
-          </h2>
-          <p className="text-gray-500 text-lg">इन businesses को हमने grow किया। आपका business next हो सकता है।</p>
+    <section id="portfolio" style={{ background: "#f9fafb", padding: "80px 0" }}>
+      <div className="wrap">
+        <div style={{ marginBottom: "48px" }}>
+          <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#2563eb", marginBottom: "12px" }}>Our Work</p>
+          <h2 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 900, color: "#111827", marginBottom: "12px" }}>Real Results, Real Businesses</h2>
+          <p style={{ color: "#6b7280" }}>इन businesses को हमने grow किया। आपका business next हो सकता है।</p>
         </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 320px), 1fr))", gap: "20px" }}>
           {projects.map(p => (
-            <div key={p.title} className="c group overflow-hidden">
-              <div className={`${p.bg} h-40 flex flex-col items-center justify-center gap-3 relative overflow-hidden`}>
-                <div className="absolute inset-0 opacity-30"
-                  style={{ background: "radial-gradient(circle at 30% 30%, white 0%, transparent 60%)" }} />
-                <span className="text-5xl relative z-10">{p.emoji}</span>
-                <div className="flex gap-2 relative z-10">
-                  {p.tags.map(t => (
-                    <span key={t} className="px-2 py-0.5 rounded-full bg-white/20 text-white text-xs font-bold">{t}</span>
-                  ))}
+            <div key={p.title} className="c" style={{ overflow: "hidden" }}>
+              <div style={{ background: p.bg, height: "140px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", position: "relative" }}>
+                <div style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, transparent 60%)" }} />
+                <span style={{ fontSize: "40px", position: "relative", zIndex: 1 }}>{p.emoji}</span>
+                <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", justifyContent: "center", padding: "0 16px", position: "relative", zIndex: 1 }}>
+                  {p.tags.map(t => <span key={t} style={{ padding: "2px 10px", borderRadius: "100px", background: "rgba(255,255,255,0.25)", color: "#fff", fontSize: "11px", fontWeight: 700 }}>{t}</span>)}
                 </div>
               </div>
-              <div className="p-5 flex items-start justify-between">
+              <div style={{ padding: "16px 20px", display: "flex", alignItems: "flex-start", justifyContent: "space-between" }}>
                 <div>
-                  <h3 className="font-bold text-gray-900 text-sm mb-0.5">{p.title}</h3>
-                  <p className="text-gray-400 text-xs">{p.type}</p>
+                  <h3 style={{ fontWeight: 700, color: "#111827", fontSize: "14px" }}>{p.title}</h3>
+                  <p style={{ color: "#9ca3af", fontSize: "12px", marginTop: "2px" }}>{p.type}</p>
                 </div>
-                <div className="text-right">
-                  <p className="text-emerald-600 font-black text-lg leading-none">{p.result}</p>
-                  <p className="text-gray-400 text-xs">{p.metric}</p>
+                <div style={{ textAlign: "right", flexShrink: 0 }}>
+                  <p style={{ color: "#059669", fontWeight: 900, fontSize: "18px", lineHeight: 1 }}>{p.result}</p>
+                  <p style={{ color: "#9ca3af", fontSize: "11px" }}>{p.metric}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-
-        <div className="text-center mt-12">
-          <a href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gray-900 text-white font-bold hover:bg-gray-700 transition-all">
+        <div style={{ textAlign: "center", marginTop: "40px" }}>
+          <a href="#contact" style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "14px 28px", borderRadius: "100px", background: "#111827", color: "#fff", fontWeight: 700, fontSize: "14px", textDecoration: "none" }}>
             अपना Project Start करें →
           </a>
         </div>

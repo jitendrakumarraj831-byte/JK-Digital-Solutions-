@@ -1,76 +1,38 @@
-import { Star } from "lucide-react";
-
 const reviews = [
-  {
-    name: "Rajan Kumar",
-    business: "Rajan Medical Store, Forbesganj",
-    rating: 5,
-    text: "JK Digital ने हमारी medical store की website बनाई और Google पर top पर rank कराया। अब रोज 10-15 नए customers आते हैं जो पहले नहीं आते थे। बहुत अच्छा काम।",
-    avatar: "R",
-    color: "bg-blue-600",
-  },
-  {
-    name: "Sunita Devi",
-    business: "Sunita Beauty Parlour, Araria",
-    rating: 5,
-    text: "पहले मेरे parlour को locally ही कोई जानता था। अब Google Maps पर top पर आती हूं और दूर-दूर से customers call करते हैं। इनका GMB optimization बेहतरीन है।",
-    avatar: "S",
-    color: "bg-violet-600",
-  },
-  {
-    name: "Mohammad Iqbal",
-    business: "Iqbal Hardware, Kishanganj",
-    rating: 5,
-    text: "Google Ads से पहले महीने में ही 40+ genuine inquiries आईं। Investment तो वापस आ ही गया, साथ में regular customers भी बन गए। बहुत professional team है।",
-    avatar: "M",
-    color: "bg-emerald-600",
-  },
-  {
-    name: "Priya Sharma",
-    business: "Priya Coaching Centre, Forbesganj",
-    rating: 5,
-    text: "हमारे coaching centre की admissions 3 गुना बढ़ गईं एक साल में। Website बहुत professional बनाई और SEO से parents खुद search करके contact करते हैं।",
-    avatar: "P",
-    color: "bg-orange-500",
-  },
+  { name:"Rajan Kumar", biz:"Rajan Medical Store, Forbesganj", avatar:"R", color:"#2563eb",
+    text:"JK Digital ने हमारी medical store की website बनाई और Google पर top पर rank कराया। अब रोज 10-15 नए customers आते हैं।" },
+  { name:"Sunita Devi", biz:"Sunita Beauty Parlour, Araria", avatar:"S", color:"#7c3aed",
+    text:"पहले सिर्फ local लोग जानते थे। अब Google Maps पर top पर आती हूं और दूर-दूर से customers call करते हैं।" },
+  { name:"Mohammad Iqbal", biz:"Iqbal Hardware, Kishanganj", avatar:"M", color:"#059669",
+    text:"Google Ads से पहले महीने में ही 40+ genuine inquiries आईं। Investment वापस आ गई और regular customers भी बन गए।" },
+  { name:"Priya Sharma", biz:"Priya Coaching Centre, Forbesganj", avatar:"P", color:"#f97316",
+    text:"हमारे coaching centre की admissions 3 गुना बढ़ गईं एक साल में। Parents खुद search करके contact करते हैं।" },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="max-w-2xl mb-16">
-          <p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4">Reviews</p>
-          <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight mb-4">
-            Clients क्या कहते हैं
-          </h2>
-          <div className="flex items-center gap-3">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />)}
-            </div>
-            <p className="text-gray-500 text-sm font-medium">4.9/5 — 120+ reviews</p>
+    <section style={{ background: "#fff", padding: "80px 0" }}>
+      <div className="wrap">
+        <div style={{ marginBottom: "48px" }}>
+          <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#2563eb", marginBottom: "12px" }}>Reviews</p>
+          <h2 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 900, color: "#111827", marginBottom: "8px" }}>Clients क्या कहते हैं</h2>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <span style={{ color: "#f59e0b", fontSize: "16px" }}>★★★★★</span>
+            <span style={{ color: "#9ca3af", fontSize: "14px" }}>4.9/5 — 120+ reviews</span>
           </div>
         </div>
-
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 440px), 1fr))", gap: "20px" }}>
           {reviews.map(r => (
-            <div key={r.name} className="c p-7">
-              {/* Stars */}
-              <div className="flex mb-4">
-                {[...Array(r.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
-              </div>
-
-              {/* Quote */}
-              <p className="text-gray-700 text-sm leading-relaxed mb-6">"{r.text}"</p>
-
-              {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className={`w-10 h-10 rounded-full ${r.color} flex items-center justify-center flex-shrink-0`}>
-                  <span className="text-white font-bold text-sm">{r.avatar}</span>
+            <div key={r.name} className="c" style={{ padding: "24px" }}>
+              <p style={{ color: "#f59e0b", fontSize: "14px", marginBottom: "12px" }}>★★★★★</p>
+              <p style={{ color: "#374151", fontSize: "14px", lineHeight: 1.7, marginBottom: "20px" }}>"{r.text}"</p>
+              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: r.color, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <span style={{ color: "#fff", fontWeight: 700, fontSize: "14px" }}>{r.avatar}</span>
                 </div>
                 <div>
-                  <p className="font-bold text-gray-900 text-sm">{r.name}</p>
-                  <p className="text-gray-400 text-xs">{r.business}</p>
+                  <p style={{ fontWeight: 700, color: "#111827", fontSize: "14px" }}>{r.name}</p>
+                  <p style={{ color: "#9ca3af", fontSize: "12px" }}>{r.biz}</p>
                 </div>
               </div>
             </div>

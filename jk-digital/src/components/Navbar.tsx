@@ -19,63 +19,65 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "nav-s" : "bg-transparent"}`}>
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center flex-shrink-0">
-              <span className="text-white font-black text-xs tracking-tight">JK</span>
-            </div>
-            <span className="font-bold text-gray-900 text-[15px]">JK Digital</span>
-          </a>
-
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {links.map(l => (
-              <a key={l.href} href={l.href} className="text-gray-500 hover:text-gray-900 text-sm font-medium transition-colors">
-                {l.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-3">
-            <a href="tel:+918651070831" className="text-sm text-gray-500 hover:text-gray-900 font-medium transition-colors">
-              +91 86510 70831
-            </a>
-            <a href="#contact" className="px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-semibold hover:bg-gray-700 transition-all">
-              Free Audit →
-            </a>
+    <header style={{
+      position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+      background: scrolled ? "rgba(255,255,255,0.96)" : "#fff",
+      backdropFilter: scrolled ? "blur(16px)" : "none",
+      borderBottom: "1px solid #f3f4f6",
+      boxShadow: scrolled ? "0 1px 16px rgba(0,0,0,0.06)" : "none",
+      transition: "all 0.3s ease"
+    }}>
+      <div className="wrap" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: "64px" }}>
+        <a href="#home" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
+          <div style={{ width: "32px", height: "32px", borderRadius: "8px", background: "linear-gradient(135deg, #2563eb, #7c3aed)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+            <span style={{ color: "#fff", fontWeight: 900, fontSize: "11px" }}>JK</span>
           </div>
+          <span style={{ fontWeight: 700, color: "#111827", fontSize: "15px" }}>JK Digital</span>
+        </a>
 
-          {/* Mobile toggle */}
-          <button onClick={() => setOpen(!open)} className="md:hidden p-2 text-gray-600 rounded-lg hover:bg-gray-100 transition-colors">
-            {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+        <nav style={{ display: "flex", gap: "32px" }} className="hidden md:flex">
+          {links.map(l => (
+            <a key={l.href} href={l.href} style={{ color: "#6b7280", fontSize: "14px", fontWeight: 500, textDecoration: "none" }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#111827")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#6b7280")}>
+              {l.label}
+            </a>
+          ))}
+        </nav>
+
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }} className="hidden md:flex">
+          <a href="tel:+918651070831" style={{ color: "#6b7280", fontSize: "14px", fontWeight: 500, textDecoration: "none" }}>
+            +91 86510 70831
+          </a>
+          <a href="#contact" style={{ padding: "8px 20px", borderRadius: "100px", background: "#111827", color: "#fff", fontSize: "14px", fontWeight: 600, textDecoration: "none" }}>
+            Free Audit →
+          </a>
         </div>
+
+        <button onClick={() => setOpen(!open)} className="md:hidden" style={{ padding: "8px", color: "#374151", background: "none", border: "none", cursor: "pointer" }}>
+          {open ? <X style={{ width: "20px", height: "20px" }} /> : <Menu style={{ width: "20px", height: "20px" }} />}
+        </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-5 py-5 shadow-lg">
-          <nav className="flex flex-col gap-1 mb-4">
+        <div style={{ background: "#fff", borderTop: "1px solid #f3f4f6", boxShadow: "0 8px 24px rgba(0,0,0,0.08)" }} className="md:hidden">
+          <div className="wrap" style={{ paddingTop: "16px", paddingBottom: "16px" }}>
             {links.map(l => (
               <a key={l.href} href={l.href} onClick={() => setOpen(false)}
-                className="px-3 py-3 text-gray-700 text-sm font-medium rounded-xl hover:bg-gray-50 transition-colors">
+                style={{ display: "block", padding: "12px", color: "#374151", fontSize: "14px", fontWeight: 500, textDecoration: "none", borderRadius: "12px" }}>
                 {l.label}
               </a>
             ))}
-          </nav>
-          <div className="flex flex-col gap-2 pt-3 border-t border-gray-100">
-            <a href="tel:+918651070831"
-              className="flex items-center justify-center py-3 rounded-xl border border-gray-200 text-gray-700 text-sm font-semibold">
-              📞 +91 86510 70831
-            </a>
-            <a href="#contact" onClick={() => setOpen(false)}
-              className="flex items-center justify-center py-3 rounded-xl bg-gray-900 text-white text-sm font-semibold">
-              Get Free Audit →
-            </a>
+            <div style={{ display: "flex", flexDirection: "column", gap: "8px", paddingTop: "12px", borderTop: "1px solid #f3f4f6", marginTop: "8px" }}>
+              <a href="tel:+918651070831"
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "12px", borderRadius: "12px", border: "1px solid #e5e7eb", color: "#374151", fontSize: "14px", fontWeight: 600, textDecoration: "none" }}>
+                📞 +91 86510 70831
+              </a>
+              <a href="#contact" onClick={() => setOpen(false)}
+                style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "12px", borderRadius: "12px", background: "#111827", color: "#fff", fontSize: "14px", fontWeight: 600, textDecoration: "none" }}>
+                Get Free Audit →
+              </a>
+            </div>
           </div>
         </div>
       )}

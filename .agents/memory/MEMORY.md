@@ -1,0 +1,1 @@
+- [Tailwind v4 cascade bug](tailwind-v4-cascade.md) — utility classes don't apply; use .wrap CSS class + inline styles for all layout

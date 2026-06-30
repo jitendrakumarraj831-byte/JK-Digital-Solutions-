@@ -2,75 +2,54 @@ import { ArrowUp } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-950 text-white">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 py-16">
-          {/* Brand */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-violet-600 flex items-center justify-center">
-                <span className="text-white font-black text-xs">JK</span>
+    <footer style={{ background: "#030712", color: "#fff" }}>
+      <div className="wrap" style={{ paddingTop: "56px", paddingBottom: "56px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "40px", marginBottom: "40px" }}>
+          <div style={{ gridColumn: "span 2" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
+              <div style={{ width: "32px", height: "32px", borderRadius: "8px", background: "linear-gradient(135deg, #2563eb, #7c3aed)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <span style={{ color: "#fff", fontWeight: 900, fontSize: "11px" }}>JK</span>
               </div>
-              <span className="font-bold text-white">JK Digital Solutions</span>
+              <span style={{ fontWeight: 700, fontSize: "15px" }}>JK Digital Solutions</span>
             </div>
-            <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-6">
+            <p style={{ color: "#6b7280", fontSize: "13px", lineHeight: 1.7, maxWidth: "280px", marginBottom: "20px" }}>
               Forbesganj, Bihar के local businesses को Google पर grow करने वाली trusted digital marketing agency।
             </p>
-            <div className="flex gap-3">
+            <div style={{ display: "flex", gap: "8px" }}>
               <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer"
-                className="px-4 py-2 rounded-full bg-[#25D366]/10 border border-[#25D366]/20 text-[#4ade80] text-sm font-semibold hover:bg-[#25D366]/20 transition-all">
+                style={{ padding: "8px 16px", borderRadius: "100px", background: "rgba(37,211,102,0.1)", border: "1px solid rgba(37,211,102,0.2)", color: "#4ade80", fontSize: "13px", fontWeight: 600, textDecoration: "none" }}>
                 💬 WhatsApp
               </a>
               <a href="mailto:jkdigitalsolutionfbg@gmail.com"
-                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-400 text-sm font-semibold hover:bg-white/10 transition-all">
+                style={{ padding: "8px 16px", borderRadius: "100px", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "#9ca3af", fontSize: "13px", fontWeight: 600, textDecoration: "none" }}>
                 ✉️ Email
               </a>
             </div>
           </div>
-
-          {/* Services */}
           <div>
-            <h4 className="text-white font-bold text-sm mb-4">Services</h4>
-            <ul className="space-y-2.5">
+            <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "13px", marginBottom: "16px" }}>Services</h4>
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
               {["Website Development","Google SEO","Google Business Profile","Google Ads"].map(s => (
-                <li key={s}>
-                  <a href="#services" className="text-gray-500 text-sm hover:text-blue-400 transition-colors">{s}</a>
-                </li>
+                <a key={s} href="#services" style={{ color: "#6b7280", fontSize: "13px", textDecoration: "none" }}>{s}</a>
               ))}
-            </ul>
+            </div>
           </div>
-
-          {/* Contact */}
           <div>
-            <h4 className="text-white font-bold text-sm mb-4">Contact</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="tel:+918651070831" className="text-gray-500 text-sm hover:text-white transition-colors">
-                  📞 +91 86510 70831
-                </a>
-              </li>
-              <li>
-                <a href="tel:+918541849118" className="text-gray-500 text-sm hover:text-white transition-colors">
-                  📞 +91 85418 49118
-                </a>
-              </li>
-              <li>
-                <a href="mailto:jkdigitalsolutionfbg@gmail.com" className="text-gray-500 text-sm hover:text-white transition-colors break-all">
-                  ✉️ jkdigitalsolutionfbg<br />@gmail.com
-                </a>
-              </li>
-              <li>
-                <span className="text-gray-500 text-sm">📍 Forbesganj, Araria, Bihar</span>
-              </li>
-            </ul>
+            <h4 style={{ color: "#fff", fontWeight: 700, fontSize: "13px", marginBottom: "16px" }}>Contact</h4>
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+              {[
+                { href: "tel:+918651070831", t: "📞 +91 86510 70831" },
+                { href: "tel:+918541849118", t: "📞 +91 85418 49118" },
+                { href: "mailto:jkdigitalsolutionfbg@gmail.com", t: "✉️ jkdigitalsolutionfbg@gmail.com" },
+              ].map(c => <a key={c.t} href={c.href} style={{ color: "#6b7280", fontSize: "13px", textDecoration: "none", wordBreak: "break-all" }}>{c.t}</a>)}
+              <span style={{ color: "#6b7280", fontSize: "13px" }}>📍 Forbesganj, Araria, Bihar</span>
+            </div>
           </div>
         </div>
-
-        <div className="border-t border-white/5 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-gray-600 text-xs">© 2025 JK Digital Solutions. Made for Bihar 🇮🇳</p>
-          <a href="#" aria-label="Back to top"
-            className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-500 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all">
-            <ArrowUp className="w-4 h-4" />
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", paddingTop: "20px", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+          <p style={{ color: "#4b5563", fontSize: "12px" }}>© 2025 JK Digital Solutions · Made for Bihar 🇮🇳</p>
+          <a href="#home" style={{ width: "32px", height: "32px", borderRadius: "50%", background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none" }}>
+            <ArrowUp style={{ width: "14px", height: "14px", color: "#6b7280" }} />
           </a>
         </div>
       </div>
