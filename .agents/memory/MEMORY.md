@@ -1,1 +1,2 @@
 - [Tailwind v4 cascade bug](tailwind-v4-cascade.md) — utility classes don't apply; use .wrap CSS class + inline styles for all layout
+- [JK Digital typography system](jk-digital-typography.md) — Inter-only, 8px base, inline styles + custom CSS classes in globals.css; one accent word per heading rule

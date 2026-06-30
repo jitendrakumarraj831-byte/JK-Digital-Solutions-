@@ -2,122 +2,134 @@
 
 const reviews = [
   {
-    name: "Rajan Kumar", role: "Medical Store Owner, Araria",
-    avatar: "RK", g: "linear-gradient(135deg,#7c3aed,#6366f1)",
-    text: "JK Digital ने मेरे medical store की GMB optimize की और 3 महीने में monthly footfall 2x हो गया। Highly recommended!",
-    rating: 5, service: "GMB Optimization",
-    card: "linear-gradient(145deg, rgba(124,58,237,0.18), rgba(99,102,241,0.1))",
-    border: "rgba(167,139,250,0.25)",
+    name: "Rajan Kumar",
+    role: "Medical Store, Araria",
+    initials: "RK",
+    avatarG: "linear-gradient(135deg,#7c3aed,#6366f1)",
+    text: "GMB optimize होने के बाद monthly footfall 2x हो गया। 3 months में results clearly visible थे।",
+    service: "GMB Optimization",
+    border: "rgba(129,140,248,0.18)",
+    bg: "linear-gradient(145deg,rgba(79,70,229,0.1),rgba(99,102,241,0.05))",
   },
   {
-    name: "Sunita Devi", role: "Restaurant Owner, Forbesganj",
-    avatar: "SD", g: "linear-gradient(135deg,#d97706,#f59e0b)",
-    text: "Website बनने के बाद online orders शुरू हुए। अब weekends में 50+ orders online आते हैं। Bahut khush हूँ!",
-    rating: 5, service: "Website + GMB",
-    card: "linear-gradient(145deg, rgba(217,119,6,0.18), rgba(245,158,11,0.1))",
-    border: "rgba(251,191,36,0.25)",
+    name: "Sunita Devi",
+    role: "Restaurant Owner, Forbesganj",
+    initials: "SD",
+    avatarG: "linear-gradient(135deg,#d97706,#f59e0b)",
+    text: "Website के बाद online orders शुरू हुए। Weekends में 50+ orders आते हैं — सब online।",
+    service: "Website + GMB",
+    border: "rgba(251,191,36,0.18)",
+    bg: "linear-gradient(145deg,rgba(217,119,6,0.1),rgba(245,158,11,0.05))",
   },
   {
-    name: "Amit Agarwal", role: "Property Dealer, Araria",
-    avatar: "AA", g: "linear-gradient(135deg,#059669,#34d399)",
-    text: "Google Ads से monthly 40+ qualified leads आ रहे हैं। ROI bahut amazing है। JK Digital पर 100% भरोसा है।",
-    rating: 5, service: "Google Ads",
-    card: "linear-gradient(145deg, rgba(5,150,105,0.18), rgba(52,211,153,0.1))",
-    border: "rgba(52,211,153,0.25)",
+    name: "Amit Agarwal",
+    role: "Property Dealer, Araria",
+    initials: "AA",
+    avatarG: "linear-gradient(135deg,#059669,#34d399)",
+    text: "Google Ads से 40+ qualified leads monthly आ रहे हैं। ROI 5x है — इससे बेहतर क्या होगा।",
+    service: "Google Ads",
+    border: "rgba(52,211,153,0.18)",
+    bg: "linear-gradient(145deg,rgba(5,150,105,0.1),rgba(52,211,153,0.05))",
   },
   {
-    name: "Priya Sharma", role: "Beauty Salon, Forbesganj",
-    avatar: "PS", g: "linear-gradient(135deg,#db2777,#a855f7)",
-    text: "Instagram और Google दोनों पर presence बन गई। अब हर week नए customers आते हैं specifically online देखकर।",
-    rating: 5, service: "Social + SEO",
-    card: "linear-gradient(145deg, rgba(219,39,119,0.18), rgba(168,85,247,0.1))",
-    border: "rgba(249,168,212,0.25)",
+    name: "Priya Sharma",
+    role: "Beauty Salon, Forbesganj",
+    initials: "PS",
+    avatarG: "linear-gradient(135deg,#db2777,#a855f7)",
+    text: "Instagram और Google पर presence बनी। हर week नए customers आते हैं specifically online देखकर।",
+    service: "Social + SEO",
+    border: "rgba(249,168,212,0.18)",
+    bg: "linear-gradient(145deg,rgba(219,39,119,0.1),rgba(168,85,247,0.05))",
   },
   {
-    name: "Rakesh Yadav", role: "Coaching Centre, Araria",
-    avatar: "RY", g: "linear-gradient(135deg,#0891b2,#3b82f6)",
-    text: "Website और SEO दोनों मिलकर काम किया। इस session में 120 नए admissions — सब online inquiry से। Unbelievable!",
-    rating: 5, service: "Website + SEO",
-    card: "linear-gradient(145deg, rgba(8,145,178,0.18), rgba(59,130,246,0.1))",
-    border: "rgba(96,165,250,0.25)",
+    name: "Rakesh Yadav",
+    role: "Coaching Centre, Araria",
+    initials: "RY",
+    avatarG: "linear-gradient(135deg,#0891b2,#3b82f6)",
+    text: "इस session में 120 नए admissions — सब online inquiry से। SEO plus website एक साथ काम किया।",
+    service: "Website + SEO",
+    border: "rgba(96,165,250,0.18)",
+    bg: "linear-gradient(145deg,rgba(8,145,178,0.1),rgba(59,130,246,0.05))",
   },
   {
-    name: "Mohan Lal", role: "Hardware Store, Forbesganj",
-    avatar: "ML", g: "linear-gradient(135deg,#ea580c,#f97316)",
-    text: "छोटे से hardware shop को JK Digital ने online bring किया। WhatsApp orders आने लगे। बहुत अच्छा team है।",
-    rating: 5, service: "GMB + Website",
-    card: "linear-gradient(145deg, rgba(234,88,12,0.18), rgba(249,115,22,0.1))",
-    border: "rgba(253,186,116,0.25)",
+    name: "Mohan Lal",
+    role: "Hardware Store, Forbesganj",
+    initials: "ML",
+    avatarG: "linear-gradient(135deg,#ea580c,#f97316)",
+    text: "Shop को online लाया — WhatsApp enquiries आने लगीं। Local customers Google Maps से आते हैं।",
+    service: "GMB + Website",
+    border: "rgba(253,186,116,0.18)",
+    bg: "linear-gradient(145deg,rgba(234,88,12,0.1),rgba(249,115,22,0.05))",
   },
 ];
 
 export default function Testimonials() {
   return (
     <section id="testimonials" style={{
-      padding: "112px 0",
-      background: "linear-gradient(180deg, #080025 0%, #0a0118 50%, #06001a 100%)",
+      padding: "128px 0",
+      background: "linear-gradient(180deg, #08001e 0%, #060011 100%)",
       position: "relative", overflow: "hidden",
     }}>
-      <div style={{
-        position: "absolute", top: "30%", left: "-20%",
-        width: "500px", height: "500px", borderRadius: "50%",
-        background: "radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%)",
+      <div aria-hidden style={{
+        position: "absolute", top: "20%", left: "-18%",
+        width: "400px", height: "400px", borderRadius: "50%",
+        background: "radial-gradient(circle, rgba(124,58,237,0.07) 0%, transparent 70%)",
         pointerEvents: "none",
       }} />
 
       <div className="wrap">
-        <div style={{ textAlign: "center", marginBottom: "72px" }}>
-          <span className="section-label" style={{ display: "block", marginBottom: "14px" }}>Testimonials</span>
-          <h2 className="font-display" style={{
-            fontSize: "clamp(2rem,5vw,3.5rem)", fontWeight: 900, color: "#fff",
-            letterSpacing: "-0.03em", lineHeight: 1.1, marginBottom: "16px",
-          }}>
-            वो लोग जिन्होंने <span className="grad-text">Trust किया</span>
+        <div style={{ marginBottom: "72px" }}>
+          <p className="t-label" style={{ marginBottom: "16px" }}>Testimonials</p>
+          <h2 className="t-h2" style={{ marginBottom: "16px" }}>
+            200+ businesses <span className="accent">trust</span> us.
           </h2>
-
-          {/* Google rating */}
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: "10px",
-            padding: "10px 20px", borderRadius: "100px",
-            background: "linear-gradient(135deg, rgba(245,158,11,0.15), rgba(251,191,36,0.1))",
-            border: "1px solid rgba(251,191,36,0.28)",
-          }}>
-            <span style={{ fontSize: "16px" }}>⭐</span>
-            <span style={{ fontWeight: 700, fontSize: "14px", color: "#fde68a" }}>4.9 / 5 · Google Reviews पर देखें</span>
-          </div>
+          <a href="https://g.page/jkdigital" target="_blank" rel="noopener noreferrer" style={{
+            display: "inline-flex", alignItems: "center", gap: "8px",
+            fontSize: "14px", fontWeight: 600, color: "rgba(230,220,255,0.45)",
+            textDecoration: "none", transition: "color 0.15s",
+          }}
+            onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "rgba(230,220,255,0.75)"}
+            onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "rgba(230,220,255,0.45)"}>
+            <span style={{ color: "#fbbf24" }}>★★★★★</span>
+            4.9 on Google Reviews →
+          </a>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,320px),1fr))", gap: "16px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,320px),1fr))", gap: "12px" }}>
           {reviews.map((r, i) => (
-            <div key={i} style={{
-              padding: "28px", borderRadius: "24px",
-              background: r.card, border: `1px solid ${r.border}`,
-              transition: "all 0.28s", position: "relative",
+            <div key={i} className="card" style={{
+              padding: "28px", background: r.bg, border: `1px solid ${r.border}`,
+              transition: "transform 0.25s, box-shadow 0.25s",
             }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-6px)"; (e.currentTarget as HTMLElement).style.boxShadow = `0 20px 50px ${r.border}`; }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLElement).style.boxShadow = `0 16px 40px ${r.border}`; }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}>
 
-              {/* Quote mark */}
-              <div style={{ fontSize: "48px", lineHeight: 1, color: r.border, fontFamily: "Georgia", marginBottom: "16px", opacity: 0.7 }}>"</div>
+              {/* Stars */}
+              <div style={{ fontSize: "13px", color: "#fbbf24", marginBottom: "14px" }}>★★★★★</div>
 
-              <p style={{ color: "rgba(228,220,255,0.75)", fontSize: "14px", lineHeight: 1.8, marginBottom: "22px" }}>{r.text}</p>
+              {/* Quote */}
+              <p style={{ fontSize: "15px", lineHeight: 1.72, color: "rgba(230,220,255,0.7)", marginBottom: "22px", fontWeight: 400 }}>
+                "{r.text}"
+              </p>
 
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "10px", flexWrap: "wrap" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+              {/* Author */}
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "10px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <div style={{
-                    width: "42px", height: "42px", borderRadius: "50%",
-                    background: r.g, display: "flex", alignItems: "center", justifyContent: "center",
-                    fontWeight: 700, fontSize: "14px", color: "#fff", flexShrink: 0,
-                  }}>{r.avatar}</div>
+                    width: "38px", height: "38px", borderRadius: "50%",
+                    background: r.avatarG, flexShrink: 0,
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    fontSize: "13px", fontWeight: 700, color: "#fff",
+                  }}>{r.initials}</div>
                   <div>
-                    <p style={{ fontWeight: 700, fontSize: "14px", color: "#fff" }}>{r.name}</p>
-                    <p style={{ fontSize: "12px", color: "rgba(228,220,255,0.45)", marginTop: "1px" }}>{r.role}</p>
+                    <div style={{ fontSize: "14px", fontWeight: 600, color: "#fff" }}>{r.name}</div>
+                    <div style={{ fontSize: "12px", color: "rgba(230,220,255,0.4)", marginTop: "1px" }}>{r.role}</div>
                   </div>
                 </div>
-                <div>
-                  <div className="stars" style={{ fontSize: "12px", marginBottom: "2px" }}>{"★".repeat(r.rating)}</div>
-                  <p style={{ fontSize: "10px", color: "rgba(228,220,255,0.4)", fontWeight: 600, textAlign: "right" }}>{r.service}</p>
-                </div>
+                <div style={{
+                  fontSize: "11px", fontWeight: 600, color: "rgba(230,220,255,0.35)",
+                  textAlign: "right",
+                }}>{r.service}</div>
               </div>
             </div>
           ))}

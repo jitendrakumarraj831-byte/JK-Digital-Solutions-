@@ -2,173 +2,142 @@
 
 const projects = [
   {
-    emoji: "🦷",
     name: "Dr. Sharma Dental Clinic",
     location: "Araria, Bihar",
     tag: "Healthcare",
-    tagG: "linear-gradient(135deg,#0284c7,#06b6d4)",
-    result1: { n: "1st", l: "Google Rank" },
-    result2: { n: "180%", l: "More Patients" },
-    service: "SEO + GMB Optimization",
-    g: "linear-gradient(145deg, #0c2340 0%, #1e4d8c 50%, #0e7490 100%)",
-    border: "rgba(56,189,248,0.35)",
-    glow: "rgba(14,165,233,0.2)",
+    service: "SEO + GMB",
+    r1: { n: "#1", l: "Google rank" },
+    r2: { n: "+180%", l: "New patients" },
+    g: "linear-gradient(145deg,#0c2340,#1e4d8c,#0e7490)",
+    border: "rgba(56,189,248,0.3)",
+    glow: "rgba(14,165,233,0.15)",
   },
   {
-    emoji: "🍛",
     name: "Rajdhani Restaurant",
     location: "Forbesganj, Bihar",
     tag: "Restaurant",
-    tagG: "linear-gradient(135deg,#d97706,#f59e0b)",
-    result1: { n: "4.8★", l: "Google Reviews" },
-    result2: { n: "3×", l: "Online Orders" },
-    service: "GMB + Website + Content",
-    g: "linear-gradient(145deg, #2d1a04 0%, #78350f 50%, #92400e 100%)",
-    border: "rgba(251,191,36,0.35)",
-    glow: "rgba(245,158,11,0.2)",
+    service: "GMB + Website",
+    r1: { n: "4.8★", l: "Rating" },
+    r2: { n: "3×",   l: "Online orders" },
+    g: "linear-gradient(145deg,#2d1a04,#78350f,#92400e)",
+    border: "rgba(251,191,36,0.3)",
+    glow: "rgba(245,158,11,0.15)",
   },
   {
-    emoji: "🎓",
     name: "Bright Future Academy",
     location: "Forbesganj, Bihar",
     tag: "Education",
-    tagG: "linear-gradient(135deg,#7c3aed,#a855f7)",
-    result1: { n: "120+", l: "New Admissions" },
-    result2: { n: "250%", l: "Lead Growth" },
-    service: "Google Ads + Website",
-    g: "linear-gradient(145deg, #2d0a3a 0%, #6d28d9 50%, #7c3aed 100%)",
-    border: "rgba(216,180,254,0.35)",
-    glow: "rgba(168,85,247,0.2)",
+    service: "Ads + Website",
+    r1: { n: "120+", l: "New admissions" },
+    r2: { n: "+250%", l: "Lead growth" },
+    g: "linear-gradient(145deg,#2d0a3a,#6d28d9,#7c3aed)",
+    border: "rgba(167,139,250,0.3)",
+    glow: "rgba(124,58,237,0.15)",
   },
   {
-    emoji: "🏠",
     name: "Agarwal Properties",
     location: "Araria, Bihar",
     tag: "Real Estate",
-    tagG: "linear-gradient(135deg,#059669,#34d399)",
-    result1: { n: "40+", l: "Property Leads / mo" },
-    result2: { n: "5×", l: "ROI on Ads" },
-    service: "Google Ads + SEO",
-    g: "linear-gradient(145deg, #0d2a1f 0%, #065f46 50%, #047857 100%)",
-    border: "rgba(52,211,153,0.35)",
-    glow: "rgba(16,185,129,0.2)",
+    service: "Ads + SEO",
+    r1: { n: "40+",  l: "Leads / month" },
+    r2: { n: "5×",   l: "ROI on ads" },
+    g: "linear-gradient(145deg,#0d2a1f,#065f46,#047857)",
+    border: "rgba(52,211,153,0.3)",
+    glow: "rgba(16,185,129,0.15)",
   },
   {
-    emoji: "💇",
     name: "Glamour Beauty Studio",
     location: "Forbesganj, Bihar",
     tag: "Beauty & Salon",
-    tagG: "linear-gradient(135deg,#db2777,#ec4899)",
-    result1: { n: "200+", l: "Monthly Bookings" },
-    result2: { n: "4.9★", l: "Rating" },
-    service: "GMB + Content + SEO",
-    g: "linear-gradient(145deg, #3b0764 0%, #86198f 50%, #a21caf 100%)",
-    border: "rgba(249,168,212,0.35)",
-    glow: "rgba(236,72,153,0.2)",
+    service: "GMB + Content",
+    r1: { n: "200+", l: "Monthly bookings" },
+    r2: { n: "4.9★", l: "Rating" },
+    g: "linear-gradient(145deg,#3b0764,#86198f,#a21caf)",
+    border: "rgba(249,168,212,0.3)",
+    glow: "rgba(236,72,153,0.15)",
   },
   {
-    emoji: "🏨",
     name: "Hotel Sunrise Palace",
     location: "Araria, Bihar",
     tag: "Hospitality",
-    tagG: "linear-gradient(135deg,#0891b2,#22d3ee)",
-    result1: { n: "85%", l: "Occupancy Rate" },
-    result2: { n: "140%", l: "Direct Bookings" },
-    service: "Website + SEO + Ads",
-    g: "linear-gradient(145deg, #0c2340 0%, #0e4f7a 50%, #0369a1 100%)",
-    border: "rgba(34,211,238,0.35)",
-    glow: "rgba(6,182,212,0.2)",
+    service: "Website + SEO",
+    r1: { n: "85%",  l: "Occupancy rate" },
+    r2: { n: "+140%", l: "Direct bookings" },
+    g: "linear-gradient(145deg,#0c2340,#0e4f7a,#0369a1)",
+    border: "rgba(34,211,238,0.3)",
+    glow: "rgba(6,182,212,0.15)",
   },
 ];
 
 export default function Portfolio() {
   return (
     <section id="portfolio" style={{
-      padding: "112px 0",
-      background: "linear-gradient(180deg, #08001f 0%, #0d0525 50%, #060018 100%)",
+      padding: "128px 0",
+      background: "linear-gradient(180deg, #060014 0%, #08001e 100%)",
       position: "relative", overflow: "hidden",
     }}>
-      <div style={{
-        position: "absolute", top: "-10%", right: "-15%",
-        width: "500px", height: "500px", borderRadius: "50%",
-        background: "radial-gradient(circle, rgba(168,85,247,0.1) 0%, transparent 70%)",
+      <div aria-hidden style={{
+        position: "absolute", top: "-5%", right: "-18%",
+        width: "420px", height: "420px", borderRadius: "50%",
+        background: "radial-gradient(circle, rgba(168,85,247,0.07) 0%, transparent 70%)",
         pointerEvents: "none",
       }} />
 
       <div className="wrap">
-        <div style={{ textAlign: "center", marginBottom: "72px" }}>
-          <span className="section-label" style={{ display: "block", marginBottom: "14px" }}>Our Work</span>
-          <h2 className="font-display" style={{
-            fontSize: "clamp(2rem,5vw,3.5rem)", fontWeight: 900, color: "#fff",
-            letterSpacing: "-0.03em", lineHeight: 1.1, marginBottom: "16px",
-          }}>
-            Real Results, <span className="grad-text-cyan">Real Businesses</span>
+        <div style={{ marginBottom: "72px" }}>
+          <p className="t-label" style={{ marginBottom: "16px" }}>Results</p>
+          <h2 className="t-h2" style={{ marginBottom: "16px" }}>
+            Real businesses. Real <span className="accent-cyan">results</span>.
           </h2>
-          <p style={{ color: "rgba(228,220,255,0.5)", fontSize: "17px", maxWidth: "480px", margin: "0 auto", lineHeight: 1.7 }}>
-            Bihar के local businesses जो अब Google पर dominate कर रहे हैं।
+          <p className="t-body" style={{ maxWidth: "380px" }}>
+            From clinics to coaching centres — measured growth, not promises.
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,340px),1fr))", gap: "20px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%,340px),1fr))", gap: "16px" }}>
           {projects.map((p, i) => (
-            <div key={i} style={{
-              borderRadius: "24px", overflow: "hidden",
+            <div key={i} className="card" style={{
+              borderRadius: "16px", overflow: "hidden",
               border: `1px solid ${p.border}`,
-              transition: "all 0.3s",
-              boxShadow: `0 4px 30px ${p.glow}`,
+              boxShadow: `0 4px 24px ${p.glow}`,
+              transition: "transform 0.25s, box-shadow 0.25s",
             }}
-              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-7px)"; (e.currentTarget as HTMLElement).style.boxShadow = `0 20px 60px ${p.glow}`; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = `0 4px 30px ${p.glow}`; }}>
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)"; (e.currentTarget as HTMLElement).style.boxShadow = `0 20px 50px ${p.glow}`; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = `0 4px 24px ${p.glow}`; }}>
 
               {/* Gradient header */}
-              <div style={{
-                background: p.g, padding: "28px 24px 22px",
-                display: "flex", alignItems: "center", justifyContent: "space-between",
-                flexWrap: "wrap", gap: "12px",
-              }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-                  <span style={{ fontSize: "36px" }}>{p.emoji}</span>
-                  <div>
-                    <p className="font-display" style={{ fontWeight: 800, fontSize: "16px", color: "#fff", letterSpacing: "-0.01em" }}>{p.name}</p>
-                    <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.55)", marginTop: "2px" }}>{p.location}</p>
-                  </div>
+              <div style={{ background: p.g, padding: "24px 20px" }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "4px" }}>
+                  <span style={{ fontSize: "16px", fontWeight: 700, color: "#fff", letterSpacing: "-0.01em" }}>{p.name}</span>
+                  <span style={{ fontSize: "11px", fontWeight: 600, color: "rgba(255,255,255,0.55)", padding: "3px 9px", borderRadius: "100px", background: "rgba(255,255,255,0.1)" }}>{p.tag}</span>
                 </div>
-                <div style={{ padding: "4px 12px", borderRadius: "50px", background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.2)" }}>
-                  <span style={{ fontSize: "11px", fontWeight: 700, color: "#fff" }}>{p.tag}</span>
-                </div>
+                <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)", fontWeight: 500 }}>{p.location}</p>
               </div>
 
-              {/* Results + body */}
-              <div style={{ background: "rgba(255,255,255,0.02)", padding: "24px" }}>
-                {/* Result boxes */}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "18px" }}>
-                  {[p.result1, p.result2].map(r => (
+              {/* Results */}
+              <div style={{ background: "rgba(255,255,255,0.02)", padding: "20px" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", marginBottom: "16px" }}>
+                  {[p.r1, p.r2].map(r => (
                     <div key={r.l} style={{
-                      padding: "14px", borderRadius: "14px", textAlign: "center",
-                      background: `${p.g.replace("145deg", "135deg")}`,
-                      border: `1px solid ${p.border}`,
+                      padding: "14px 12px", borderRadius: "10px", textAlign: "center",
+                      background: "rgba(255,255,255,0.04)", border: `1px solid ${p.border}`,
                     }}>
-                      <p className="font-display" style={{ fontSize: "22px", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em" }}>{r.n}</p>
-                      <p style={{ fontSize: "11px", color: "rgba(255,255,255,0.6)", marginTop: "2px" }}>{r.l}</p>
+                      <div style={{ fontSize: "20px", fontWeight: 700, color: "#fff", letterSpacing: "-0.02em" }}>{r.n}</div>
+                      <div style={{ fontSize: "11px", color: "rgba(230,220,255,0.45)", marginTop: "3px", fontWeight: 500 }}>{r.l}</div>
                     </div>
                   ))}
                 </div>
-
-                <div style={{ display: "flex", alignItems: "center", gap: "7px" }}>
-                  <div style={{ width: "20px", height: "20px", borderRadius: "50%", background: p.tagG, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  </div>
-                  <span style={{ fontSize: "12px", color: "rgba(228,220,255,0.55)", fontWeight: 500 }}>{p.service}</span>
-                </div>
+                <p style={{ fontSize: "12px", color: "rgba(230,220,255,0.4)", fontWeight: 500 }}>
+                  Service: {p.service}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
-        <div style={{ textAlign: "center", marginTop: "56px" }}>
-          <a href="#contact" className="btn-primary" style={{ fontSize: "16px", padding: "16px 40px" }}>
-            अपना Case Study देखें →
+        <div style={{ marginTop: "56px", textAlign: "center" }}>
+          <a href="#contact" className="btn btn-primary btn-lg">
+            Start your success story →
           </a>
         </div>
       </div>
