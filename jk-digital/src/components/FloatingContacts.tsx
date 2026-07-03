@@ -1,15 +1,33 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function FloatingContacts() {
-  const [visible, setVisible] = useState(false);
+  const [pastHero, setPastHero] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+  const scrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 500);
+    const onScroll = () => {
+      setPastHero(window.scrollY > 500);
+
+      // On narrow screens the floats can sit over in-flow text as it scrolls
+      // past their fixed position — hide them mid-scroll and only show once
+      // scrolling settles, so they never appear to "cut off" moving content.
+      if (window.innerWidth <= 600) {
+        setScrolling(true);
+        if (scrollTimer.current) clearTimeout(scrollTimer.current);
+        scrollTimer.current = setTimeout(() => setScrolling(false), 450);
+      }
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (scrollTimer.current) clearTimeout(scrollTimer.current);
+    };
   }, []);
+
+  const visible = pastHero && !scrolling;
 
   const floatStyle = (base: React.CSSProperties): React.CSSProperties => ({
     ...base,

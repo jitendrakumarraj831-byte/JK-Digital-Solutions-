@@ -254,9 +254,18 @@ select.inp option { background: #fff; color: #111827; }
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 16px rgba(29,78,216,0.4);
   text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, bottom 0.2s, right 0.2s;
 }
 .call-float:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(29,78,216,0.5); }
+
+/* On narrow screens, sit the two floats side by side instead of stacked —
+   a stacked pair spans ~140px of the viewport's bottom-right corner, which
+   is tall enough to clip in-flow text (table/card content) as the page
+   scrolls under it. Side by side cuts that intrusion to ~60px. */
+@media (max-width: 600px) {
+  .wa-float   { width: 50px; height: 50px; bottom: 16px; right: 16px; }
+  .call-float { width: 42px; height: 42px; bottom: 21px; right: 74px; }
+}
 
 /* ─── STARS ─── */
 .stars { color: #F59E0B; }
