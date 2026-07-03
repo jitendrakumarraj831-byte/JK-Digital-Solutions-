@@ -115,7 +115,7 @@ export default function Navbar() {
           </a>
 
           {/* WhatsApp CTA */}
-          <a href="https://wa.me/918651070831?text=नमस्ते! मुझे digital marketing में help चाहिए।" target="_blank" rel="noopener noreferrer" className="desk-phone" style={{
+          <a href="https://wa.me/918651070831?text=नमस्ते! मुझे digital marketing में सहायता चाहिए।" target="_blank" rel="noopener noreferrer" className="desk-phone" style={{
             display: "inline-flex", alignItems: "center", gap: "6px",
             padding: "8px 16px", borderRadius: "8px",
             background: "#F0FDF4", color: "#16A34A",

@@ -8,8 +8,9 @@ const services = [
     badgeBg: "#EFF6FF",
     badgeColor: "#1D4ED8",
     title: "Website Development",
-    tagline: "आपका 24/7 online salesman।",
+    tagline: "आपका 24/7 ऑनलाइन बिक्री प्रतिनिधि।",
     desc: "Fast, mobile-first websites built to convert visitors into customers. SEO-ready from day one.",
+    descHi: "तेज़, mobile-first वेबसाइट जो आगंतुकों को ग्राहकों में बदले। पहले दिन से SEO के लिए तैयार।",
     features: ["Mobile-first design", "SEO architecture", "30-day delivery", "1 year free support"],
     price: "₹8,999",
     priceNote: "onwards",
@@ -28,8 +29,9 @@ const services = [
     badgeBg: "#F0FDF4",
     badgeColor: "#16A34A",
     title: "Google SEO",
-    tagline: "ऊपर rank करें। Clicks पर कुछ न दें।",
+    tagline: "ऊपर रैंक करें। क्लिक के लिए कुछ न दें।",
     desc: "Get your business to the top of Google search results organically — and stay there.",
+    descHi: "अपने व्यवसाय को Google खोज परिणामों में स्वाभाविक रूप से शीर्ष पर लाएं — और वहीं बनाए रखें।",
     features: ["Local + national SEO", "Keyword research", "Monthly reports", "Competitor analysis"],
     price: "₹4,999",
     priceNote: "/ month",
@@ -48,8 +50,9 @@ const services = [
     badgeBg: "#ECFEFF",
     badgeColor: "#06B6D4",
     title: "Google Business Profile",
-    tagline: "Local search जीतें। पास के लोग ढूंढें।",
+    tagline: "स्थानीय खोज में जीतें। आस-पास के ग्राहकों तक पहुंचें।",
     desc: "Optimise your GMB listing so customers searching near you find your business first.",
+    descHi: "अपनी GMB लिस्टिंग को अनुकूलित करें ताकि आस-पास खोजने वाले ग्राहक सबसे पहले आपका व्यवसाय पाएं।",
     features: ["Complete GMB setup", "Review management", "Photo optimisation", "Local ranking"],
     price: "₹2,499",
     priceNote: "/ month",
@@ -68,8 +71,9 @@ const services = [
     badgeBg: "#EEF2FF",
     badgeColor: "#4F46E5",
     title: "Google Ads",
-    tagline: "नतीजों के लिए pay करें, दिखावे के लिए नहीं।",
+    tagline: "नतीजों के लिए भुगतान करें, दिखावे के लिए नहीं।",
     desc: "Targeted campaigns that bring qualified leads within days. Expert management, measurable ROI.",
+    descHi: "लक्षित अभियान जो कुछ ही दिनों में योग्य ग्राहक लाएं। विशेषज्ञ प्रबंधन, मापने योग्य ROI।",
     features: ["Campaign setup", "Bid optimisation", "Ad copywriting", "Weekly reports"],
     price: "₹3,999",
     priceNote: "/ month",
@@ -88,8 +92,9 @@ const services = [
     badgeBg: "#FDF2F8",
     badgeColor: "#DB2777",
     title: "Social Media Marketing",
-    tagline: "जहां आपके customers हैं, वहां दिखें।",
+    tagline: "जहां आपके ग्राहक हैं, वहां दिखें।",
     desc: "Consistent, on-brand content across Instagram and Facebook that builds trust and drives enquiries.",
+    descHi: "Instagram और Facebook पर लगातार, ब्रांड के अनुरूप सामग्री जो भरोसा बनाए और पूछताछ लाए।",
     features: ["Content calendar", "Reels & graphics", "Community management", "Monthly insights"],
     price: "₹5,999",
     priceNote: "/ month",
@@ -108,8 +113,9 @@ const services = [
     badgeBg: "#FDF4FF",
     badgeColor: "#9333EA",
     title: "Logo & Branding",
-    tagline: "एक brand जो याद रह जाए।",
+    tagline: "एक पहचान जो याद रह जाए।",
     desc: "Professional logo, colour system, and brand guidelines that make your business instantly recognisable.",
+    descHi: "पेशेवर लोगो, रंग प्रणाली, और ब्रांड दिशा-निर्देश जो आपके व्यवसाय को तुरंत पहचानने योग्य बनाएं।",
     features: ["Logo design (3 concepts)", "Brand colour palette", "Visiting cards", "Brand guideline PDF"],
     price: "₹4,999",
     priceNote: "onwards",
@@ -128,8 +134,9 @@ const services = [
     badgeBg: "#ECFDF5",
     badgeColor: "#059669",
     title: "Business Automation",
-    tagline: "Leads follow-up करें, बिना manual काम के।",
+    tagline: "पूछताछ का फॉलो-अप करें, बिना मैन्युअल काम के।",
     desc: "WhatsApp auto-replies, lead capture, and CRM workflows so no enquiry ever slips through.",
+    descHi: "WhatsApp के स्वचालित उत्तर, लीड कैप्चर, और CRM वर्कफ़्लो — ताकि कोई भी पूछताछ कभी छूटे नहीं।",
     features: ["WhatsApp auto-reply", "Lead capture forms", "CRM setup", "Appointment reminders"],
     price: "₹6,999",
     priceNote: "onwards",
@@ -151,10 +158,10 @@ export default function Services() {
         <div style={{ marginBottom: "72px", maxWidth: "520px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>हमारी सेवाएं</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            सात सेवाएं। <span className="accent">एक</span> Agency।
+            सात सेवाएं। <span className="accent">एक</span> एजेंसी।
           </h2>
           <p className="t-body">
-            आपके business को online grow करने के लिए सब कुछ — एक ही जगह।
+            आपके व्यवसाय को ऑनलाइन बढ़ाने के लिए सब कुछ — एक ही जगह।
           </p>
         </div>
 
@@ -193,7 +200,8 @@ export default function Services() {
 
               <h3 className="t-h3" style={{ marginBottom: "6px" }}>{s.title}</h3>
               <p style={{ fontSize: "13px", color: s.iconColor, fontWeight: 600, marginBottom: "12px" }}>{s.tagline}</p>
-              <p style={{ fontSize: "14px", color: "#4B5563", marginBottom: "24px", lineHeight: 1.7 }}>{s.desc}</p>
+              <p style={{ fontSize: "14px", color: "#4B5563", marginBottom: "6px", lineHeight: 1.7 }}>{s.desc}</p>
+              <p lang="hi" style={{ fontSize: "14px", color: "#4B5563", marginBottom: "24px", lineHeight: 1.7 }}>{s.descHi}</p>
 
               {/* Features */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "28px" }}>

@@ -41,7 +41,7 @@ export default function Home() {
 
       {/* WhatsApp Float Button */}
       <a
-        href="https://wa.me/918651070831?text=नमस्ते! मुझे digital marketing में help चाहिए।"
+        href="https://wa.me/918651070831?text=नमस्ते! मुझे digital marketing में सहायता चाहिए।"
         target="_blank"
         rel="noopener noreferrer"
         className="wa-float"

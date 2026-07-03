@@ -101,7 +101,7 @@ export default function Contact() {
               आइए <span className="accent">बात</span> करें।
             </h2>
             <p className="t-body" style={{ marginBottom: "48px", maxWidth: "380px" }}>
-              30 minutes में free audit पाएं। हम आपके business को analyse करके बताएंगे exactly क्या missing है।
+              30 मिनट में मुफ़्त ऑडिट पाएं। हम आपके व्यवसाय का विश्लेषण करके बताएंगे बिल्कुल क्या कमी है।
             </p>
 
             {/* Contact cards */}
@@ -172,7 +172,7 @@ export default function Contact() {
           }}>
             <h3 className="t-h3" style={{ marginBottom: "6px" }}>Free Audit Request — मुफ्त जांच</h3>
             <p style={{ fontSize: "14px", color: "#4B5563", marginBottom: "28px" }}>
-              हम personally आपके business को review करेंगे और बताएंगे क्या fix करना है।
+              हम व्यक्तिगत रूप से आपके व्यवसाय की समीक्षा करेंगे और बताएंगे क्या ठीक करना है।
             </p>
 
             <div style={{ height: "1px", background: "#F1F5F9", marginBottom: "24px" }} />

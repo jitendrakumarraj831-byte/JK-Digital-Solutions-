@@ -4,7 +4,7 @@ const steps = [
   {
     num: "01",
     title: "Consultation — मुफ्त बातचीत",
-    desc: "30 minutes में आपकी online presence देखते हैं — website, Google ranking, GMB, और competitors।",
+    desc: "30 मिनट में आपकी ऑनलाइन उपस्थिति देखते हैं — वेबसाइट, Google रैंकिंग, GMB, और प्रतिस्पर्धी।",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>,
     color: "#1D4ED8",
     bg: "#EFF6FF",
@@ -12,15 +12,15 @@ const steps = [
   {
     num: "02",
     title: "Planning — रणनीति तैयार",
-    desc: "आपके goals, budget, और competition के हिसाब से 90-दिन का digital plan तैयार करते हैं।",
+    desc: "आपके लक्ष्यों, बजट, और प्रतिस्पर्धा के हिसाब से 90-दिन की डिजिटल योजना तैयार करते हैं।",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>,
     color: "#4F46E5",
     bg: "#EEF2FF",
   },
   {
     num: "03",
-    title: "Design — पहला impression",
-    desc: "Brand-aligned wireframes और visual design — आपकी approval के बाद ही development शुरू होता है।",
+    title: "Design — पहला प्रभाव",
+    desc: "ब्रांड के अनुरूप वायरफ्रेम और दृश्य डिज़ाइन — आपकी स्वीकृति के बाद ही विकास कार्य शुरू होता है।",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>,
     color: "#9333EA",
     bg: "#FDF4FF",
@@ -28,15 +28,15 @@ const steps = [
   {
     num: "04",
     title: "Development — काम शुरू",
-    desc: "हमारी team code में लग जाती है — website, campaigns, SEO, GMB — सब agreed timeline में बनते हैं।",
+    desc: "हमारी टीम कोडिंग में जुट जाती है — वेबसाइट, कैंपेन, SEO, GMB — सब तय समय-सीमा में बनते हैं।",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
     color: "#06B6D4",
     bg: "#ECFEFF",
   },
   {
     num: "05",
-    title: "Launch — Live होता है",
-    desc: "Final testing के बाद website और campaigns publicly launch होते हैं — पूरी team आपके साथ।",
+    title: "Launch — सबके सामने आता है",
+    desc: "अंतिम परीक्षण के बाद वेबसाइट और कैंपेन सार्वजनिक रूप से लॉन्च होते हैं — पूरी टीम आपके साथ।",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>,
     color: "#D97706",
     bg: "#FFFBEB",
@@ -44,7 +44,7 @@ const steps = [
   {
     num: "06",
     title: "Support — नतीजे देखें",
-    desc: "Monthly reports, WhatsApp updates, और ongoing optimisation — results दिखते हैं, सिर्फ activity नहीं।",
+    desc: "मासिक रिपोर्ट, WhatsApp अपडेट, और निरंतर अनुकूलन — नतीजे दिखते हैं, सिर्फ गतिविधि नहीं।",
     icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>,
     color: "#16A34A",
     bg: "#F0FDF4",
@@ -61,7 +61,7 @@ export default function Process() {
             Consultation से <span className="accent">Support</span> तक — हफ्तों में।
           </h2>
           <p className="t-body" style={{ maxWidth: "440px", margin: "0 auto" }}>
-            छह simple steps — आपका business जल्दी grow करे, बिना किसी confusion के।
+            छह सरल चरण — आपका व्यवसाय जल्दी बढ़े, बिना किसी उलझन के।
           </p>
         </div>
 
@@ -117,7 +117,7 @@ export default function Process() {
 
         <div style={{ textAlign: "center", marginTop: "56px" }}>
           <a href="#contact" className="btn btn-primary btn-lg">
-            आज Free Audit शुरू करें →
+            आज मुफ़्त ऑडिट शुरू करें →
           </a>
         </div>
       </div>

@@ -7,8 +7,8 @@ const cases = [
     tag: "Education · Forbesganj",
     color: "#1D4ED8",
     bg: "#EFF6FF",
-    problem: "Admissions पिछले साल flat थे — walk-ins पर पूरी tarah निर्भर, कोई online presence नहीं, students Google पर उन्हें ढूंढ ही नहीं पाते थे।",
-    solution: "5-page website + local SEO + targeted Google Ads campaign — admission season से 6 हफ्ते पहले launch किया, हर ad landing page पर WhatsApp enquiry button के साथ।",
+    problem: "पिछले साल दाख़िले स्थिर थे — walk-ins पर पूरी तरह निर्भर, कोई ऑनलाइन उपस्थिति नहीं थी, विद्यार्थी Google पर उन्हें ढूंढ ही नहीं पाते थे।",
+    solution: "5-पेज वेबसाइट + स्थानीय SEO + लक्षित Google Ads अभियान — दाख़िले के मौसम से 6 हफ़्ते पहले लॉन्च किया, हर विज्ञापन लैंडिंग पेज पर WhatsApp पूछताछ बटन के साथ।",
     metrics: [
       { l: "Website Traffic", v: "+340%", icon: "📈" },
       { l: "New Leads / month", v: "120+", icon: "🎯" },
@@ -21,8 +21,8 @@ const cases = [
     tag: "Healthcare · Araria",
     color: "#06B6D4",
     bg: "#ECFEFF",
-    problem: "Clinic Google Maps पर rank नहीं कर रहा था — competitors के clinics पहले दिखते थे, reviews भी सिर्फ 12 थे।",
-    solution: "पूरा Google Business Profile rebuild, review-collection WhatsApp flow, और 8 हफ्तों का local SEO — targeted keywords पर।",
+    problem: "क्लिनिक Google Maps पर रैंक नहीं कर रहा था — प्रतिस्पर्धियों के क्लिनिक पहले दिखते थे, समीक्षाएं भी सिर्फ 12 थीं।",
+    solution: "पूरा Google Business Profile फिर से तैयार किया, समीक्षा-संग्रह के लिए WhatsApp प्रक्रिया, और 8 हफ़्तों का स्थानीय SEO — लक्षित कीवर्ड पर।",
     metrics: [
       { l: "Local Search Rank", v: "#1", icon: "📍" },
       { l: "New Patients", v: "+180%", icon: "🦷" },
@@ -35,8 +35,8 @@ const cases = [
     tag: "Real Estate · Araria",
     color: "#16A34A",
     bg: "#F0FDF4",
-    problem: "Leads सिर्फ referrals से आ रहे थे — कोई digital funnel नहीं, अच्छे properties भी slow बिक रहे थे।",
-    solution: "Google Ads + landing pages per property-type + retargeting — हर lead सीधे WhatsApp पर route हुआ, response time 5 मिनट के अंदर।",
+    problem: "पूछताछ सिर्फ संदर्भों (referrals) से आ रही थी — कोई डिजिटल फ़नल नहीं, अच्छी संपत्तियां भी धीमी गति से बिक रही थीं।",
+    solution: "Google Ads + प्रत्येक संपत्ति-प्रकार के लिए लैंडिंग पेज + रीटार्गेटिंग — हर पूछताछ सीधे WhatsApp पर भेजी गई, प्रतिक्रिया समय 5 मिनट के अंदर।",
     metrics: [
       { l: "Qualified Leads", v: "40+/mo", icon: "🏠" },
       { l: "Cost per Lead", v: "-58%", icon: "📉" },
@@ -59,7 +59,7 @@ export default function CaseStudies() {
             Problem से <span className="accent">Result</span> तक — पूरी कहानी।
           </h2>
           <p className="t-body">
-            हर business अलग होता है। यहां देखें हमने असली challenges को measurable growth में कैसे बदला।
+            हर व्यवसाय अलग होता है। यहां देखें हमने असली चुनौतियों को मापने योग्य वृद्धि में कैसे बदला।
           </p>
         </div>
 
