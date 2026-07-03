@@ -39,7 +39,7 @@ const plans = [
     pro: false,
   },
   {
-    name: "Premium",
+    name: "Professional",
     price: "₹16,999",
     period: "per month",
     desc: "For market leaders who want total digital dominance.",
@@ -98,12 +98,12 @@ export default function Pricing() {
     <section id="pricing" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>हमारी कीमत</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>Pricing</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            सरल और ईमानदार <span className="accent">मूल्य निर्धारण</span>।
+            Simple, honest <span className="accent">pricing</span>.
           </h2>
           <p className="t-body" style={{ maxWidth: "380px", margin: "0 auto" }}>
-            कोई lock-in नहीं। कोई छुपी फीस नहीं। कभी भी रद्द करें।
+            No lock-in contracts. No hidden fees. Cancel any time.
           </p>
         </div>
 
@@ -242,11 +242,11 @@ export default function Pricing() {
           display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "20px",
         }}>
           <div>
-            <div style={{ fontSize: "17px", fontWeight: 700, color: "#111827", marginBottom: "4px" }}>अनुकूलित योजना चाहिए?</div>
-            <p style={{ fontSize: "14px", color: "#4B5563" }}>अपना बजट और लक्ष्य बताएं — हम आपके लिए कुछ बनाएंगे।</p>
+            <div style={{ fontSize: "17px", fontWeight: 700, color: "#111827", marginBottom: "4px" }}>Need a custom plan?</div>
+            <p style={{ fontSize: "14px", color: "#4B5563" }}>Tell us your budget and goals — we&apos;ll put together something that fits.</p>
           </div>
           <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer" className="btn btn-wa">
-            WhatsApp करें →
+            Message us on WhatsApp →
           </a>
         </div>
       </div>

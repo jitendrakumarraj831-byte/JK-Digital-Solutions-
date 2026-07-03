@@ -2,9 +2,9 @@
 import { useState } from "react";
 
 const businessTypes = [
-  "Medical / Clinic", "Restaurant / Dhaba", "Coaching / School",
-  "Real Estate", "Beauty / Salon", "Hardware / Retail",
-  "Hotel", "Service Provider", "E-commerce", "Other",
+  "Small Business", "School / Coaching Institute", "Hospital / Clinic",
+  "Hotel / Restaurant", "Interior Designer", "Real Estate",
+  "Startup", "Retail / E-commerce", "Other",
 ];
 
 const contactCards = [
@@ -96,12 +96,12 @@ export default function Contact() {
 
           {/* Left — info */}
           <div>
-            <p className="t-label" style={{ marginBottom: "14px" }}>संपर्क करें</p>
+            <p className="t-label" style={{ marginBottom: "14px" }}>Contact Us</p>
             <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-              आइए <span className="accent">बात</span> करें।
+              Let&apos;s <span className="accent">talk</span>.
             </h2>
             <p className="t-body" style={{ marginBottom: "48px", maxWidth: "380px" }}>
-              30 मिनट में मुफ़्त ऑडिट पाएं। हम आपके व्यवसाय का विश्लेषण करके बताएंगे बिल्कुल क्या कमी है।
+              Get a free consultation in 30 minutes. We&apos;ll review your online presence and tell you exactly what&apos;s missing.
             </p>
 
             {/* Contact cards */}
@@ -153,7 +153,7 @@ export default function Contact() {
             }}>
               <iframe
                 title="JK Digital Solutions location — Forbesganj, Bihar"
-                src="https://www.google.com/maps/embed?origin=mfe&pb=!1m3!2m1!1sForbesganj,Araria,Bihar,India!6i12"
+                src="https://www.google.com/maps?q=Forbesganj,Araria,Bihar,India&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0, display: "block" }}
@@ -170,9 +170,9 @@ export default function Contact() {
             borderRadius: "24px", padding: "clamp(28px, 5vw, 44px)",
             boxShadow: "0 4px 24px rgba(0,0,0,0.05)",
           }}>
-            <h3 className="t-h3" style={{ marginBottom: "6px" }}>Free Audit Request — मुफ्त जांच</h3>
+            <h3 className="t-h3" style={{ marginBottom: "6px" }}>Request a Free Consultation</h3>
             <p style={{ fontSize: "14px", color: "#4B5563", marginBottom: "28px" }}>
-              हम व्यक्तिगत रूप से आपके व्यवसाय की समीक्षा करेंगे और बताएंगे क्या ठीक करना है।
+              We&apos;ll personally review your business and tell you exactly what to fix first.
             </p>
 
             <div style={{ height: "1px", background: "#F1F5F9", marginBottom: "24px" }} />
@@ -219,7 +219,7 @@ export default function Contact() {
                 width: "100%", cursor: status === "loading" ? "not-allowed" : "pointer",
                 opacity: status === "loading" ? 0.6 : 1,
               }}>
-                {status === "loading" ? "भेज रहे हैं..." : "Free Audit Request भेजें →"}
+                {status === "loading" ? "Sending..." : "Send Free Consultation Request →"}
               </button>
 
               <p style={{ textAlign: "center", fontSize: "12px", color: "#94A3B8", fontWeight: 500 }}>

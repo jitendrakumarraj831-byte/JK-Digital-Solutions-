@@ -4,20 +4,31 @@ const cols = [
   {
     title: "Services",
     links: [
-      { label: "Website Development", href: "#services" },
-      { label: "Google SEO",           href: "#services" },
+      { label: "Website Development",     href: "#services" },
+      { label: "SEO",                     href: "#services" },
       { label: "Google Business Profile", href: "#services" },
-      { label: "Google Ads",           href: "#services" },
-      { label: "Content Marketing",    href: "#services" },
+      { label: "Google Ads",              href: "#services" },
+      { label: "Social Media Marketing",  href: "#services" },
+      { label: "Brand Identity & Logo",   href: "#services" },
     ],
   },
   {
-    title: "Company",
+    title: "Quick Links",
     links: [
-      { label: "Our Work",   href: "#portfolio" },
+      { label: "Home",       href: "#" },
+      { label: "About Us",   href: "#why" },
+      { label: "Portfolio",  href: "#portfolio" },
       { label: "Pricing",    href: "#pricing" },
-      { label: "FAQ",        href: "#faq" },
       { label: "Contact",    href: "#contact" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { label: "Case Studies", href: "#case-studies" },
+      { label: "Testimonials", href: "#testimonials" },
+      { label: "Blog",         href: "#blog" },
+      { label: "FAQ",          href: "#faq" },
     ],
   },
   {
@@ -38,8 +49,8 @@ export default function Footer() {
         {/* Main grid */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "2fr 1fr 1fr 1fr",
-          gap: "48px 40px",
+          gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr",
+          gap: "48px 32px",
           marginBottom: "56px",
         }} className="footer-grid">
 
@@ -58,7 +69,7 @@ export default function Footer() {
             </a>
 
             <p style={{ fontSize: "14px", color: "#4B5563", lineHeight: 1.7, maxWidth: "240px", marginBottom: "28px" }}>
-              Bihar की डिजिटल मार्केटिंग एजेंसी — स्थानीय व्यवसायों को Google पर आगे बढ़ाते हैं।
+              A premium digital agency helping small businesses, schools, hospitals, hotels and local brands grow online.
             </p>
 
             <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
@@ -132,10 +143,22 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div style={{ height: "1px", background: "#1E293B", marginBottom: "24px" }} />
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "12px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "16px" }}>
           <p style={{ fontSize: "13px", color: "#475569" }}>
-            © {new Date().getFullYear()} JK Digital Solutions · Forbesganj, Bihar
+            © {new Date().getFullYear()} JK Digital Solutions · Forbesganj, Bihar. All rights reserved.
           </p>
+          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            <a href="/privacy" style={{ fontSize: "13px", color: "#475569", textDecoration: "none" }}
+              onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#CBD5E1"}
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#475569"}>
+              Privacy Policy
+            </a>
+            <a href="/terms" style={{ fontSize: "13px", color: "#475569", textDecoration: "none" }}
+              onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#CBD5E1"}
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#475569"}>
+              Terms of Service
+            </a>
+          </div>
           <a href="#" style={{
             width: "34px", height: "34px", borderRadius: "8px",
             background: "rgba(29,78,216,0.1)", border: "1px solid rgba(29,78,216,0.2)",
@@ -151,11 +174,15 @@ export default function Footer() {
       </div>
 
       <style>{`
-        @media (max-width: 900px) {
+        @media (max-width: 1100px) {
+          .footer-grid { grid-template-columns: 1fr 1fr 1fr !important; }
+          .footer-grid > div:first-child { grid-column: span 3; }
+        }
+        @media (max-width: 700px) {
           .footer-grid { grid-template-columns: 1fr 1fr !important; }
           .footer-grid > div:first-child { grid-column: span 2; }
         }
-        @media (max-width: 540px) {
+        @media (max-width: 480px) {
           .footer-grid { grid-template-columns: 1fr !important; }
           .footer-grid > div:first-child { grid-column: span 1; }
         }

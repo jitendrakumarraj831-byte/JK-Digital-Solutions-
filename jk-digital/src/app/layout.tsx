@@ -8,9 +8,9 @@ const inter = Inter({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jkdigitalsolutions.in";
-const title = "JK Digital Solutions — Bihar's #1 Digital Marketing Agency";
+const title = "JK Digital Solutions — Website Development, SEO & Digital Marketing Agency";
 const description =
-  "Website development, Google SEO, GMB optimization, and Google Ads for local businesses in Bihar. 200+ businesses growing. Based in Forbesganj, Araria.";
+  "A premium digital agency helping small businesses, schools, hospitals, hotels, restaurants and local brands grow online — website development, SEO, Google Business Profile, Google Ads and digital marketing. Free consultation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     template: "%s | JK Digital Solutions",
   },
   description,
-  keywords: "digital marketing forbesganj, website design bihar, seo agency araria, google ads forbesganj, jk digital solutions",
+  keywords: "website development agency, SEO services, Google Business Profile optimization, Google Ads management, digital marketing agency, JK Digital Solutions",
   authors: [{ name: "JK Digital Solutions" }],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
-    locale: "hi_IN",
+    locale: "en_IN",
     url: siteUrl,
     siteName: "JK Digital Solutions",
     title,
@@ -65,7 +65,7 @@ const jsonLd = {
     postalCode: "854318",
     addressCountry: "IN",
   },
-  areaServed: "Bihar, India",
+  areaServed: "India",
   sameAs: [
     "https://instagram.com/jkdigitalsolutions",
     "https://facebook.com/jkdigitalsolutions",
@@ -79,18 +79,19 @@ const jsonLd = {
   },
   makesOffer: [
     "Website Development",
-    "Google SEO",
+    "SEO",
     "Google Business Profile Optimization",
     "Google Ads Management",
     "Social Media Marketing",
-    "Logo & Branding",
+    "Brand Identity",
+    "Logo Design",
     "Business Automation",
   ].map(name => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="hi">
+    <html lang="en">
       <head>
         <script
           type="application/ld+json"

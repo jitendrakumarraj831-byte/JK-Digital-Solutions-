@@ -9,16 +9,16 @@ interface ContactFormData {
 
 function validateForm(data: ContactFormData): string | null {
   if (!data.name || data.name.trim().length < 2) {
-    return "कृपया अपना पूरा नाम दर्ज करें।";
+    return "Please enter your full name.";
   }
   if (!data.phone || !/^[6-9]\d{9}$/.test(data.phone.replace(/\s/g, ""))) {
-    return "कृपया एक मान्य 10-अंकीय मोबाइल नंबर दर्ज करें।";
+    return "Please enter a valid 10-digit mobile number.";
   }
   if (!data.businessType || data.businessType.trim().length < 2) {
-    return "कृपया अपने व्यवसाय का प्रकार बताएं।";
+    return "Please select your business type.";
   }
   if (!data.message || data.message.trim().length < 10) {
-    return "कृपया कम से कम 10 अक्षरों का संदेश लिखें।";
+    return "Please write a message of at least 10 characters.";
   }
   return null;
 }
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         success: true,
-        message: "आपका संदेश मिल गया! हम जल्द ही आपसे संपर्क करेंगे। 🎉",
+        message: "Thanks! We've received your request and will get back to you shortly. 🎉",
         leadId: lead.id,
       },
       { status: 200 }
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        error: "सर्वर में कुछ गड़बड़ी हुई। कृपया दोबारा कोशिश करें।",
+        error: "Something went wrong on our end. Please try again.",
       },
       { status: 500 }
     );
