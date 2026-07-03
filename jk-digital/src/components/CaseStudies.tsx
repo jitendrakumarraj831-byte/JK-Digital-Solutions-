@@ -119,7 +119,7 @@ export default function CaseStudies() {
             <p style={{
               fontSize: "clamp(19px, 2.4vw, 24px)", fontWeight: 700, color: "#111827",
               letterSpacing: "-0.015em", lineHeight: 1.35, marginBottom: "32px",
-              borderLeft: `3px solid ${c.color}`, paddingLeft: "18px",
+              borderLeft: `3px solid ${c.color}`, paddingLeft: "18px", paddingRight: "18px",
             }}>
               {c.outcome}
             </p>
