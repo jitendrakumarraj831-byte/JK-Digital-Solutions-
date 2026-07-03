@@ -16,6 +16,7 @@ const plans = [
     excluded: ["Google Ads management", "Advanced content creation"],
     cta: "Get started",
     popular: false,
+    pro: false,
   },
   {
     name: "Growth",
@@ -35,6 +36,7 @@ const plans = [
     excluded: [],
     cta: "Start free audit",
     popular: true,
+    pro: false,
   },
   {
     name: "Premium",
@@ -54,6 +56,7 @@ const plans = [
     excluded: [],
     cta: "Get started",
     popular: false,
+    pro: true,
   },
 ];
 
@@ -91,6 +94,18 @@ export default function Pricing() {
                   fontSize: "11px", fontWeight: 700, color: "#fff",
                   letterSpacing: "0.1em", textTransform: "uppercase",
                 }}>⭐ Most Popular</div>
+              )}
+
+              {plan.pro && (
+                <div style={{
+                  position: "absolute", top: "20px", right: "20px",
+                  display: "flex", alignItems: "center", gap: "4px",
+                  padding: "5px 12px", borderRadius: "100px",
+                  background: "linear-gradient(135deg, #FCD34D, #F59E0B)",
+                  boxShadow: "0 4px 12px rgba(245,158,11,0.35)",
+                  fontSize: "11px", fontWeight: 800, color: "#78350F",
+                  letterSpacing: "0.08em", textTransform: "uppercase",
+                }}>👑 Pro</div>
               )}
 
               <div style={{ padding: "32px 28px" }}>
