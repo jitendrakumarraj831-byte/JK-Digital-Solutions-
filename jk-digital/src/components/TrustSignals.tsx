@@ -35,9 +35,9 @@ const signals = [
 
 export default function TrustSignals() {
   return (
-    <section id="trust" style={{ padding: "112px 0", background: "#F5F7FA" }}>
+    <section id="trust" style={{ padding: "96px 0", background: "#F5F7FA" }}>
       <div className="wrap">
-        <div style={{ textAlign: "center", marginBottom: "24px" }}>
+        <div style={{ textAlign: "center", marginBottom: "48px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>Why Businesses Trust Us</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
             Trust isn&apos;t given. It&apos;s <span className="accent">earned</span>{" "}— here&apos;s how.
@@ -45,24 +45,6 @@ export default function TrustSignals() {
           <p className="t-body" style={{ maxWidth: "520px", margin: "0 auto" }}>
             No fine print, no vanishing acts after the invoice clears. Every engagement runs on the same six promises.
           </p>
-        </div>
-
-        {/* Compact proof strip */}
-        <div style={{
-          display: "flex", alignItems: "center", justifyContent: "center", gap: "clamp(20px,4vw,40px)",
-          flexWrap: "wrap", padding: "18px 24px", marginBottom: "56px",
-          background: "#fff", border: "1px solid #E2E8F0", borderRadius: "100px",
-          boxShadow: "0 1px 6px rgba(0,0,0,0.03)", maxWidth: "760px", marginLeft: "auto", marginRight: "auto",
-        }}>
-          {[["5+", "Years in business"], ["200+", "Businesses served"], ["4.9★", "Average client rating"]].map(([v, l], i) => (
-            <div key={l} style={{ display: "flex", alignItems: "center", gap: "clamp(20px,4vw,40px)" }}>
-              {i > 0 && <div style={{ width: "1px", height: "28px", background: "#E2E8F0" }} aria-hidden="true" />}
-              <div style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "20px", fontWeight: 700, color: "#111827", letterSpacing: "-0.02em" }}>{v}</div>
-                <div style={{ fontSize: "12px", color: "#6B7280", fontWeight: 500 }}>{l}</div>
-              </div>
-            </div>
-          ))}
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: "16px" }}>

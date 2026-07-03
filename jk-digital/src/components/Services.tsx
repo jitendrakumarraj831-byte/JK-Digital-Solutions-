@@ -157,7 +157,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" style={{ padding: "112px 0", background: "#F5F7FA" }}>
+    <section id="services" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
         {/* Section header */}
         <div style={{ marginBottom: "72px", maxWidth: "560px" }}>

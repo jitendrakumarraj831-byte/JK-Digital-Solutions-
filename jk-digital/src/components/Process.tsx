@@ -69,7 +69,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" style={{ padding: "112px 0", background: "#F5F7FA" }}>
+    <section id="process" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>How We Work</p>

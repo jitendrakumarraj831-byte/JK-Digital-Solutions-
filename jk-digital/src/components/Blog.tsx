@@ -32,7 +32,7 @@ const posts = [
 
 export default function Blog() {
   return (
-    <section id="blog" style={{ padding: "112px 0", background: "#F5F7FA" }}>
+    <section id="blog" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
         <div style={{ marginBottom: "56px", maxWidth: "520px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>Our Blog</p>

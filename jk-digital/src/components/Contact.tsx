@@ -86,7 +86,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" style={{ padding: "112px 0", background: "#F5F7FA" }}>
+    <section id="contact" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
         <div style={{
           display: "grid",

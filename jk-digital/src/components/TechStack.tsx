@@ -45,7 +45,7 @@ const categories = [
 
 export default function TechStack() {
   return (
-    <section id="tech-stack" style={{ padding: "112px 0", background: "#FCFCFD" }}>
+    <section id="tech-stack" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap">
         <div style={{ textAlign: "center", marginBottom: "64px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>Our Technology Stack</p>
