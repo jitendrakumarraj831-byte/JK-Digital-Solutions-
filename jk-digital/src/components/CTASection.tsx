@@ -6,9 +6,9 @@ export default function CTASection() {
       <div className="wrap">
         <div style={{
           borderRadius: "28px", overflow: "hidden", position: "relative",
-          background: "linear-gradient(135deg, #1E40AF 0%, #2563EB 40%, #1D4ED8 70%, #1E3A8A 100%)",
+          background: "linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 40%, #1D4ED8 70%, #1E3A8A 100%)",
           padding: "clamp(56px, 8vw, 88px) clamp(32px, 6vw, 80px)",
-          boxShadow: "0 24px 80px rgba(37,99,235,0.3)",
+          boxShadow: "0 24px 80px rgba(29,78,216,0.3)",
         }}>
           {/* Dot grid overlay */}
           <div aria-hidden style={{
@@ -59,7 +59,7 @@ export default function CTASection() {
               <a href="#contact" style={{
                 display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px",
                 padding: "16px 32px", borderRadius: "12px",
-                background: "#fff", color: "#1E40AF",
+                background: "#fff", color: "#1E3A8A",
                 fontWeight: 700, fontSize: "16px", textDecoration: "none",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.15)",
                 transition: "transform 0.15s, box-shadow 0.15s",

@@ -25,7 +25,7 @@ export default function Hero() {
         <div style={{
           position: "absolute", top: "-20%", right: "-12%",
           width: "640px", height: "640px", borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(37,99,235,0.042) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(29,78,216,0.042) 0%, transparent 65%)",
         }} />
         {/* Bottom-left subtle glow — reduced */}
         <div style={{
@@ -52,11 +52,11 @@ export default function Hero() {
               display: "inline-flex", alignItems: "center", gap: "8px",
               padding: "6px 14px", borderRadius: "100px",
               background: "#F0F7FF", border: "1px solid #BFDBFE",
-              fontSize: "13px", fontWeight: 600, color: "#2563EB",
+              fontSize: "13px", fontWeight: 600, color: "#1D4ED8",
               marginBottom: "32px",
               letterSpacing: "-0.01em",
             }}>
-              <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#2563EB", display: "inline-block" }} />
+              <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#1D4ED8", display: "inline-block" }} />
               Forbesganj, Bihar · Digital Marketing
             </div>
 
@@ -79,7 +79,7 @@ export default function Hero() {
             <p style={{
               fontSize: "18px",
               lineHeight: 1.65,
-              color: "#64748B",
+              color: "#4B5563",
               maxWidth: "450px",
               marginBottom: "36px",
               fontWeight: 400,
@@ -92,13 +92,13 @@ export default function Hero() {
               <a href="#contact" style={{
                 display: "inline-flex", alignItems: "center", gap: "8px",
                 padding: "15px 28px", borderRadius: "10px",
-                background: "#2563EB", color: "#fff",
+                background: "#1D4ED8", color: "#fff",
                 fontWeight: 700, fontSize: "15px", textDecoration: "none",
-                boxShadow: "0 4px 18px rgba(37,99,235,0.32)",
+                boxShadow: "0 4px 18px rgba(29,78,216,0.32)",
                 transition: "transform 0.15s, box-shadow 0.15s",
               }}
-                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(-2px)"; el.style.boxShadow = "0 8px 28px rgba(37,99,235,0.4)"; }}
-                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 18px rgba(37,99,235,0.32)"; }}>
+                onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(-2px)"; el.style.boxShadow = "0 8px 28px rgba(29,78,216,0.4)"; }}
+                onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 18px rgba(29,78,216,0.32)"; }}>
                 Free Consultation लें
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
@@ -124,7 +124,7 @@ export default function Hero() {
             <div style={{ display: "flex", alignItems: "center", gap: "20px", flexWrap: "wrap" }}>
               {/* Avatars */}
               <div style={{ display: "flex" }}>
-                {["#2563EB","#4F46E5","#0891B2","#16A34A"].map((c, i) => (
+                {["#1D4ED8","#4F46E5","#06B6D4","#16A34A"].map((c, i) => (
                   <div key={i} style={{
                     width: "32px", height: "32px", borderRadius: "50%",
                     background: c, border: "2px solid #fff",
@@ -140,7 +140,7 @@ export default function Hero() {
                 <div style={{ display: "flex", gap: "2px", marginBottom: "2px" }}>
                   {[1,2,3,4,5].map(i => <span key={i} style={{ color: "#F59E0B", fontSize: "14px" }}>★</span>)}
                 </div>
-                <p style={{ fontSize: "13px", color: "#64748B", margin: 0, fontWeight: 500 }}>
+                <p style={{ fontSize: "13px", color: "#4B5563", margin: 0, fontWeight: 500 }}>
                   Helping local businesses <strong style={{ color: "#111827" }}>grow online</strong> across Bihar
                 </p>
               </div>
@@ -189,7 +189,7 @@ export default function Hero() {
                     </div>
                   </div>
                   {/* Website hero block */}
-                  <div style={{ background: "linear-gradient(135deg, #1E40AF 0%, #2563EB 100%)", padding: "20px 16px 16px" }}>
+                  <div style={{ background: "linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 100%)", padding: "20px 16px 16px" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                         <div style={{ width: "16px", height: "16px", borderRadius: "4px", background: "rgba(255,255,255,0.25)" }} />
@@ -219,8 +219,8 @@ export default function Hero() {
                   </div>
                   {/* Mini stats bar */}
                   <div style={{ padding: "0 12px", display: "flex", gap: "6px" }}>
-                    {[["#2563EB","82%"],["#16A34A","66%"],["#4F46E5","91%"]].map(([c, w], i) => (
-                      <div key={i} style={{ flex: 1, background: "#F8FAFC", borderRadius: "5px", padding: "6px 7px" }}>
+                    {[["#1D4ED8","82%"],["#16A34A","66%"],["#4F46E5","91%"]].map(([c, w], i) => (
+                      <div key={i} style={{ flex: 1, background: "#F5F7FA", borderRadius: "5px", padding: "6px 7px" }}>
                         <div style={{ width: w, height: "3px", background: c, borderRadius: "2px", marginBottom: "3px" }} />
                         <div style={{ width: "55%", height: "3px", background: "#E2E8F0", borderRadius: "2px" }} />
                       </div>
@@ -280,7 +280,7 @@ export default function Hero() {
                   <div style={{ padding: "8px 7px" }}>
                     <div style={{ fontSize: "8px", fontWeight: 800, color: "#0F172A", marginBottom: "6px", letterSpacing: "-0.02em" }}>Google Business Profile</div>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4px", marginBottom: "7px" }}>
-                      {[["📞","Call","#EFF6FF","#2563EB"],["🗺️","Route","#F0FDF4","#16A34A"]].map(([icon, label, bg, color]) => (
+                      {[["📞","Call","#EFF6FF","#1D4ED8"],["🗺️","Route","#F0FDF4","#16A34A"]].map(([icon, label, bg, color]) => (
                         <div key={label as string} style={{ background: bg as string, borderRadius: "7px", padding: "5px 4px", textAlign: "center" }}>
                           <div style={{ fontSize: "11px", marginBottom: "2px" }}>{icon}</div>
                           <div style={{ fontSize: "8px", color: color as string, fontWeight: 700 }}>{label}</div>
@@ -292,7 +292,7 @@ export default function Hero() {
                       ["AP", "Best digital agency in Bihar.", "#F0FDF4"],
                     ].map(([init, text, bg]) => (
                       <div key={init} style={{ display: "flex", gap: "4px", marginBottom: "5px" }}>
-                        <div style={{ width: "14px", height: "14px", borderRadius: "50%", background: bg, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "6px", fontWeight: 800, color: "#2563EB" }}>{init}</div>
+                        <div style={{ width: "14px", height: "14px", borderRadius: "50%", background: bg, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "6px", fontWeight: 800, color: "#1D4ED8" }}>{init}</div>
                         <div>
                           <div style={{ fontSize: "7px", color: "#F59E0B", marginBottom: "1px" }}>★★★★★</div>
                           <div style={{ fontSize: "7px", color: "#475569", lineHeight: 1.3 }}>{text}</div>
@@ -323,7 +323,7 @@ export default function Hero() {
                   <div key={i} style={{
                     flex: 1, borderRadius: "3px 3px 0 0",
                     height: `${h / 1.1}%`,
-                    background: i >= 9 ? "#2563EB" : "#DBEAFE",
+                    background: i >= 9 ? "#1D4ED8" : "#DBEAFE",
                   }} />
                 ))}
               </div>

@@ -32,7 +32,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" style={{ padding: "112px 0", background: "#F8FAFC" }}>
+    <section id="faq" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap-sm">
         <div style={{ marginBottom: "64px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>अक्सर पूछे सवाल</p>
@@ -42,7 +42,7 @@ export default function FAQ() {
           <p className="t-body">
             और सवाल हैं?{" "}
             <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer"
-              style={{ color: "#2563EB", fontWeight: 600, textDecoration: "none" }}>
+              style={{ color: "#1D4ED8", fontWeight: 600, textDecoration: "none" }}>
               WhatsApp पर पूछें →
             </a>
           </p>
@@ -55,9 +55,9 @@ export default function FAQ() {
               <div key={i} style={{
                 borderRadius: "16px",
                 background: isOpen ? "#fff" : "#fff",
-                border: isOpen ? "1.5px solid #2563EB" : "1px solid #E2E8F0",
+                border: isOpen ? "1.5px solid #1D4ED8" : "1px solid #E2E8F0",
                 overflow: "hidden",
-                boxShadow: isOpen ? "0 4px 20px rgba(37,99,235,0.08)" : "0 1px 4px rgba(0,0,0,0.03)",
+                boxShadow: isOpen ? "0 4px 20px rgba(29,78,216,0.08)" : "0 1px 4px rgba(0,0,0,0.03)",
                 transition: "border-color 0.2s, box-shadow 0.2s",
               }}>
                 <button onClick={() => setOpen(isOpen ? null : i)} style={{
@@ -79,7 +79,7 @@ export default function FAQ() {
                     transform: isOpen ? "rotate(45deg)" : "none",
                     transition: "transform 0.22s, background 0.22s",
                   }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={isOpen ? "#2563EB" : "#94A3B8"} strokeWidth="2.5" strokeLinecap="round">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={isOpen ? "#1D4ED8" : "#94A3B8"} strokeWidth="2.5" strokeLinecap="round">
                       <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
                     </svg>
                   </div>
@@ -87,7 +87,7 @@ export default function FAQ() {
                 <div className={`acc${isOpen ? " open" : ""}`}>
                   <p style={{
                     padding: "0 24px 20px",
-                    fontSize: "15px", color: "#64748B", lineHeight: 1.75, fontWeight: 400,
+                    fontSize: "15px", color: "#4B5563", lineHeight: 1.75, fontWeight: 400,
                   }}>{f.a}</p>
                 </div>
               </div>
