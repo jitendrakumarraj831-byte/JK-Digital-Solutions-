@@ -7,7 +7,7 @@ const reviews = [
     initials: "RK",
     avatarBg: "#EFF6FF",
     avatarColor: "#1D4ED8",
-    text: "GMB optimize होने के बाद monthly footfall 2x हो गया। 3 months में results clearly visible थे।",
+    text: "GMB अनुकूलित होने के बाद मासिक ग्राहक संख्या दोगुनी हो गई। 3 महीनों में नतीजे साफ़ दिखने लगे थे।",
     service: "GMB Optimization",
   },
   {
@@ -16,7 +16,7 @@ const reviews = [
     initials: "SD",
     avatarBg: "#FFFBEB",
     avatarColor: "#D97706",
-    text: "Website के बाद online orders शुरू हुए। Weekends में 50+ orders आते हैं — सब online।",
+    text: "वेबसाइट बनने के बाद ऑनलाइन ऑर्डर शुरू हुए। सप्ताहांत में 50+ ऑर्डर आते हैं — सब ऑनलाइन।",
     service: "Website + GMB",
   },
   {
@@ -25,7 +25,7 @@ const reviews = [
     initials: "AA",
     avatarBg: "#F0FDF4",
     avatarColor: "#16A34A",
-    text: "Google Ads से 40+ qualified leads monthly आ रहे हैं। ROI 5x है — इससे बेहतर क्या होगा।",
+    text: "Google Ads से हर महीने 40+ योग्य ग्राहक पूछताछ आ रही हैं। ROI 5 गुना है — इससे बेहतर क्या होगा।",
     service: "Google Ads",
   },
   {
@@ -34,7 +34,7 @@ const reviews = [
     initials: "PS",
     avatarBg: "#FDF2F8",
     avatarColor: "#DB2777",
-    text: "Instagram और Google पर presence बनी। हर week नए customers आते हैं specifically online देखकर।",
+    text: "Instagram और Google पर उपस्थिति बनी। हर सप्ताह नए ग्राहक विशेष रूप से ऑनलाइन देखकर आते हैं।",
     service: "Social + SEO",
   },
   {
@@ -43,7 +43,7 @@ const reviews = [
     initials: "RY",
     avatarBg: "#ECFEFF",
     avatarColor: "#06B6D4",
-    text: "इस session में 120 नए admissions — सब online inquiry से। SEO plus website एक साथ काम किया।",
+    text: "इस सत्र में 120 नए दाख़िले हुए — सब ऑनलाइन पूछताछ से। SEO और वेबसाइट ने एक साथ काम किया।",
     service: "Website + SEO",
   },
   {
@@ -52,7 +52,7 @@ const reviews = [
     initials: "ML",
     avatarBg: "#EEF2FF",
     avatarColor: "#4F46E5",
-    text: "Shop को online लाया — WhatsApp enquiries आने लगीं। Local customers Google Maps से आते हैं।",
+    text: "दुकान को ऑनलाइन लाया — WhatsApp पूछताछ आने लगीं। स्थानीय ग्राहक Google Maps से आते हैं।",
     service: "GMB + Website",
   },
 ];
@@ -64,7 +64,7 @@ export default function Testimonials() {
         <div style={{ marginBottom: "72px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>ग्राहक क्या कहते हैं</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            हमारे clients की <span className="accent">growth</span> कहानियां।
+            हमारे ग्राहकों की <span className="accent">विकास</span> कहानियां।
           </h2>
           <a href="https://g.page/jkdigital" target="_blank" rel="noopener noreferrer" style={{
             display: "inline-flex", alignItems: "center", gap: "8px",

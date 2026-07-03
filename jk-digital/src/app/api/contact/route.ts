@@ -12,13 +12,13 @@ function validateForm(data: ContactFormData): string | null {
     return "कृपया अपना पूरा नाम दर्ज करें।";
   }
   if (!data.phone || !/^[6-9]\d{9}$/.test(data.phone.replace(/\s/g, ""))) {
-    return "कृपया एक valid 10-अंकीय मोबाइल नंबर दर्ज करें।";
+    return "कृपया एक मान्य 10-अंकीय मोबाइल नंबर दर्ज करें।";
   }
   if (!data.businessType || data.businessType.trim().length < 2) {
-    return "कृपया अपने बिजनेस का प्रकार बताएं।";
+    return "कृपया अपने व्यवसाय का प्रकार बताएं।";
   }
   if (!data.message || data.message.trim().length < 10) {
-    return "कृपया कम से कम 10 characters का संदेश लिखें।";
+    return "कृपया कम से कम 10 अक्षरों का संदेश लिखें।";
   }
   return null;
 }

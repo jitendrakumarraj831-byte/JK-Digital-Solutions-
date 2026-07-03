@@ -3,27 +3,27 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Website deliver होने में कितना time लगता है?",
+    q: "वेबसाइट तैयार होने में कितना समय लगता है?",
     a: "A standard 5–10 page website takes 15–30 days. Complex builds — e-commerce, custom portals — take 45–60 days. We agree on the timeline before we start. No surprises.",
   },
   {
-    q: "Google SEO results कब दिखना शुरू होते हैं?",
+    q: "Google SEO के नतीजे कब दिखना शुरू होते हैं?",
     a: "Local SEO shows visible movement in 60–90 days. Google Ads and GMB optimisation deliver results in 1–2 weeks. SEO is a long game — but one that pays off for years.",
   },
   {
-    q: "क्या आप Forbesganj के बाहर भी serve करते हैं?",
+    q: "क्या आप Forbesganj के बाहर भी सेवा देते हैं?",
     a: "Yes — we work with businesses across Bihar and all of India. Location is not a barrier. Everything is managed remotely, and we communicate over WhatsApp and calls.",
   },
   {
-    q: "Google Ads के लिए minimum budget कितना होना चाहिए?",
+    q: "Google Ads के लिए न्यूनतम बजट कितना होना चाहिए?",
     a: "We recommend starting with ₹5,000/month in ad spend. Management fee is separate. We'll tell you exactly what to expect at your budget before you spend a rupee.",
   },
   {
-    q: "क्या कोई long-term contract है?",
+    q: "क्या कोई दीर्घकालिक अनुबंध है?",
     a: "No lock-in. We work on monthly billing. We recommend a 3-month commitment for meaningful SEO results, but you can stop any time. No exit penalties.",
   },
   {
-    q: "Reporting कैसे होती है?",
+    q: "रिपोर्टिंग कैसे होती है?",
     a: "Monthly PDF report, weekly WhatsApp updates, and a monthly strategy call. You always know what's working and where your money is going — in plain language.",
   },
 ];

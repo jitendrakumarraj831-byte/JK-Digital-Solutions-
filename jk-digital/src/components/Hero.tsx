@@ -70,7 +70,7 @@ export default function Hero() {
               marginBottom: "22px",
             }}>
               Google से पाएं{" "}
-              <span style={{ color: "#1D4ED8" }}>ज़्यादा Customers</span>
+              <span style={{ color: "#1D4ED8" }}>ज़्यादा ग्राहक</span>
               <br />
               — हर रोज़।
             </h1>
@@ -84,7 +84,7 @@ export default function Hero() {
               marginBottom: "36px",
               fontWeight: 400,
             }}>
-              हम websites बनाते हैं, Google Ads run करते हैं, और local SEO grow करते हैं — ताकि आपका business Google पर सबसे पहले दिखे।
+              हम वेबसाइट बनाते हैं, Google Ads चलाते हैं, और स्थानीय SEO बढ़ाते हैं — ताकि आपका व्यवसाय Google पर सबसे पहले दिखे।
             </p>
 
             {/* CTAs */}
@@ -99,10 +99,10 @@ export default function Hero() {
               }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(-2px)"; el.style.boxShadow = "0 8px 28px rgba(29,78,216,0.4)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 18px rgba(29,78,216,0.32)"; }}>
-                Free Consultation लें
+                मुफ़्त परामर्श लें
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
-              <a href="https://wa.me/918651070831?text=नमस्ते! मुझे अपना business online grow करना है।" target="_blank" rel="noopener noreferrer" style={{
+              <a href="https://wa.me/918651070831?text=नमस्ते! मुझे अपना व्यवसाय ऑनलाइन बढ़ाना है।" target="_blank" rel="noopener noreferrer" style={{
                 display: "inline-flex", alignItems: "center", gap: "9px",
                 padding: "15px 24px", borderRadius: "10px",
                 background: "#fff", color: "#111827",

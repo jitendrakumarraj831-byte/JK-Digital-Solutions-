@@ -53,10 +53,10 @@ export default function WhyChooseUs() {
         <div style={{ marginBottom: "72px", maxWidth: "520px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>हम क्यों?</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            Bihar के <span className="accent">market</span> के लिए बना।
+            Bihar के <span className="accent">बाज़ार</span> के लिए बना।
           </h2>
           <p className="t-body">
-            आपके customers, competitors, और शहर को हम जानते हैं — सिर्फ digital theory नहीं।
+            आपके ग्राहकों, प्रतिस्पर्धियों, और शहर को हम जानते हैं — सिर्फ डिजिटल सिद्धांत नहीं।
           </p>
         </div>
 
