@@ -26,13 +26,13 @@ export default function Navbar() {
       position: "fixed",
       top: 0, left: 0, right: 0,
       zIndex: 100,
-      height: "68px",
+      height: scrolled ? "60px" : "76px",
       background: scrolled ? "rgba(252,252,253,0.92)" : "rgba(252,252,253,0.85)",
       backdropFilter: "blur(18px)",
       WebkitBackdropFilter: "blur(18px)",
       borderBottom: scrolled ? "1px solid #E9EEF4" : "1px solid transparent",
       boxShadow: scrolled ? "0 1px 16px rgba(0,0,0,0.05)" : "none",
-      transition: "border-color 0.25s, box-shadow 0.25s, background 0.25s",
+      transition: "height 0.25s cubic-bezier(0.4,0,0.2,1), border-color 0.25s, box-shadow 0.25s, background 0.25s",
     }}>
       <div className="wrap" style={{
         display: "flex",
@@ -42,23 +42,24 @@ export default function Navbar() {
       }}>
 
         {/* ── Logo ── */}
-        <a href="#" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none", flexShrink: 0 }}>
+        <a href="#" aria-label="JK Digital Solutions — home" style={{ display: "flex", alignItems: "center", gap: "9px", textDecoration: "none", flexShrink: 0 }}>
           <Image
             src="/jk-icon.png"
-            alt="JK Digital Solutions"
+            alt=""
             width={34}
             height={34}
             priority
             style={{
-              width: "34px",
-              height: "34px",
-              borderRadius: "9px",
+              width: scrolled ? "28px" : "32px",
+              height: scrolled ? "28px" : "32px",
+              borderRadius: "8px",
               flexShrink: 0,
               display: "block",
+              transition: "width 0.25s, height 0.25s",
             }}
           />
           <span style={{
-            fontWeight: 700, fontSize: "14px", color: "#111827",
+            fontWeight: 700, fontSize: "14.5px", color: "#111827",
             letterSpacing: "-0.02em", lineHeight: 1,
           }}>
             JK Digital Solutions
@@ -66,7 +67,7 @@ export default function Navbar() {
         </a>
 
         {/* ── Desktop nav links ── */}
-        <nav className="desk-nav" style={{
+        <nav className="desk-nav" aria-label="Primary" style={{
           display: "flex",
           alignItems: "center",
           gap: "4px",
@@ -130,7 +131,7 @@ export default function Navbar() {
             WhatsApp
           </a>
 
-          {/* Free Audit CTA */}
+          {/* Free Consultation CTA */}
           <a href="#contact" style={{
             display: "inline-flex", alignItems: "center",
             padding: "8px 18px", borderRadius: "8px",
@@ -160,6 +161,8 @@ export default function Navbar() {
             onClick={() => setOpen(o => !o)}
             className="mob-ham"
             aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
             style={{
               background: "none", border: "1px solid #E2E8F0",
               cursor: "pointer", padding: "7px 8px",
@@ -194,14 +197,18 @@ export default function Navbar() {
       </div>
 
       {/* ── Mobile dropdown ── */}
-      <div style={{
-        background: "#fff",
-        borderTop: "1px solid #F1F5F9",
-        overflow: "hidden",
-        maxHeight: open ? "420px" : "0",
-        transition: "max-height 0.28s ease",
-        boxShadow: open ? "0 16px 40px rgba(0,0,0,0.07)" : "none",
-      }}>
+      <nav
+        id="mobile-nav"
+        aria-label="Mobile"
+        hidden={!open}
+        style={{
+          background: "#fff",
+          borderTop: "1px solid #F1F5F9",
+          overflow: "hidden",
+          maxHeight: open ? "420px" : "0",
+          transition: "max-height 0.28s ease",
+          boxShadow: open ? "0 16px 40px rgba(0,0,0,0.07)" : "none",
+        }}>
         <div style={{ padding: "8px 24px 20px" }}>
           {links.map((l, i) => (
             <a key={l.label} href={l.href} onClick={() => setOpen(false)} style={{
@@ -226,7 +233,7 @@ export default function Navbar() {
             Get Free Consultation →
           </a>
         </div>
-      </div>
+      </nav>
 
       <style>{`
         .desk-nav   { display: flex !important; }

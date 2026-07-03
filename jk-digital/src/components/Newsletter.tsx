@@ -42,14 +42,15 @@ export default function Newsletter() {
               padding: "16px 22px", borderRadius: "12px",
               background: "#F0FDF4", border: "1px solid #BBF7D0",
             }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="3" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-              <span style={{ fontSize: "14px", fontWeight: 600, color: "#16A34A" }}>Subscribed! Thank you.</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="3" strokeLinecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span role="status" style={{ fontSize: "14px", fontWeight: 600, color: "#16A34A" }}>Subscribed! Thank you.</span>
             </div>
           ) : (
             <form onSubmit={onSubmit} style={{ display: "flex", gap: "10px", flexWrap: "wrap", flex: "0 1 380px" }}>
               <input
                 type="email"
                 required
+                aria-label="Email address"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 placeholder="Your email address"

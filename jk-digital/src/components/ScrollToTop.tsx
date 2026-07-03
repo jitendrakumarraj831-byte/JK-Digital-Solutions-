@@ -11,12 +11,12 @@ export default function ScrollToTop() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  if (!visible) return null;
-
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Scroll to top"
+      aria-hidden={!visible}
+      tabIndex={visible ? 0 : -1}
       title="Scroll to top"
       style={{
         position: "fixed",
@@ -29,12 +29,15 @@ export default function ScrollToTop() {
         display: "flex", alignItems: "center", justifyContent: "center",
         boxShadow: "0 4px 16px rgba(0,0,0,0.1)",
         cursor: "pointer",
-        transition: "transform 0.2s, box-shadow 0.2s",
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0) scale(1)" : "translateY(8px) scale(0.9)",
+        pointerEvents: visible ? "auto" : "none",
+        transition: "opacity 0.25s ease, transform 0.25s ease, box-shadow 0.2s",
       }}
-      onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(-3px)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.15)"; }}
-      onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 16px rgba(0,0,0,0.1)"; }}
+      onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(-3px) scale(1)"; el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.15)"; }}
+      onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.transform = visible ? "translateY(0) scale(1)" : "translateY(8px) scale(0.9)"; el.style.boxShadow = "0 4px 16px rgba(0,0,0,0.1)"; }}
     >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 19V5M5 12l7-7 7 7" />
       </svg>
     </button>

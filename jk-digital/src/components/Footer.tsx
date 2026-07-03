@@ -68,7 +68,7 @@ export default function Footer() {
               <span style={{ fontWeight: 700, fontSize: "16px", color: "#fff", letterSpacing: "-0.02em" }}>JK Digital Solutions</span>
             </a>
 
-            <p style={{ fontSize: "14px", color: "#4B5563", lineHeight: 1.7, maxWidth: "240px", marginBottom: "28px" }}>
+            <p style={{ fontSize: "14px", color: "#94A3B8", lineHeight: 1.7, maxWidth: "240px", marginBottom: "28px" }}>
               A premium digital agency helping small businesses, schools, hospitals, hotels and local brands grow online.
             </p>
 
@@ -122,17 +122,17 @@ export default function Footer() {
           {/* Link columns */}
           {cols.map(col => (
             <div key={col.title}>
-              <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#475569", marginBottom: "20px" }}>
+              <p style={{ fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#94A3B8", marginBottom: "20px" }}>
                 {col.title}
               </p>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                 {col.links.map(l => (
                   <a key={l.label} href={l.href} style={{
-                    fontSize: "14px", fontWeight: 400, color: "#4B5563",
+                    fontSize: "14px", fontWeight: 400, color: "#94A3B8",
                     textDecoration: "none", transition: "color 0.15s", lineHeight: 1,
                   }}
-                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#CBD5E1"}
-                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#4B5563"}>
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#fff"}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#94A3B8"}>
                     {l.label}
                   </a>
                 ))}
@@ -144,18 +144,18 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ height: "1px", background: "#1E293B", marginBottom: "24px" }} />
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "16px" }}>
-          <p style={{ fontSize: "13px", color: "#475569" }}>
+          <p style={{ fontSize: "13px", color: "#94A3B8" }}>
             © {new Date().getFullYear()} JK Digital Solutions · Forbesganj, Bihar. All rights reserved.
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-            <a href="/privacy" style={{ fontSize: "13px", color: "#475569", textDecoration: "none" }}
+            <a href="/privacy" style={{ fontSize: "13px", color: "#94A3B8", textDecoration: "none" }}
               onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#CBD5E1"}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#475569"}>
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#94A3B8"}>
               Privacy Policy
             </a>
-            <a href="/terms" style={{ fontSize: "13px", color: "#475569", textDecoration: "none" }}
+            <a href="/terms" style={{ fontSize: "13px", color: "#94A3B8", textDecoration: "none" }}
               onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#CBD5E1"}
-              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#475569"}>
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#94A3B8"}>
               Terms of Service
             </a>
           </div>

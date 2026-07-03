@@ -1,10 +1,10 @@
 "use client";
 
 const stats = [
-  { n: "4.9★", l: "Average rating",     icon: "⭐" },
-  { n: "200+", l: "Businesses served",  icon: "🤝" },
-  { n: "3×",   l: "Average lead growth", icon: "📈" },
-  { n: "24hr", l: "Support response",   icon: "💬" },
+  { n: "4.9★", l: "Average rating",      icon: <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8L6 21l1.6-7-5.4-4.7 7.1-.6L12 2z"/> },
+  { n: "200+", l: "Businesses served",   icon: <><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></> },
+  { n: "3×",   l: "Average lead growth", icon: <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/> },
+  { n: "24hr", l: "Support response",    icon: <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/> },
 ];
 
 const reasons = [
@@ -80,9 +80,9 @@ export default function WhyChooseUs() {
               background: "#F5F7FA", border: "1px solid #E2E8F0",
               boxShadow: "0 1px 4px rgba(0,0,0,0.03)",
             }}>
-              <div style={{ fontSize: "28px", marginBottom: "8px" }}>{s.icon}</div>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ display: "block", margin: "0 auto 10px" }} aria-hidden="true">{s.icon}</svg>
               <div style={{ fontSize: "clamp(28px,3.5vw,36px)", fontWeight: 700, color: "#111827", letterSpacing: "-0.02em", lineHeight: 1 }}>{s.n}</div>
-              <div style={{ fontSize: "13px", color: "#94A3B8", marginTop: "6px", fontWeight: 500 }}>{s.l}</div>
+              <div style={{ fontSize: "13px", color: "#6B7280", marginTop: "6px", fontWeight: 500 }}>{s.l}</div>
             </div>
           ))}
         </div>

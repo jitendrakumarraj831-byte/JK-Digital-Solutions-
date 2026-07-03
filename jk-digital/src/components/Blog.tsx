@@ -63,9 +63,13 @@ export default function Blog() {
               <div style={{ padding: "16px 24px 24px" }}>
                 <h3 style={{ fontSize: "17px", fontWeight: 700, color: "#111827", lineHeight: 1.4, marginBottom: "10px", letterSpacing: "-0.01em" }}>{p.title}</h3>
                 <p style={{ fontSize: "14px", color: "#4B5563", lineHeight: 1.65, marginBottom: "18px" }}>{p.excerpt}</p>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: "12px", color: "#4B5563", fontWeight: 500 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontSize: "12px", color: "#6B7280", fontWeight: 500, marginBottom: "14px" }}>
                   <span>{p.date}</span>
                   <span>{p.readTime}</span>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "13px", fontWeight: 600, color: p.color, paddingTop: "14px", borderTop: "1px solid #F1F5F9" }}>
+                  Read article
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </div>
               </div>
             </a>

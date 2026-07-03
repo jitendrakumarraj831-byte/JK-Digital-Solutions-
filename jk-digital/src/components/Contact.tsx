@@ -122,7 +122,7 @@ export default function Contact() {
                     display: "flex", alignItems: "center", justifyContent: "center", color: c.iconColor,
                   }}>{c.icon}</div>
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: "11px", fontWeight: 700, color: "#94A3B8", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "2px" }}>{c.label}</div>
+                    <div style={{ fontSize: "11px", fontWeight: 700, color: "#6B7280", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "2px" }}>{c.label}</div>
                     <div style={{ fontSize: "14px", fontWeight: 600, color: "#111827", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.value}</div>
                   </div>
                   <div style={{ fontSize: "12px", color: c.iconColor, fontWeight: 600, flexShrink: 0, opacity: 0.8 }}>{c.note}</div>
@@ -147,19 +147,37 @@ export default function Contact() {
 
             {/* Map */}
             <div style={{
+              position: "relative",
               borderRadius: "14px", overflow: "hidden",
               border: "1px solid #E2E8F0", boxShadow: "0 1px 4px rgba(0,0,0,0.03)",
               height: "220px",
+              background: "linear-gradient(135deg, #EFF6FF, #F5F7FA)",
             }}>
               <iframe
-                title="JK Digital Solutions location — Forbesganj, Bihar"
+                title="Map showing JK Digital Solutions' office in Forbesganj, Bihar"
                 src="https://www.google.com/maps?q=Forbesganj,Araria,Bihar,India&output=embed"
                 width="100%"
                 height="100%"
-                style={{ border: 0, display: "block" }}
+                style={{ border: 0, display: "block", position: "relative", zIndex: 1 }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
+              <a
+                href="https://maps.google.com/?q=Forbesganj+Bihar"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  position: "absolute", bottom: "10px", right: "10px", zIndex: 2,
+                  display: "inline-flex", alignItems: "center", gap: "6px",
+                  background: "#fff", padding: "8px 14px", borderRadius: "9px",
+                  fontSize: "12.5px", fontWeight: 600, color: "#111827",
+                  textDecoration: "none", border: "1px solid #E2E8F0",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                }}
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Open in Google Maps
+              </a>
             </div>
           </div>
 
@@ -177,40 +195,40 @@ export default function Contact() {
 
             <div style={{ height: "1px", background: "#F1F5F9", marginBottom: "24px" }} />
 
-            <form onSubmit={onSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+            <form onSubmit={onSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px,1fr))", gap: "12px" }}>
                 <div>
-                  <label style={labelStyle}>Your name *</label>
-                  <input type="text" name="name" value={form.name} onChange={onChange} required placeholder="Full name" className="inp" />
+                  <label htmlFor="cf-name" style={labelStyle}>Your name *</label>
+                  <input id="cf-name" type="text" name="name" value={form.name} onChange={onChange} required placeholder="Full name" className="inp" />
                 </div>
                 <div>
-                  <label style={labelStyle}>WhatsApp number *</label>
-                  <input type="tel" name="phone" value={form.phone} onChange={onChange} required placeholder="10 digits" maxLength={10} className="inp" />
+                  <label htmlFor="cf-phone" style={labelStyle}>WhatsApp number *</label>
+                  <input id="cf-phone" type="tel" name="phone" value={form.phone} onChange={onChange} required placeholder="10 digits" maxLength={10} className="inp" />
                 </div>
               </div>
 
               <div>
-                <label style={labelStyle}>Business type *</label>
-                <select name="businessType" value={form.businessType} onChange={onChange} required className="inp">
+                <label htmlFor="cf-business" style={labelStyle}>Business type *</label>
+                <select id="cf-business" name="businessType" value={form.businessType} onChange={onChange} required className="inp">
                   <option value="">Select category</option>
                   {businessTypes.map(t => <option key={t} value={t}>{t}</option>)}
                 </select>
               </div>
 
               <div>
-                <label style={labelStyle}>What do you need? *</label>
-                <textarea name="message" value={form.message} onChange={onChange} required rows={4}
+                <label htmlFor="cf-message" style={labelStyle}>What do you need? *</label>
+                <textarea id="cf-message" name="message" value={form.message} onChange={onChange} required rows={4}
                   placeholder="Website, SEO, Google Ads, GMB — tell us your goal."
                   className="inp" style={{ resize: "none" }} />
               </div>
 
               {status === "success" && (
-                <div style={{ padding: "14px 16px", borderRadius: "12px", background: "#F0FDF4", border: "1px solid #BBF7D0" }}>
+                <div role="status" style={{ padding: "14px 16px", borderRadius: "12px", background: "#F0FDF4", border: "1px solid #BBF7D0" }}>
                   <p style={{ fontSize: "14px", color: "#16A34A", fontWeight: 600 }}>✓ {msg}</p>
                 </div>
               )}
               {status === "error" && (
-                <div style={{ padding: "14px 16px", borderRadius: "12px", background: "#FEF2F2", border: "1px solid #FECACA" }}>
+                <div role="alert" style={{ padding: "14px 16px", borderRadius: "12px", background: "#FEF2F2", border: "1px solid #FECACA" }}>
                   <p style={{ fontSize: "14px", color: "#DC2626", fontWeight: 600 }}>✕ {msg}</p>
                 </div>
               )}
@@ -222,7 +240,7 @@ export default function Contact() {
                 {status === "loading" ? "Sending..." : "Send Free Consultation Request →"}
               </button>
 
-              <p style={{ textAlign: "center", fontSize: "12px", color: "#94A3B8", fontWeight: 500 }}>
+              <p style={{ textAlign: "center", fontSize: "12px", color: "#6B7280", fontWeight: 500 }}>
                 Your information is 100% private. No spam, ever.
               </p>
             </form>

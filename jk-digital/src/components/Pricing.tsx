@@ -34,7 +34,7 @@ const plans = [
       "Bi-weekly reports",
     ],
     excluded: [],
-    cta: "Start free audit",
+    cta: "Start free consultation",
     popular: true,
     pro: false,
   },
@@ -64,7 +64,7 @@ const plans = [
     period: "tailored to you",
     desc: "For chains, franchises and large teams with multi-location needs.",
     features: [
-      "Everything in Premium",
+      "Everything in Professional",
       "Unlimited website pages",
       "Multi-location SEO & GMB",
       "Business automation & CRM",
@@ -122,23 +122,30 @@ export default function Pricing() {
 
               {plan.popular && (
                 <div style={{
-                  textAlign: "center", padding: "10px 0",
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: "6px",
+                  padding: "10px 0",
                   background: "#1D4ED8",
                   fontSize: "11px", fontWeight: 700, color: "#fff",
                   letterSpacing: "0.1em", textTransform: "uppercase",
-                }}>⭐ Most Popular</div>
+                }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8L6 21l1.6-7-5.4-4.7 7.1-.6L12 2z"/></svg>
+                  Most Popular
+                </div>
               )}
 
               {plan.pro && (
                 <div style={{
                   position: "absolute", top: "20px", right: "20px",
-                  display: "flex", alignItems: "center", gap: "4px",
+                  display: "flex", alignItems: "center", gap: "5px",
                   padding: "5px 12px", borderRadius: "100px",
                   background: "linear-gradient(135deg, #FCD34D, #F59E0B)",
                   boxShadow: "0 4px 12px rgba(245,158,11,0.35)",
                   fontSize: "11px", fontWeight: 800, color: "#78350F",
                   letterSpacing: "0.08em", textTransform: "uppercase",
-                }}>👑 Pro</div>
+                }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 20h20l-2-9-5 4-3-8-3 8-5-4z"/></svg>
+                  Pro
+                </div>
               )}
 
               <div style={{ padding: "32px 24px" }}>
@@ -206,8 +213,13 @@ export default function Pricing() {
               <thead>
                 <tr style={{ background: "#F5F7FA" }}>
                   <th style={{ textAlign: "left", padding: "16px 20px", fontSize: "12px", fontWeight: 700, color: "#4B5563", textTransform: "uppercase", letterSpacing: "0.06em", borderBottom: "1px solid #E2E8F0" }}>Feature</th>
-                  {planNames.map(n => (
-                    <th key={n} style={{ textAlign: "center", padding: "16px 16px", fontSize: "13px", fontWeight: 700, color: "#111827", borderBottom: "1px solid #E2E8F0" }}>{n}</th>
+                  {planNames.map((n, ni) => (
+                    <th key={n} style={{
+                      textAlign: "center", padding: "16px 16px", fontSize: "13px", fontWeight: 700,
+                      color: plans[ni].popular ? "#1D4ED8" : "#111827",
+                      background: plans[ni].popular ? "#EFF6FF" : "transparent",
+                      borderBottom: plans[ni].popular ? "2px solid #1D4ED8" : "1px solid #E2E8F0",
+                    }}>{n}</th>
                   ))}
                 </tr>
               </thead>
@@ -216,12 +228,18 @@ export default function Pricing() {
                   <tr key={row.label} style={{ background: ri % 2 === 0 ? "#fff" : "#FCFCFD" }}>
                     <td style={{ padding: "14px 20px", fontSize: "13.5px", color: "#374151", fontWeight: 500, borderBottom: "1px solid #F1F5F9" }}>{row.label}</td>
                     {row.values.map((v, vi) => (
-                      <td key={vi} style={{ textAlign: "center", padding: "14px 16px", borderBottom: "1px solid #F1F5F9" }}>
+                      <td key={vi} style={{
+                        textAlign: "center", padding: "14px 16px", borderBottom: "1px solid #F1F5F9",
+                        background: plans[vi].popular ? "#F5F9FF" : "transparent",
+                      }}>
                         {typeof v === "boolean" ? (
                           v ? (
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="3" strokeLinecap="round" style={{ display: "inline-block" }}><polyline points="20 6 9 17 4 12"/></svg>
+                            <>
+                              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="3" strokeLinecap="round" style={{ display: "inline-block" }} aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                              <span style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)" }}>Included</span>
+                            </>
                           ) : (
-                            <span style={{ color: "#CBD5E1", fontSize: "14px" }}>—</span>
+                            <span style={{ color: "#94A3B8", fontSize: "14px" }} aria-label="Not included">—</span>
                           )
                         ) : (
                           <span style={{ fontSize: "13.5px", color: "#374151", fontWeight: 500 }}>{v}</span>
