@@ -11,7 +11,7 @@ const rows = [
 
 export default function AgencyVsFreelancer() {
   return (
-    <section id="agency-vs-freelancer" style={{ padding: "112px 0", background: "#FCFCFD" }}>
+    <section id="agency-vs-freelancer" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap">
         <div style={{ textAlign: "center", marginBottom: "56px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>A Fair Comparison</p>

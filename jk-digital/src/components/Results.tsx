@@ -19,7 +19,7 @@ const stats = [
 
 export default function Results() {
   return (
-    <section id="results" style={{ padding: "112px 0", background: "#FCFCFD" }}>
+    <section id="results" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap">
         <div style={{ marginBottom: "16px", maxWidth: "560px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>Results</p>

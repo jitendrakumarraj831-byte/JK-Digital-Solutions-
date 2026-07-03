@@ -67,7 +67,7 @@ export default function CaseStudies() {
   const c = cases[active];
 
   return (
-    <section id="case-studies" style={{ padding: "112px 0", background: "#FCFCFD" }}>
+    <section id="case-studies" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap">
         <div style={{ marginBottom: "24px", maxWidth: "560px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>Case Studies</p>
