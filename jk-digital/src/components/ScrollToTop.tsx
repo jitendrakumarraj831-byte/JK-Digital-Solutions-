@@ -1,15 +1,32 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function ScrollToTop() {
-  const [visible, setVisible] = useState(false);
+  const [pastFold, setPastFold] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+  const scrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 600);
+    const onScroll = () => {
+      setPastFold(window.scrollY > 600);
+
+      // On narrow screens this button can sit over in-flow text as it
+      // scrolls past its fixed position — hide mid-scroll, show once settled.
+      if (window.innerWidth <= 600) {
+        setScrolling(true);
+        if (scrollTimer.current) clearTimeout(scrollTimer.current);
+        scrollTimer.current = setTimeout(() => setScrolling(false), 450);
+      }
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (scrollTimer.current) clearTimeout(scrollTimer.current);
+    };
   }, []);
+
+  const visible = pastFold && !scrolling;
 
   return (
     <button
