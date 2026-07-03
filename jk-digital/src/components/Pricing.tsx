@@ -107,7 +107,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "20px", alignItems: "start" }}>
+        <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "20px", alignItems: "start" }}>
           {plans.map((plan) => (
             <div key={plan.name} style={{
               borderRadius: "22px", overflow: "hidden",

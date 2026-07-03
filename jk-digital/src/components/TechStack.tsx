@@ -57,7 +57,7 @@ export default function TechStack() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "20px" }}>
+        <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "20px" }}>
           {categories.map(cat => (
             <div key={cat.title} style={{
               background: "#fff", border: "1px solid #E2E8F0", borderRadius: "20px",

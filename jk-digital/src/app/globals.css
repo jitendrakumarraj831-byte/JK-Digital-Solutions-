@@ -310,6 +310,16 @@ select:focus-visible {
   }
 }
 
+/* ─── RESPONSIVE CARD GRIDS ───
+   These grids use "repeat(auto-fit, minmax(min(100%, Npx), 1fr))" so cards
+   stay full-width on mobile and wrap into columns on larger screens. Forcing
+   a single explicit column below 640px removes any reliance on auto-fit's
+   track-counting resolving consistently across browsers/devices — every
+   card renders at exactly the same width, edge to edge. */
+@media (max-width: 640px) {
+  .auto-grid-mobile { grid-template-columns: 1fr !important; }
+}
+
 /* ─── SKIP LINK ─── */
 .skip-link {
   position: absolute;

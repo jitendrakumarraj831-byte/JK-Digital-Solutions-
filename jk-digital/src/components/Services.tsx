@@ -170,7 +170,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 380px), 1fr))", gap: "20px", alignItems: "stretch" }}>
+        <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 380px), 1fr))", gap: "20px", alignItems: "stretch" }}>
           {services.map((s, i) => (
             <div key={i} className="card" style={{
               display: "flex",

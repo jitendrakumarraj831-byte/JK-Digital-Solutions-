@@ -47,7 +47,7 @@ export default function TrustSignals() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: "16px" }}>
+        <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: "16px" }}>
           {signals.map(s => (
             <div key={s.title} className="card" style={{
               padding: "28px", background: "#fff",

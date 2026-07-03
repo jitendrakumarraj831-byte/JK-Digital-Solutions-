@@ -88,7 +88,7 @@ export default function Contact() {
   return (
     <section id="contact" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
-        <div style={{
+        <div className="auto-grid-mobile" style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 420px), 1fr))",
           gap: "64px", alignItems: "start",
