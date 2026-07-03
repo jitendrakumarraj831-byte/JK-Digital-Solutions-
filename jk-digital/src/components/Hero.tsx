@@ -57,7 +57,7 @@ export default function Hero() {
               letterSpacing: "-0.01em",
             }}>
               <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#1D4ED8", display: "inline-block" }} />
-              Trusted Digital Growth Partner
+              Full-Service Digital Partner · 200+ Businesses Grown
             </div>
 
             {/* Headline */}
@@ -80,11 +80,11 @@ export default function Hero() {
               fontSize: "18px",
               lineHeight: 1.65,
               color: "#4B5563",
-              maxWidth: "450px",
+              maxWidth: "460px",
               marginBottom: "36px",
               fontWeight: 400,
             }}>
-              We build high-converting websites, run Google Ads, and grow local SEO — so your business shows up first when customers search.
+              One dedicated team for your website, SEO and ads — with clear timelines, transparent reporting, and no lock-in contracts. That&apos;s why 200+ businesses stay with us long after the first project ends.
             </p>
 
             {/* CTAs */}

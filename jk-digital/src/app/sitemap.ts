@@ -3,8 +3,9 @@ import type { MetadataRoute } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jkdigitalsolutions.in";
 
 const sections = [
-  "", "services", "portfolio", "case-studies", "testimonials",
-  "pricing", "blog", "faq", "contact",
+  "", "trust", "tech-stack", "services", "agency-vs-freelancer", "results",
+  "portfolio", "case-studies", "industries", "testimonials", "pricing",
+  "free-audit", "blog", "faq", "contact",
 ];
 
 const pages = ["privacy", "terms"];

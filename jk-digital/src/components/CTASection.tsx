@@ -34,24 +34,24 @@ export default function CTASection() {
                 background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.2)",
                 fontSize: "12px", fontWeight: 600, color: "rgba(255,255,255,0.85)", letterSpacing: "0.06em",
               }}>
-                Free Consultation · No Contracts
+                Free Consultation · No Contracts · No Pressure
               </div>
 
               <h2 style={{
                 fontSize: "clamp(30px, 4.5vw, 48px)", fontWeight: 700,
                 letterSpacing: "-0.02em", lineHeight: 1.05, color: "#fff", marginBottom: "16px",
               }}>
-                Ready to <span style={{
+                Your competitors are already <span style={{
                   background: "linear-gradient(135deg, #FDE68A, #FCD34D)",
                   WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
-                }}>grow</span>?
+                }}>on Google</span>.
               </h2>
 
               <p style={{
                 fontSize: "17px", lineHeight: 1.7, color: "rgba(255,255,255,0.7)",
                 fontWeight: 400, maxWidth: "440px",
               }}>
-                Get a free consultation — we&apos;ll analyse your business and tell you exactly what to fix so enquiries start coming in from Google.
+                Every day without a strategy is a day they get found first. Talk to us for 30 minutes — we&apos;ll show you exactly where you&apos;re losing customers, and what to do about it.
               </p>
             </div>
 
