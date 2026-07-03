@@ -1,20 +1,25 @@
 import Navbar from "@/components/Navbar";
+import ScrollProgress from "@/components/ScrollProgress";
 import Hero from "@/components/Hero";
 import TrustedBy from "@/components/TrustedBy";
 import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Process from "@/components/Process";
 import Portfolio from "@/components/Portfolio";
+import CaseStudies from "@/components/CaseStudies";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
+import Blog from "@/components/Blog";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import Contact from "@/components/Contact";
+import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <Navbar />
       <main>
         <Hero />
@@ -23,11 +28,14 @@ export default function Home() {
         <WhyChooseUs />
         <Process />
         <Portfolio />
+        <CaseStudies />
         <Testimonials />
         <Pricing />
+        <Blog />
         <FAQ />
         <CTASection />
         <Contact />
+        <Newsletter />
       </main>
       <Footer />
 

@@ -3,10 +3,10 @@
 const services = [
   {
     iconBg: "#EFF6FF",
-    iconColor: "#2563EB",
+    iconColor: "#1D4ED8",
     badge: "Most Popular",
     badgeBg: "#EFF6FF",
-    badgeColor: "#2563EB",
+    badgeColor: "#1D4ED8",
     title: "Website Development",
     tagline: "आपका 24/7 online salesman।",
     desc: "Fast, mobile-first websites built to convert visitors into customers. SEO-ready from day one.",
@@ -14,7 +14,7 @@ const services = [
     price: "₹8,999",
     priceNote: "onwards",
     cardBorder: "#BFDBFE",
-    checkColor: "#2563EB",
+    checkColor: "#1D4ED8",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
@@ -43,10 +43,10 @@ const services = [
   },
   {
     iconBg: "#ECFEFF",
-    iconColor: "#0891B2",
+    iconColor: "#06B6D4",
     badge: "Free Setup",
     badgeBg: "#ECFEFF",
-    badgeColor: "#0891B2",
+    badgeColor: "#06B6D4",
     title: "Google Business Profile",
     tagline: "Local search जीतें। पास के लोग ढूंढें।",
     desc: "Optimise your GMB listing so customers searching near you find your business first.",
@@ -54,7 +54,7 @@ const services = [
     price: "₹2,499",
     priceNote: "/ month",
     cardBorder: "#A5F3FC",
-    checkColor: "#0891B2",
+    checkColor: "#06B6D4",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
@@ -81,24 +81,84 @@ const services = [
       </svg>
     ),
   },
+  {
+    iconBg: "#FDF2F8",
+    iconColor: "#DB2777",
+    badge: "Trending",
+    badgeBg: "#FDF2F8",
+    badgeColor: "#DB2777",
+    title: "Social Media Marketing",
+    tagline: "जहां आपके customers हैं, वहां दिखें।",
+    desc: "Consistent, on-brand content across Instagram and Facebook that builds trust and drives enquiries.",
+    features: ["Content calendar", "Reels & graphics", "Community management", "Monthly insights"],
+    price: "₹5,999",
+    priceNote: "/ month",
+    cardBorder: "#FBCFE8",
+    checkColor: "#DB2777",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    ),
+  },
+  {
+    iconBg: "#FDF4FF",
+    iconColor: "#9333EA",
+    badge: "First Impression",
+    badgeBg: "#FDF4FF",
+    badgeColor: "#9333EA",
+    title: "Logo & Branding",
+    tagline: "एक brand जो याद रह जाए।",
+    desc: "Professional logo, colour system, and brand guidelines that make your business instantly recognisable.",
+    features: ["Logo design (3 concepts)", "Brand colour palette", "Visiting cards", "Brand guideline PDF"],
+    price: "₹4,999",
+    priceNote: "onwards",
+    cardBorder: "#E9D5FF",
+    checkColor: "#9333EA",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/>
+      </svg>
+    ),
+  },
+  {
+    iconBg: "#ECFDF5",
+    iconColor: "#059669",
+    badge: "Save Time",
+    badgeBg: "#ECFDF5",
+    badgeColor: "#059669",
+    title: "Business Automation",
+    tagline: "Leads follow-up करें, बिना manual काम के।",
+    desc: "WhatsApp auto-replies, lead capture, and CRM workflows so no enquiry ever slips through.",
+    features: ["WhatsApp auto-reply", "Lead capture forms", "CRM setup", "Appointment reminders"],
+    price: "₹6,999",
+    priceNote: "onwards",
+    cardBorder: "#A7F3D0",
+    checkColor: "#059669",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function Services() {
   return (
-    <section id="services" style={{ padding: "112px 0", background: "#F8FAFC" }}>
+    <section id="services" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap">
         {/* Section header */}
         <div style={{ marginBottom: "72px", maxWidth: "520px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>हमारी सेवाएं</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            चार सेवाएं। <span className="accent">एक</span> Agency।
+            सात सेवाएं। <span className="accent">एक</span> Agency।
           </h2>
           <p className="t-body">
             आपके business को online grow करने के लिए सब कुछ — एक ही जगह।
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 440px), 1fr))", gap: "20px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 380px), 1fr))", gap: "20px" }}>
           {services.map((s, i) => (
             <div key={i} className="card" style={{
               background: "#fff",
@@ -133,7 +193,7 @@ export default function Services() {
 
               <h3 className="t-h3" style={{ marginBottom: "6px" }}>{s.title}</h3>
               <p style={{ fontSize: "13px", color: s.iconColor, fontWeight: 600, marginBottom: "12px" }}>{s.tagline}</p>
-              <p style={{ fontSize: "14px", color: "#64748B", marginBottom: "24px", lineHeight: 1.7 }}>{s.desc}</p>
+              <p style={{ fontSize: "14px", color: "#4B5563", marginBottom: "24px", lineHeight: 1.7 }}>{s.desc}</p>
 
               {/* Features */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "28px" }}>

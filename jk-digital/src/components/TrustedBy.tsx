@@ -35,7 +35,7 @@ const doubledIndustry = [...industries, ...industries];
 
 export default function TrustedBy() {
   return (
-    <div style={{ background: "#F8FAFC", borderTop: "1px solid #E2E8F0", borderBottom: "1px solid #E2E8F0", overflow: "hidden", padding: "44px 0" }}>
+    <div style={{ background: "#F5F7FA", borderTop: "1px solid #E2E8F0", borderBottom: "1px solid #E2E8F0", overflow: "hidden", padding: "44px 0" }}>
 
       {/* Header */}
       <p style={{

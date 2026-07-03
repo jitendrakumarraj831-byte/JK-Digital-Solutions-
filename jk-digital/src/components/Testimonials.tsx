@@ -6,7 +6,7 @@ const reviews = [
     role: "Medical Store, Araria",
     initials: "RK",
     avatarBg: "#EFF6FF",
-    avatarColor: "#2563EB",
+    avatarColor: "#1D4ED8",
     text: "GMB optimize होने के बाद monthly footfall 2x हो गया। 3 months में results clearly visible थे।",
     service: "GMB Optimization",
   },
@@ -42,7 +42,7 @@ const reviews = [
     role: "Coaching Centre, Araria",
     initials: "RY",
     avatarBg: "#ECFEFF",
-    avatarColor: "#0891B2",
+    avatarColor: "#06B6D4",
     text: "इस session में 120 नए admissions — सब online inquiry से। SEO plus website एक साथ काम किया।",
     service: "Website + SEO",
   },
@@ -59,7 +59,7 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" style={{ padding: "112px 0", background: "#F8FAFC" }}>
+    <section id="testimonials" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap">
         <div style={{ marginBottom: "72px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>ग्राहक क्या कहते हैं</p>
@@ -68,11 +68,11 @@ export default function Testimonials() {
           </h2>
           <a href="https://g.page/jkdigital" target="_blank" rel="noopener noreferrer" style={{
             display: "inline-flex", alignItems: "center", gap: "8px",
-            fontSize: "14px", fontWeight: 600, color: "#64748B",
+            fontSize: "14px", fontWeight: 600, color: "#4B5563",
             textDecoration: "none", transition: "color 0.15s",
           }}
             onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#111827"}
-            onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#64748B"}>
+            onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#4B5563"}>
             <span style={{ color: "#F59E0B" }}>★★★★★</span>
             4.9 on Google Reviews →
           </a>
@@ -96,7 +96,7 @@ export default function Testimonials() {
 
               {/* Quote */}
               <p style={{ fontSize: "15px", lineHeight: 1.72, color: "#374151", marginBottom: "24px", fontWeight: 400 }}>
-                "{r.text}"
+                &ldquo;{r.text}&rdquo;
               </p>
 
               {/* Author */}

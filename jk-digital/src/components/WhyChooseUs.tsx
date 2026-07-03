@@ -9,7 +9,7 @@ const stats = [
 
 const reasons = [
   {
-    iconBg: "#EFF6FF", iconColor: "#2563EB",
+    iconBg: "#EFF6FF", iconColor: "#1D4ED8",
     title: "Local Market Expertise",
     desc: "We understand Bihar's buyers, local competition, and regional search behaviour — not just digital theory.",
     icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>,
@@ -21,7 +21,7 @@ const reasons = [
     icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
   },
   {
-    iconBg: "#ECFEFF", iconColor: "#0891B2",
+    iconBg: "#ECFEFF", iconColor: "#06B6D4",
     title: "Direct WhatsApp Access",
     desc: "You talk to us, not a ticketing system. Dedicated manager, WhatsApp-first, no waiting.",
     icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>,
@@ -48,7 +48,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why" style={{ padding: "112px 0", background: "#FFFFFF" }}>
+    <section id="why" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
         <div style={{ marginBottom: "72px", maxWidth: "520px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>हम क्यों?</p>
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
           {stats.map(s => (
             <div key={s.n} style={{
               padding: "28px 20px", borderRadius: "20px", textAlign: "center",
-              background: "#F8FAFC", border: "1px solid #E2E8F0",
+              background: "#F5F7FA", border: "1px solid #E2E8F0",
               boxShadow: "0 1px 4px rgba(0,0,0,0.03)",
             }}>
               <div style={{ fontSize: "28px", marginBottom: "8px" }}>{s.icon}</div>
@@ -93,7 +93,7 @@ export default function WhyChooseUs() {
                 marginBottom: "16px",
               }}>{r.icon}</div>
               <h3 style={{ fontSize: "16px", fontWeight: 700, color: "#111827", letterSpacing: "-0.01em", marginBottom: "8px" }}>{r.title}</h3>
-              <p style={{ fontSize: "14px", color: "#64748B", lineHeight: 1.7 }}>{r.desc}</p>
+              <p style={{ fontSize: "14px", color: "#4B5563", lineHeight: 1.7 }}>{r.desc}</p>
             </div>
           ))}
         </div>

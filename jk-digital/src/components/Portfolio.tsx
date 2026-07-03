@@ -8,10 +8,10 @@ const projects = [
     service: "SEO + GMB",
     r1: { n: "#1", l: "Google rank" },
     r2: { n: "+180%", l: "New patients" },
-    accentColor: "#0891B2",
+    accentColor: "#06B6D4",
     accentBg: "#ECFEFF",
     tagBg: "#ECFEFF",
-    tagColor: "#0891B2",
+    tagColor: "#06B6D4",
   },
   {
     name: "Rajdhani Restaurant",
@@ -68,16 +68,16 @@ const projects = [
     service: "Website + SEO",
     r1: { n: "85%",  l: "Occupancy rate" },
     r2: { n: "+140%", l: "Direct bookings" },
-    accentColor: "#2563EB",
+    accentColor: "#1D4ED8",
     accentBg: "#EFF6FF",
     tagBg: "#EFF6FF",
-    tagColor: "#2563EB",
+    tagColor: "#1D4ED8",
   },
 ];
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" style={{ padding: "112px 0", background: "#FFFFFF" }}>
+    <section id="portfolio" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
         <div style={{ marginBottom: "72px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>हमारे नतीजे</p>

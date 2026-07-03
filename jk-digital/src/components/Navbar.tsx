@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const links = [
   { label: "Home",      href: "#" },
@@ -42,9 +43,12 @@ export default function Navbar() {
 
         {/* ── Logo ── */}
         <a href="#" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none", flexShrink: 0 }}>
-          <img
+          <Image
             src="/jk-icon.png"
             alt="JK Digital Solutions"
+            width={34}
+            height={34}
+            priority
             style={{
               width: "34px",
               height: "34px",
@@ -99,38 +103,54 @@ export default function Navbar() {
           {/* Phone — desktop only */}
           <a href="tel:+918651070831" className="desk-phone" style={{
             display: "flex", alignItems: "center", gap: "5px",
-            fontSize: "13px", fontWeight: 500, color: "#64748B",
+            fontSize: "13px", fontWeight: 500, color: "#4B5563",
             textDecoration: "none",
             padding: "6px 4px",
             transition: "color 0.14s",
           }}
             onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#111827"}
-            onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#64748B"}>
+            onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#4B5563"}>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.29 6.29l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             +91 86510 70831
+          </a>
+
+          {/* WhatsApp CTA */}
+          <a href="https://wa.me/918651070831?text=नमस्ते! मुझे digital marketing में help चाहिए।" target="_blank" rel="noopener noreferrer" className="desk-phone" style={{
+            display: "inline-flex", alignItems: "center", gap: "6px",
+            padding: "8px 16px", borderRadius: "8px",
+            background: "#F0FDF4", color: "#16A34A",
+            border: "1px solid #BBF7D0",
+            fontSize: "13.5px", fontWeight: 600,
+            textDecoration: "none", whiteSpace: "nowrap",
+            transition: "background 0.15s, transform 0.15s",
+          }}
+            onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = "#DCFCE7"; el.style.transform = "translateY(-1px)"; }}
+            onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = "#F0FDF4"; el.style.transform = "translateY(0)"; }}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.847L.055 23.454l5.758-1.51A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.376l-.36-.213-3.716.975.992-3.625-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+            WhatsApp
           </a>
 
           {/* Free Audit CTA */}
           <a href="#contact" style={{
             display: "inline-flex", alignItems: "center",
             padding: "8px 18px", borderRadius: "8px",
-            background: "#2563EB", color: "#fff",
+            background: "#1D4ED8", color: "#fff",
             fontSize: "13.5px", fontWeight: 600,
             textDecoration: "none", whiteSpace: "nowrap",
-            boxShadow: "0 2px 10px rgba(37,99,235,0.28)",
+            boxShadow: "0 2px 10px rgba(29,78,216,0.28)",
             transition: "background 0.15s, box-shadow 0.15s, transform 0.15s",
           }}
             onMouseEnter={e => {
               const el = e.currentTarget as HTMLElement;
               el.style.background = "#1D4ED8";
               el.style.transform = "translateY(-1px)";
-              el.style.boxShadow = "0 4px 16px rgba(37,99,235,0.38)";
+              el.style.boxShadow = "0 4px 16px rgba(29,78,216,0.38)";
             }}
             onMouseLeave={e => {
               const el = e.currentTarget as HTMLElement;
-              el.style.background = "#2563EB";
+              el.style.background = "#1D4ED8";
               el.style.transform = "translateY(0)";
-              el.style.boxShadow = "0 2px 10px rgba(37,99,235,0.28)";
+              el.style.boxShadow = "0 2px 10px rgba(29,78,216,0.28)";
             }}>
             Free Audit
           </a>
@@ -187,7 +207,7 @@ export default function Navbar() {
             <a key={l.label} href={l.href} onClick={() => setOpen(false)} style={{
               display: "flex", alignItems: "center", justifyContent: "space-between",
               padding: "13px 0",
-              borderBottom: i < links.length - 1 ? "1px solid #F8FAFC" : "none",
+              borderBottom: i < links.length - 1 ? "1px solid #F5F7FA" : "none",
               fontSize: "15px", fontWeight: 500, color: "#111827",
               textDecoration: "none",
             }}>
@@ -198,10 +218,10 @@ export default function Navbar() {
           <a href="#contact" onClick={() => setOpen(false)} style={{
             display: "block", textAlign: "center", marginTop: "14px",
             padding: "13px", borderRadius: "10px",
-            background: "#2563EB", color: "#fff",
+            background: "#1D4ED8", color: "#fff",
             fontSize: "15px", fontWeight: 700,
             textDecoration: "none",
-            boxShadow: "0 2px 10px rgba(37,99,235,0.3)",
+            boxShadow: "0 2px 10px rgba(29,78,216,0.3)",
           }}>
             Get Free Audit →
           </a>
