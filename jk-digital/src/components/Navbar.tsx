@@ -7,7 +7,7 @@ const links = [
   { label: "Services",  href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Pricing",   href: "#pricing" },
-  { label: "About",     href: "#about" },
+  { label: "About",     href: "#why" },
   { label: "Contact",   href: "#contact" },
 ];
 
@@ -115,7 +115,7 @@ export default function Navbar() {
           </a>
 
           {/* WhatsApp CTA */}
-          <a href="https://wa.me/918651070831?text=नमस्ते! मुझे digital marketing में सहायता चाहिए।" target="_blank" rel="noopener noreferrer" className="desk-phone" style={{
+          <a href="https://wa.me/918651070831?text=Hi! I'd like help with digital marketing." target="_blank" rel="noopener noreferrer" className="desk-phone" style={{
             display: "inline-flex", alignItems: "center", gap: "6px",
             padding: "8px 16px", borderRadius: "8px",
             background: "#F0FDF4", color: "#16A34A",
@@ -152,7 +152,7 @@ export default function Navbar() {
               el.style.transform = "translateY(0)";
               el.style.boxShadow = "0 2px 10px rgba(29,78,216,0.28)";
             }}>
-            Free Audit
+            Free Consultation
           </a>
 
           {/* Hamburger — mobile only */}
@@ -223,7 +223,7 @@ export default function Navbar() {
             textDecoration: "none",
             boxShadow: "0 2px 10px rgba(29,78,216,0.3)",
           }}>
-            Get Free Audit →
+            Get Free Consultation →
           </a>
         </div>
       </div>

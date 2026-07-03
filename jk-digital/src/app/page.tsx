@@ -15,6 +15,7 @@ import CTASection from "@/components/CTASection";
 import Contact from "@/components/Contact";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -38,10 +39,11 @@ export default function Home() {
         <Newsletter />
       </main>
       <Footer />
+      <ScrollToTop />
 
       {/* WhatsApp Float Button */}
       <a
-        href="https://wa.me/918651070831?text=नमस्ते! मुझे digital marketing में सहायता चाहिए।"
+        href="https://wa.me/918651070831?text=Hi! I'd like help with digital marketing."
         target="_blank"
         rel="noopener noreferrer"
         className="wa-float"

@@ -2,11 +2,11 @@
 
 const posts = [
   {
-    category: "Google SEO",
+    category: "SEO",
     color: "#1D4ED8",
     bg: "#EFF6FF",
-    title: "2026 में स्थानीय SEO कैसे करें — छोटे व्यवसायों के लिए पूरी गाइड",
-    excerpt: "Google Maps पर रैंक करने के 7 व्यावहारिक चरण, जिन्हें हर स्थानीय व्यवसाय आज ही अपना सकता है।",
+    title: "Local SEO in 2026 — the complete guide for small businesses",
+    excerpt: "7 practical steps to rank on Google Maps that any local business can start using today.",
     readTime: "6 min read",
     date: "12 Jun 2026",
   },
@@ -14,8 +14,8 @@ const posts = [
     category: "Google Business Profile",
     color: "#06B6D4",
     bg: "#ECFEFF",
-    title: "GMB पर 5-स्टार समीक्षाएं कैसे बढ़ाएं — बिना भुगतान वाली समीक्षाओं के",
-    excerpt: "असली ग्राहक समीक्षाएं एकत्र करने की आसान WhatsApp-आधारित प्रक्रिया जो हमारे ग्राहक इस्तेमाल करते हैं।",
+    title: "How to get more 5-star reviews on your GMB profile — the honest way",
+    excerpt: "The simple WhatsApp-based process our clients use to collect genuine customer reviews.",
     readTime: "4 min read",
     date: "28 May 2026",
   },
@@ -23,8 +23,8 @@ const posts = [
     category: "Google Ads",
     color: "#4F46E5",
     bg: "#EEF2FF",
-    title: "Google Ads का बजट बर्बाद हो रहा है? ये 6 गलतियां जांचें",
-    excerpt: "सबसे आम अभियान गलतियां जो प्रति-लीड लागत बढ़ाती हैं — और उन्हें कैसे ठीक करें।",
+    title: "Is your Google Ads budget going to waste? Check these 6 mistakes",
+    excerpt: "The most common campaign mistakes that inflate cost-per-lead — and how to fix them.",
     readTime: "7 min read",
     date: "15 May 2026",
   },
@@ -35,12 +35,12 @@ export default function Blog() {
     <section id="blog" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap">
         <div style={{ marginBottom: "56px", maxWidth: "520px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>हमारा ब्लॉग</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>Our Blog</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            जानकारियां जो <span className="accent">काम</span> आएं।
+            Insights that actually <span className="accent">help</span>.
           </h2>
           <p className="t-body">
-            डिजिटल मार्केटिंग पर व्यावहारिक गाइड — जटिल शब्दजाल नहीं, सिर्फ वो जो वाकई काम करता है।
+            Practical guides on digital marketing — no jargon, just what actually works.
           </p>
         </div>
 

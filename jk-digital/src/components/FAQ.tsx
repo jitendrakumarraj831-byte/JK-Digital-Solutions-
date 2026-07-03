@@ -3,28 +3,32 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "वेबसाइट तैयार होने में कितना समय लगता है?",
+    q: "How long does it take to build a website?",
     a: "A standard 5–10 page website takes 15–30 days. Complex builds — e-commerce, custom portals — take 45–60 days. We agree on the timeline before we start. No surprises.",
   },
   {
-    q: "Google SEO के नतीजे कब दिखना शुरू होते हैं?",
+    q: "When do SEO results start showing?",
     a: "Local SEO shows visible movement in 60–90 days. Google Ads and GMB optimisation deliver results in 1–2 weeks. SEO is a long game — but one that pays off for years.",
   },
   {
-    q: "क्या आप Forbesganj के बाहर भी सेवा देते हैं?",
-    a: "Yes — we work with businesses across Bihar and all of India. Location is not a barrier. Everything is managed remotely, and we communicate over WhatsApp and calls.",
+    q: "Do you work with businesses outside our city?",
+    a: "Yes — we work with businesses across India, in every industry from healthcare to hospitality. Location is not a barrier. Everything is managed remotely, and we communicate over WhatsApp and calls.",
   },
   {
-    q: "Google Ads के लिए न्यूनतम बजट कितना होना चाहिए?",
+    q: "What's the minimum budget for Google Ads?",
     a: "We recommend starting with ₹5,000/month in ad spend. Management fee is separate. We'll tell you exactly what to expect at your budget before you spend a rupee.",
   },
   {
-    q: "क्या कोई दीर्घकालिक अनुबंध है?",
+    q: "Is there a long-term contract?",
     a: "No lock-in. We work on monthly billing. We recommend a 3-month commitment for meaningful SEO results, but you can stop any time. No exit penalties.",
   },
   {
-    q: "रिपोर्टिंग कैसे होती है?",
+    q: "How does reporting work?",
     a: "Monthly PDF report, weekly WhatsApp updates, and a monthly strategy call. You always know what's working and where your money is going — in plain language.",
+  },
+  {
+    q: "Do you work with schools, hospitals, and other non-retail businesses?",
+    a: "Absolutely. We've built websites and campaigns for schools, hospitals, coaching institutes, hotels, restaurants, interior designers and real estate agents — each with a strategy suited to how their customers actually search.",
   },
 ];
 
@@ -35,15 +39,15 @@ export default function FAQ() {
     <section id="faq" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap-sm">
         <div style={{ marginBottom: "64px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>अक्सर पूछे सवाल</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>FAQ</p>
           <h2 className="t-h2" style={{ marginBottom: "12px" }}>
-            आम <span className="accent">सवाल</span>।
+            Frequently asked <span className="accent">questions</span>.
           </h2>
           <p className="t-body">
-            और सवाल हैं?{" "}
+            Still have questions?{" "}
             <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer"
               style={{ color: "#1D4ED8", fontWeight: 600, textDecoration: "none" }}>
-              WhatsApp पर पूछें →
+              Ask us on WhatsApp →
             </a>
           </p>
         </div>

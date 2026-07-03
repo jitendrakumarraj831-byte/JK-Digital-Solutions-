@@ -79,15 +79,18 @@ export default function Portfolio() {
   return (
     <section id="portfolio" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
-        <div style={{ marginBottom: "72px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>हमारे नतीजे</p>
+        <div style={{ marginBottom: "48px", maxWidth: "560px" }}>
+          <p className="t-label" style={{ marginBottom: "14px" }}>Our Work</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            असली व्यवसाय। असली <span className="accent-cyan">नतीजे</span>।
+            Real businesses. Real <span className="accent-cyan">results</span>.
           </h2>
-          <p className="t-body" style={{ maxWidth: "400px" }}>
-            क्लिनिक से कोचिंग सेंटर तक — मापी गई वृद्धि, सिर्फ वादे नहीं।
+          <p className="t-body">
+            From clinics to coaching centres — measured growth, not just promises.
           </p>
         </div>
+        <p style={{ fontSize: "12.5px", color: "#94A3B8", fontStyle: "italic", marginBottom: "24px" }}>
+          Project names and figures below are illustrative examples representing the type of results we deliver.
+        </p>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))", gap: "20px" }}>
           {projects.map((p, i) => (
@@ -155,7 +158,7 @@ export default function Portfolio() {
 
         <div style={{ marginTop: "56px", textAlign: "center" }}>
           <a href="#contact" className="btn btn-primary btn-lg">
-            अपनी सफलता की कहानी शुरू करें →
+            Start Your Success Story →
           </a>
         </div>
       </div>

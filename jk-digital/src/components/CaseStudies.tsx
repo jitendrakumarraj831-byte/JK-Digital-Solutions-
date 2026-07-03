@@ -4,11 +4,11 @@ import { useState } from "react";
 const cases = [
   {
     name: "Bright Future Academy",
-    tag: "Education · Forbesganj",
+    tag: "Education · Coaching Institute",
     color: "#1D4ED8",
     bg: "#EFF6FF",
-    problem: "पिछले साल दाख़िले स्थिर थे — walk-ins पर पूरी तरह निर्भर, कोई ऑनलाइन उपस्थिति नहीं थी, विद्यार्थी Google पर उन्हें ढूंढ ही नहीं पाते थे।",
-    solution: "5-पेज वेबसाइट + स्थानीय SEO + लक्षित Google Ads अभियान — दाख़िले के मौसम से 6 हफ़्ते पहले लॉन्च किया, हर विज्ञापन लैंडिंग पेज पर WhatsApp पूछताछ बटन के साथ।",
+    problem: "Admissions had plateaued — the institute relied entirely on walk-ins, had no online presence, and prospective students couldn't find them on Google.",
+    solution: "A 5-page website, local SEO, and a targeted Google Ads campaign — launched 6 weeks before admission season, with a WhatsApp enquiry button on every landing page.",
     metrics: [
       { l: "Website Traffic", v: "+340%", icon: "📈" },
       { l: "New Leads / month", v: "120+", icon: "🎯" },
@@ -18,11 +18,11 @@ const cases = [
   },
   {
     name: "Dr. Sharma Dental Clinic",
-    tag: "Healthcare · Araria",
+    tag: "Healthcare · Clinic",
     color: "#06B6D4",
     bg: "#ECFEFF",
-    problem: "क्लिनिक Google Maps पर रैंक नहीं कर रहा था — प्रतिस्पर्धियों के क्लिनिक पहले दिखते थे, समीक्षाएं भी सिर्फ 12 थीं।",
-    solution: "पूरा Google Business Profile फिर से तैयार किया, समीक्षा-संग्रह के लिए WhatsApp प्रक्रिया, और 8 हफ़्तों का स्थानीय SEO — लक्षित कीवर्ड पर।",
+    problem: "The clinic wasn't ranking on Google Maps — competing clinics appeared first, and the profile had only 12 reviews.",
+    solution: "A complete Google Business Profile rebuild, a WhatsApp-based review collection process, and 8 weeks of local SEO targeting the right keywords.",
     metrics: [
       { l: "Local Search Rank", v: "#1", icon: "📍" },
       { l: "New Patients", v: "+180%", icon: "🦷" },
@@ -32,11 +32,11 @@ const cases = [
   },
   {
     name: "Agarwal Properties",
-    tag: "Real Estate · Araria",
+    tag: "Real Estate · Property Dealer",
     color: "#16A34A",
     bg: "#F0FDF4",
-    problem: "पूछताछ सिर्फ संदर्भों (referrals) से आ रही थी — कोई डिजिटल फ़नल नहीं, अच्छी संपत्तियां भी धीमी गति से बिक रही थीं।",
-    solution: "Google Ads + प्रत्येक संपत्ति-प्रकार के लिए लैंडिंग पेज + रीटार्गेटिंग — हर पूछताछ सीधे WhatsApp पर भेजी गई, प्रतिक्रिया समय 5 मिनट के अंदर।",
+    problem: "Enquiries came from referrals alone — no digital funnel, and even strong listings were selling slowly.",
+    solution: "Google Ads with landing pages for each property type, plus retargeting — every enquiry routed straight to WhatsApp with a 5-minute response time.",
     metrics: [
       { l: "Qualified Leads", v: "40+/mo", icon: "🏠" },
       { l: "Cost per Lead", v: "-58%", icon: "📉" },
@@ -53,15 +53,18 @@ export default function CaseStudies() {
   return (
     <section id="case-studies" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
-        <div style={{ marginBottom: "56px", maxWidth: "560px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>केस स्टडीज़</p>
+        <div style={{ marginBottom: "24px", maxWidth: "560px" }}>
+          <p className="t-label" style={{ marginBottom: "14px" }}>Case Studies</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            Problem से <span className="accent">Result</span> तक — पूरी कहानी।
+            From <span className="accent">problem</span> to result — the full story.
           </h2>
           <p className="t-body">
-            हर व्यवसाय अलग होता है। यहां देखें हमने असली चुनौतियों को मापने योग्य वृद्धि में कैसे बदला।
+            Every business is different. Here&apos;s how we turn real challenges into measurable growth.
           </p>
         </div>
+        <p style={{ fontSize: "12.5px", color: "#94A3B8", fontStyle: "italic", marginBottom: "32px" }}>
+          Sample case studies illustrating the type of engagement and results we deliver for clients.
+        </p>
 
         {/* Tabs */}
         <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "32px" }}>

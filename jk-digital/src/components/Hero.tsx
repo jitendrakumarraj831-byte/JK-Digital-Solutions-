@@ -57,7 +57,7 @@ export default function Hero() {
               letterSpacing: "-0.01em",
             }}>
               <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#1D4ED8", display: "inline-block" }} />
-              Forbesganj, Bihar · Digital Marketing
+              Trusted Digital Growth Partner
             </div>
 
             {/* Headline */}
@@ -69,10 +69,10 @@ export default function Hero() {
               color: "#111827",
               marginBottom: "22px",
             }}>
-              Google से पाएं{" "}
-              <span style={{ color: "#1D4ED8" }}>ज़्यादा ग्राहक</span>
+              Turn Google searches{" "}
+              <span style={{ color: "#1D4ED8" }}>into customers</span>
               <br />
-              — हर रोज़।
+              — every single day.
             </h1>
 
             {/* Sub-headline */}
@@ -84,7 +84,7 @@ export default function Hero() {
               marginBottom: "36px",
               fontWeight: 400,
             }}>
-              हम वेबसाइट बनाते हैं, Google Ads चलाते हैं, और स्थानीय SEO बढ़ाते हैं — ताकि आपका व्यवसाय Google पर सबसे पहले दिखे।
+              We build high-converting websites, run Google Ads, and grow local SEO — so your business shows up first when customers search.
             </p>
 
             {/* CTAs */}
@@ -99,10 +99,10 @@ export default function Hero() {
               }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(-2px)"; el.style.boxShadow = "0 8px 28px rgba(29,78,216,0.4)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 18px rgba(29,78,216,0.32)"; }}>
-                मुफ़्त परामर्श लें
+                Get a Free Consultation
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
-              <a href="https://wa.me/918651070831?text=नमस्ते! मुझे अपना व्यवसाय ऑनलाइन बढ़ाना है।" target="_blank" rel="noopener noreferrer" style={{
+              <a href="https://wa.me/918651070831?text=Hi! I'd like to grow my business online." target="_blank" rel="noopener noreferrer" style={{
                 display: "inline-flex", alignItems: "center", gap: "9px",
                 padding: "15px 24px", borderRadius: "10px",
                 background: "#fff", color: "#111827",
@@ -116,7 +116,7 @@ export default function Hero() {
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
                   <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.847L.055 23.454l5.758-1.51A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.376l-.36-.213-3.716.975.992-3.625-.234-.373A9.818 9.818 0 1112 21.818z"/>
                 </svg>
-                WhatsApp पर बात करें
+                Chat on WhatsApp
               </a>
             </div>
 
@@ -141,7 +141,7 @@ export default function Hero() {
                   {[1,2,3,4,5].map(i => <span key={i} style={{ color: "#F59E0B", fontSize: "14px" }}>★</span>)}
                 </div>
                 <p style={{ fontSize: "13px", color: "#4B5563", margin: 0, fontWeight: 500 }}>
-                  Helping local businesses <strong style={{ color: "#111827" }}>grow online</strong> across Bihar
+                  Rated <strong style={{ color: "#111827" }}>4.9/5</strong> by 200+ happy clients
                 </p>
               </div>
             </div>
@@ -389,10 +389,10 @@ export default function Hero() {
           boxShadow: "0 1px 8px rgba(0,0,0,0.04)",
         }}>
           {[
-            { n: "Local",   l: "Bihar Focused",      i: "📍" },
-            { n: "Free",   l: "First Audit",        i: "🎯" },
-            { n: "48hr",   l: "Ads Go Live",        i: "📈" },
-            { n: "0",      l: "Lock-in Contract",   i: "✅" },
+            { n: "4.9★",  l: "Google Rating",       i: "⭐" },
+            { n: "200+",  l: "Happy Clients",        i: "🤝" },
+            { n: "5+",    l: "Years Experience",     i: "📅" },
+            { n: "48hr",  l: "Ads Go Live",          i: "📈" },
           ].map((s, idx) => (
             <div key={idx} style={{
               padding: "26px 16px",
