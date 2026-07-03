@@ -202,14 +202,6 @@ select.inp option { background: #fff; color: #111827; }
 }
 .card:hover { transform: translateY(-4px); }
 
-/* ─── MARQUEE ─── */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-.marquee-track { animation: marquee 36s linear infinite; }
-.marquee-wrap:hover .marquee-track { animation-play-state: paused; }
-
 /* ─── ANIMATIONS ─── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }

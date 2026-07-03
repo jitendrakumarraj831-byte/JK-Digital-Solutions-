@@ -98,10 +98,10 @@ export default function Contact() {
           <div>
             <p className="t-label" style={{ marginBottom: "14px" }}>Contact Us</p>
             <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-              Let&apos;s <span className="accent">talk</span>.
+              Ready to start? <span className="accent">Reach us directly.</span>
             </h2>
             <p className="t-body" style={{ marginBottom: "48px", maxWidth: "380px" }}>
-              Get a free consultation in 30 minutes. We&apos;ll review your online presence and tell you exactly what&apos;s missing.
+              Already know what you need? Skip the queue — message us on WhatsApp, call, or send the details below and a real person will respond the same day.
             </p>
 
             {/* Contact cards */}
@@ -188,9 +188,9 @@ export default function Contact() {
             borderRadius: "24px", padding: "clamp(28px, 5vw, 44px)",
             boxShadow: "0 4px 24px rgba(0,0,0,0.05)",
           }}>
-            <h3 className="t-h3" style={{ marginBottom: "6px" }}>Request a Free Consultation</h3>
+            <h3 className="t-h3" style={{ marginBottom: "6px" }}>Tell Us About Your Project</h3>
             <p style={{ fontSize: "14px", color: "#4B5563", marginBottom: "28px" }}>
-              We&apos;ll personally review your business and tell you exactly what to fix first.
+              Share a few details and we&apos;ll come back with a plan, a timeline, and a clear price — no guesswork.
             </p>
 
             <div style={{ height: "1px", background: "#F1F5F9", marginBottom: "24px" }} />
@@ -237,7 +237,7 @@ export default function Contact() {
                 width: "100%", cursor: status === "loading" ? "not-allowed" : "pointer",
                 opacity: status === "loading" ? 0.6 : 1,
               }}>
-                {status === "loading" ? "Sending..." : "Send Free Consultation Request →"}
+                {status === "loading" ? "Sending..." : "Send My Project Details →"}
               </button>
 
               <p style={{ textAlign: "center", fontSize: "12px", color: "#6B7280", fontWeight: 500 }}>
