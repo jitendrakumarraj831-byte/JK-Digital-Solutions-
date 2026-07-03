@@ -10,6 +10,7 @@ const services = [
     title: "Website Development",
     tagline: "आपका 24/7 online salesman।",
     desc: "Fast, mobile-first websites built to convert visitors into customers. SEO-ready from day one.",
+    descHi: "तेज़, mobile-first websites जो visitors को customers में बदलें। पहले दिन से SEO-ready।",
     features: ["Mobile-first design", "SEO architecture", "30-day delivery", "1 year free support"],
     price: "₹8,999",
     priceNote: "onwards",
@@ -30,6 +31,7 @@ const services = [
     title: "Google SEO",
     tagline: "ऊपर rank करें। Clicks पर कुछ न दें।",
     desc: "Get your business to the top of Google search results organically — and stay there.",
+    descHi: "अपने business को Google search results में organically top पर लाएं — और वहीं बनाए रखें।",
     features: ["Local + national SEO", "Keyword research", "Monthly reports", "Competitor analysis"],
     price: "₹4,999",
     priceNote: "/ month",
@@ -50,6 +52,7 @@ const services = [
     title: "Google Business Profile",
     tagline: "Local search जीतें। पास के लोग ढूंढें।",
     desc: "Optimise your GMB listing so customers searching near you find your business first.",
+    descHi: "अपनी GMB listing को optimise करें ताकि पास में search करने वाले customers सबसे पहले आपका business पाएं।",
     features: ["Complete GMB setup", "Review management", "Photo optimisation", "Local ranking"],
     price: "₹2,499",
     priceNote: "/ month",
@@ -70,6 +73,7 @@ const services = [
     title: "Google Ads",
     tagline: "नतीजों के लिए pay करें, दिखावे के लिए नहीं।",
     desc: "Targeted campaigns that bring qualified leads within days. Expert management, measurable ROI.",
+    descHi: "Targeted campaigns जो कुछ ही दिनों में qualified leads लाएं। Expert management, measurable ROI।",
     features: ["Campaign setup", "Bid optimisation", "Ad copywriting", "Weekly reports"],
     price: "₹3,999",
     priceNote: "/ month",
@@ -90,6 +94,7 @@ const services = [
     title: "Social Media Marketing",
     tagline: "जहां आपके customers हैं, वहां दिखें।",
     desc: "Consistent, on-brand content across Instagram and Facebook that builds trust and drives enquiries.",
+    descHi: "Instagram और Facebook पर consistent, brand के अनुसार content जो trust बनाए और enquiries लाए।",
     features: ["Content calendar", "Reels & graphics", "Community management", "Monthly insights"],
     price: "₹5,999",
     priceNote: "/ month",
@@ -110,6 +115,7 @@ const services = [
     title: "Logo & Branding",
     tagline: "एक brand जो याद रह जाए।",
     desc: "Professional logo, colour system, and brand guidelines that make your business instantly recognisable.",
+    descHi: "Professional logo, colour system, और brand guidelines जो आपके business को तुरंत पहचानने लायक बनाएं।",
     features: ["Logo design (3 concepts)", "Brand colour palette", "Visiting cards", "Brand guideline PDF"],
     price: "₹4,999",
     priceNote: "onwards",
@@ -130,6 +136,7 @@ const services = [
     title: "Business Automation",
     tagline: "Leads follow-up करें, बिना manual काम के।",
     desc: "WhatsApp auto-replies, lead capture, and CRM workflows so no enquiry ever slips through.",
+    descHi: "WhatsApp auto-replies, lead capture, और CRM workflows — ताकि कोई भी enquiry कभी miss न हो।",
     features: ["WhatsApp auto-reply", "Lead capture forms", "CRM setup", "Appointment reminders"],
     price: "₹6,999",
     priceNote: "onwards",
@@ -193,7 +200,8 @@ export default function Services() {
 
               <h3 className="t-h3" style={{ marginBottom: "6px" }}>{s.title}</h3>
               <p style={{ fontSize: "13px", color: s.iconColor, fontWeight: 600, marginBottom: "12px" }}>{s.tagline}</p>
-              <p style={{ fontSize: "14px", color: "#4B5563", marginBottom: "24px", lineHeight: 1.7 }}>{s.desc}</p>
+              <p style={{ fontSize: "14px", color: "#4B5563", marginBottom: "6px", lineHeight: 1.7 }}>{s.desc}</p>
+              <p lang="hi" style={{ fontSize: "14px", color: "#4B5563", marginBottom: "24px", lineHeight: 1.7 }}>{s.descHi}</p>
 
               {/* Features */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "28px" }}>
