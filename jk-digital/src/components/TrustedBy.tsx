@@ -40,7 +40,7 @@ export default function TrustedBy() {
       {/* Header */}
       <p style={{
         textAlign: "center",
-        fontSize: "12px", fontWeight: 700, color: "#94A3B8",
+        fontSize: "12px", fontWeight: 700, color: "#6B7280",
         textTransform: "uppercase", letterSpacing: "0.12em",
         marginBottom: "28px",
       }}>
@@ -81,7 +81,7 @@ export default function TrustedBy() {
 
       {/* Divider */}
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
-        <span style={{ fontSize: "11px", fontWeight: 700, color: "#CBD5E1", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, color: "#6B7280", textTransform: "uppercase", letterSpacing: "0.1em" }}>
           Industries We Serve
         </span>
       </div>

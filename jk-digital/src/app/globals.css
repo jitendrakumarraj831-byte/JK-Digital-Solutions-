@@ -202,10 +202,6 @@ select.inp option { background: #fff; color: #111827; }
 }
 .card:hover { transform: translateY(-4px); }
 
-/* ─── ACCORDION ─── */
-.acc { max-height: 0; overflow: hidden; transition: max-height 0.38s cubic-bezier(0.4,0,0.2,1); }
-.acc.open { max-height: 360px; }
-
 /* ─── MARQUEE ─── */
 @keyframes marquee {
   from { transform: translateX(0); }
@@ -291,3 +287,40 @@ select.inp option { background: #fff; color: #111827; }
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #F1F5F9; }
 ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+
+/* ─── FOCUS STATE — consistent, brand-colored, visible only for keyboard nav ─── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #1D4ED8;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ─── REDUCED MOTION ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ─── SKIP LINK ─── */
+.skip-link {
+  position: absolute;
+  top: -48px; left: 12px;
+  z-index: 1000;
+  background: #1D4ED8;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 12px; }

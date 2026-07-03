@@ -9,7 +9,6 @@ const services = [
     badgeColor: "#1D4ED8",
     title: "Website Development",
     tagline: "Your 24/7 online sales representative.",
-    desc: "Fast, mobile-first websites built to convert visitors into customers. SEO-ready from day one.",
     features: ["Mobile-first design", "SEO architecture", "30-day delivery", "1 year free support"],
     price: "₹8,999",
     priceNote: "onwards",
@@ -29,7 +28,6 @@ const services = [
     badgeColor: "#16A34A",
     title: "SEO",
     tagline: "Rank higher. Pay nothing for the click.",
-    desc: "Get your business to the top of Google search results organically — and stay there.",
     features: ["Local + national SEO", "Keyword research", "Monthly reports", "Competitor analysis"],
     price: "₹4,999",
     priceNote: "/ month",
@@ -49,7 +47,6 @@ const services = [
     badgeColor: "#06B6D4",
     title: "Google Business Profile",
     tagline: "Win local search. Reach customers nearby.",
-    desc: "Optimise your GMB listing so customers searching near you find your business first.",
     features: ["Complete GMB setup", "Review management", "Photo optimisation", "Local ranking"],
     price: "₹2,499",
     priceNote: "/ month",
@@ -69,7 +66,6 @@ const services = [
     badgeColor: "#4F46E5",
     title: "Google Ads",
     tagline: "Pay for results, not just impressions.",
-    desc: "Targeted campaigns that bring qualified leads within days. Expert management, measurable ROI.",
     features: ["Campaign setup", "Bid optimisation", "Ad copywriting", "Weekly reports"],
     price: "₹3,999",
     priceNote: "/ month",
@@ -89,7 +85,6 @@ const services = [
     badgeColor: "#DB2777",
     title: "Social Media Marketing",
     tagline: "Show up where your customers already are.",
-    desc: "Consistent, on-brand content across Instagram and Facebook that builds trust and drives enquiries.",
     features: ["Content calendar", "Reels & graphics", "Community management", "Monthly insights"],
     price: "₹5,999",
     priceNote: "/ month",
@@ -109,7 +104,6 @@ const services = [
     badgeColor: "#9333EA",
     title: "Brand Identity",
     tagline: "A consistent look, everywhere your business appears.",
-    desc: "Colour systems, typography, and brand guidelines that keep every touchpoint instantly recognisable.",
     features: ["Brand colour palette", "Typography system", "Brand guideline PDF", "Templates for social & print"],
     price: "₹6,999",
     priceNote: "onwards",
@@ -129,7 +123,6 @@ const services = [
     badgeColor: "#E11D48",
     title: "Logo Design",
     tagline: "An identity that's remembered.",
-    desc: "A professional, versatile logo designed to work everywhere — from your storefront to your app icon.",
     features: ["3 unique concepts", "Unlimited revisions", "All file formats", "Visiting card design"],
     price: "₹3,499",
     priceNote: "onwards",
@@ -149,7 +142,6 @@ const services = [
     badgeColor: "#059669",
     title: "Business Automation",
     tagline: "Follow up on every enquiry — without manual work.",
-    desc: "WhatsApp auto-replies, lead capture, and CRM workflows so no enquiry ever slips through.",
     features: ["WhatsApp auto-reply", "Lead capture forms", "CRM setup", "Appointment reminders"],
     price: "₹6,999",
     priceNote: "onwards",
@@ -178,9 +170,12 @@ export default function Services() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 380px), 1fr))", gap: "20px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 380px), 1fr))", gap: "20px", alignItems: "stretch" }}>
           {services.map((s, i) => (
             <div key={i} className="card" style={{
+              display: "flex",
+              flexDirection: "column",
+              height: "100%",
               background: "#fff",
               border: `1px solid #E2E8F0`,
               borderTop: `3px solid ${s.cardBorder}`,
@@ -211,9 +206,8 @@ export default function Services() {
                 {s.icon}
               </div>
 
-              <h3 className="t-h3" style={{ marginBottom: "6px" }}>{s.title}</h3>
-              <p style={{ fontSize: "13px", color: s.iconColor, fontWeight: 600, marginBottom: "12px" }}>{s.tagline}</p>
-              <p style={{ fontSize: "14px", color: "#4B5563", marginBottom: "24px", lineHeight: 1.7 }}>{s.desc}</p>
+              <h3 className="t-h3" style={{ marginBottom: "8px" }}>{s.title}</h3>
+              <p style={{ fontSize: "14px", color: s.iconColor, fontWeight: 600, marginBottom: "24px", lineHeight: 1.6 }}>{s.tagline}</p>
 
               {/* Features */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "28px" }}>
@@ -224,20 +218,21 @@ export default function Services() {
                       background: s.iconBg, flexShrink: 0,
                       display: "flex", alignItems: "center", justifyContent: "center",
                     }}>
-                      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke={s.checkColor} strokeWidth="3.5" strokeLinecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke={s.checkColor} strokeWidth="3.5" strokeLinecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
                     <span style={{ fontSize: "13px", color: "#475569", fontWeight: 500 }}>{f}</span>
                   </div>
                 ))}
               </div>
 
-              {/* Footer */}
+              {/* Footer — pinned to bottom so every card lines up */}
               <div style={{
                 display: "flex", alignItems: "center", justifyContent: "space-between",
                 paddingTop: "20px", borderTop: "1px solid #F1F5F9",
+                marginTop: "auto",
               }}>
                 <div>
-                  <div style={{ fontSize: "11px", color: "#94A3B8", fontWeight: 600, marginBottom: "2px", textTransform: "uppercase", letterSpacing: "0.06em" }}>{s.priceNote}</div>
+                  <div style={{ fontSize: "11px", color: "#6B7280", fontWeight: 600, marginBottom: "2px", textTransform: "uppercase", letterSpacing: "0.06em" }}>{s.priceNote}</div>
                   <div style={{ fontSize: "28px", fontWeight: 700, color: "#111827", letterSpacing: "-0.02em", lineHeight: 1 }}>{s.price}</div>
                 </div>
                 <a href="#contact" style={{

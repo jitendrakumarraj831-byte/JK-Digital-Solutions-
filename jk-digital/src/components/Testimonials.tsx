@@ -91,8 +91,19 @@ export default function Testimonials() {
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 16px 40px rgba(0,0,0,0.08)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 1px 6px rgba(0,0,0,0.04)"; }}>
 
-              {/* Stars */}
-              <div style={{ fontSize: "14px", color: "#F59E0B", marginBottom: "16px", letterSpacing: "2px" }}>★★★★★</div>
+              {/* Stars + source */}
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "16px" }}>
+                <div style={{ fontSize: "14px", color: "#F59E0B", letterSpacing: "2px" }} aria-label="5 out of 5 stars">★★★★★</div>
+                <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill="#4285F4" d="M23.52 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.47a5.53 5.53 0 01-2.4 3.63v3h3.88c2.27-2.09 3.57-5.17 3.57-8.82z"/>
+                    <path fill="#34A853" d="M12 24c3.24 0 5.96-1.07 7.95-2.91l-3.88-3c-1.08.72-2.45 1.15-4.07 1.15-3.13 0-5.78-2.11-6.73-4.96H1.26v3.11A12 12 0 0012 24z"/>
+                    <path fill="#FBBC05" d="M5.27 14.28a7.2 7.2 0 010-4.56V6.61H1.26a12 12 0 000 10.78l4.01-3.11z"/>
+                    <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.44-3.44C17.95 1.19 15.24 0 12 0A12 12 0 001.26 6.61l4.01 3.11C6.22 6.86 8.87 4.75 12 4.75z"/>
+                  </svg>
+                  <span style={{ fontSize: "11px", fontWeight: 600, color: "#6B7280" }}>Google review</span>
+                </div>
+              </div>
 
               {/* Quote */}
               <p style={{ fontSize: "15px", lineHeight: 1.72, color: "#374151", marginBottom: "24px", fontWeight: 400 }}>
@@ -100,7 +111,7 @@ export default function Testimonials() {
               </p>
 
               {/* Author */}
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "10px" }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px", flexWrap: "wrap", paddingTop: "20px", borderTop: "1px solid #F1F5F9" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                   <div style={{
                     width: "40px", height: "40px", borderRadius: "50%",
@@ -108,16 +119,17 @@ export default function Testimonials() {
                     display: "flex", alignItems: "center", justifyContent: "center",
                     fontSize: "13px", fontWeight: 700, color: r.avatarColor,
                     border: `1px solid ${r.avatarColor}20`,
-                  }}>{r.initials}</div>
+                  }} aria-hidden="true">{r.initials}</div>
                   <div>
                     <div style={{ fontSize: "14px", fontWeight: 700, color: "#111827" }}>{r.name}</div>
-                    <div style={{ fontSize: "12px", color: "#94A3B8", marginTop: "1px" }}>{r.role}</div>
+                    <div style={{ fontSize: "12px", color: "#6B7280", marginTop: "1px" }}>{r.role}</div>
                   </div>
                 </div>
-                <div style={{
-                  fontSize: "11px", fontWeight: 600, color: "#94A3B8",
-                  textAlign: "right", whiteSpace: "nowrap",
-                }}>{r.service}</div>
+                <span style={{
+                  fontSize: "11px", fontWeight: 600, color: r.avatarColor,
+                  background: r.avatarBg, padding: "4px 10px", borderRadius: "100px",
+                  whiteSpace: "nowrap",
+                }}>{r.service}</span>
               </div>
             </div>
           ))}
