@@ -88,14 +88,14 @@ export default function Contact() {
   return (
     <section id="contact" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
-        <div style={{
+        <div className="auto-grid-mobile" style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 420px), 1fr))",
           gap: "64px", alignItems: "start",
         }}>
 
           {/* Left — info */}
-          <div>
+          <div style={{ minWidth: 0 }}>
             <p className="t-label" style={{ marginBottom: "14px" }}>Contact Us</p>
             <h2 className="t-h2" style={{ marginBottom: "16px" }}>
               Ready to start? <span className="accent">Reach us directly.</span>
@@ -183,6 +183,7 @@ export default function Contact() {
 
           {/* Right — form */}
           <div style={{
+            minWidth: 0,
             background: "#fff",
             border: "1px solid #E2E8F0",
             borderRadius: "24px", padding: "clamp(28px, 5vw, 44px)",

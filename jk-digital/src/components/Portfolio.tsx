@@ -98,7 +98,7 @@ export default function Portfolio() {
           Project names and figures below are illustrative examples representing the type of results we deliver.
         </p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))", gap: "20px" }}>
+        <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))", gap: "20px" }}>
           {projects.map((p, i) => (
             <div key={i} className="card" style={{
               background: "#fff",

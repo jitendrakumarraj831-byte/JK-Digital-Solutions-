@@ -44,7 +44,7 @@ export default function Blog() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "20px" }}>
+        <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "20px" }}>
           {posts.map((p, i) => (
             <a key={i} href="#contact" className="card" style={{
               display: "block", textDecoration: "none",

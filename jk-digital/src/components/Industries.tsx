@@ -71,7 +71,7 @@ export default function Industries() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "16px" }}>
+        <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "16px" }}>
           {industries.map(ind => (
             <div key={ind.name} className="card" style={{
               display: "flex", alignItems: "flex-start", gap: "14px",

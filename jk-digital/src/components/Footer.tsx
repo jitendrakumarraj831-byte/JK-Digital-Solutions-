@@ -45,7 +45,7 @@ const cols = [
 export default function Footer() {
   return (
     <footer style={{ background: "#0F172A", position: "relative" }}>
-      <div className="wrap" style={{ paddingTop: "72px", paddingBottom: "48px" }}>
+      <div className="wrap footer-wrap" style={{ paddingTop: "72px", paddingBottom: "48px" }}>
         {/* Main grid */}
         <div style={{
           display: "grid",

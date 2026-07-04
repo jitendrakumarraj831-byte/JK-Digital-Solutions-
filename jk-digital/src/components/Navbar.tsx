@@ -133,8 +133,8 @@ export default function Navbar() {
             WhatsApp
           </a>
 
-          {/* Free Consultation CTA */}
-          <a href="#contact" style={{
+          {/* Free Consultation CTA — desktop only; the mobile dropdown has its own */}
+          <a href="#contact" className="desk-phone" style={{
             display: "inline-flex", alignItems: "center",
             padding: "8px 18px", borderRadius: "8px",
             background: "#1D4ED8", color: "#fff",

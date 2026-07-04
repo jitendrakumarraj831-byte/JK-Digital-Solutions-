@@ -78,7 +78,7 @@ export default function Testimonials() {
           </a>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "16px" }}>
+        <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 320px), 1fr))", gap: "16px" }}>
           {reviews.map((r, i) => (
             <div key={i} className="card" style={{
               padding: "28px",

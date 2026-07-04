@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Reasons */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "16px" }}>
+        <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "16px" }}>
           {reasons.map(r => (
             <div key={r.title} className="card" style={{
               padding: "28px", background: "#fff",
