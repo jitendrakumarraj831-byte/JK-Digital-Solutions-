@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 
 const plans = [
   {
@@ -94,6 +95,8 @@ const comparisonRows = [
 const planNames = plans.map(p => p.name);
 
 export default function Pricing() {
+  const [mobilePlan, setMobilePlan] = useState(1);
+
   return (
     <section id="pricing" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
@@ -202,8 +205,8 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Feature comparison table */}
-        <div style={{ marginTop: "72px" }}>
+        {/* Feature comparison — desktop table */}
+        <div className="pricing-table-desktop" style={{ marginTop: "72px" }}>
           <h3 className="t-h3" style={{ textAlign: "center", marginBottom: "32px" }}>Feature Comparison</h3>
           <div style={{
             overflowX: "auto", border: "1px solid #E2E8F0", borderRadius: "18px",
@@ -250,6 +253,51 @@ export default function Pricing() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+
+        {/* Feature comparison — mobile: tap a plan, no horizontal scroll */}
+        <div className="pricing-table-mobile" style={{ marginTop: "72px" }}>
+          <h3 className="t-h3" style={{ textAlign: "center", marginBottom: "20px" }}>Feature Comparison</h3>
+          <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", justifyContent: "center", marginBottom: "20px" }}>
+            {planNames.map((n, ni) => (
+              <button key={n} onClick={() => setMobilePlan(ni)} aria-pressed={mobilePlan === ni} style={{
+                padding: "8px 16px", borderRadius: "100px", cursor: "pointer",
+                border: mobilePlan === ni ? "1.5px solid #1D4ED8" : "1px solid #E2E8F0",
+                background: mobilePlan === ni ? "#EFF6FF" : "#fff",
+                color: mobilePlan === ni ? "#1D4ED8" : "#4B5563",
+                fontSize: "13px", fontWeight: 600,
+              }}>
+                {n}
+              </button>
+            ))}
+          </div>
+          <div style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: "16px", overflow: "hidden" }}>
+            {comparisonRows.map((row, ri) => {
+              const v = row.values[mobilePlan];
+              return (
+                <div key={row.label} style={{
+                  display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px",
+                  padding: "14px 18px",
+                  borderBottom: ri < comparisonRows.length - 1 ? "1px solid #F1F5F9" : "none",
+                  background: ri % 2 === 0 ? "#fff" : "#FCFCFD",
+                }}>
+                  <span style={{ fontSize: "13.5px", color: "#374151", fontWeight: 500 }}>{row.label}</span>
+                  {typeof v === "boolean" ? (
+                    v ? (
+                      <>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="3" strokeLinecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                        <span style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0,0,0,0)" }}>Included</span>
+                      </>
+                    ) : (
+                      <span style={{ color: "#94A3B8", fontSize: "14px" }} aria-label="Not included">—</span>
+                    )
+                  ) : (
+                    <span style={{ fontSize: "13.5px", color: "#111827", fontWeight: 600 }}>{v}</span>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 

@@ -267,6 +267,15 @@ select.inp option { background: #fff; color: #111827; }
   .call-float { width: 42px; height: 42px; bottom: 21px; right: 74px; }
 }
 
+/* The footer's last row (copyright / legal links) is the one place these
+   floats can't just "hide while scrolling" — the page can't scroll past
+   it, so the floats stay visible on top of it at rest. Give the footer
+   enough bottom clearance on mobile that its last row never sits under
+   the floats' fixed footprint (~90px including the scroll-to-top button). */
+@media (max-width: 600px) {
+  .footer-wrap { padding-bottom: 96px !important; }
+}
+
 /* ─── STARS ─── */
 .stars { color: #F59E0B; }
 
@@ -318,6 +327,16 @@ select:focus-visible {
    card renders at exactly the same width, edge to edge. */
 @media (max-width: 640px) {
   .auto-grid-mobile { grid-template-columns: 1fr !important; }
+}
+
+/* ─── PRICING COMPARISON — table on desktop, tap-to-compare list on mobile ───
+   The desktop table is intentionally wider than a phone screen (many
+   columns of data); below 760px we swap it for a single-plan stacked list
+   selected via tabs, so there's no horizontally-scrollable table on mobile. */
+.pricing-table-mobile { display: none; }
+@media (max-width: 760px) {
+  .pricing-table-desktop { display: none; }
+  .pricing-table-mobile { display: block; }
 }
 
 /* ─── SKIP LINK ─── */
