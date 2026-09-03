@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { useT } from "@/lib/i18n";
 
 export default function ScrollToTop() {
+  const t = useT();
   const [pastFold, setPastFold] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const scrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -31,10 +33,10 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      aria-label="Scroll to top"
+      aria-label={t("Scroll to top", "ऊपर जाएं")}
       aria-hidden={!visible}
       tabIndex={visible ? 0 : -1}
-      title="Scroll to top"
+      title={t("Scroll to top", "ऊपर जाएं")}
       style={{
         position: "fixed",
         bottom: "24px", left: "24px",

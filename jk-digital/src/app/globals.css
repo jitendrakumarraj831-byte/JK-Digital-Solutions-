@@ -329,16 +329,6 @@ select:focus-visible {
   .auto-grid-mobile { grid-template-columns: 1fr !important; }
 }
 
-/* ─── PRICING COMPARISON — table on desktop, tap-to-compare list on mobile ───
-   The desktop table is intentionally wider than a phone screen (many
-   columns of data); below 760px we swap it for a single-plan stacked list
-   selected via tabs, so there's no horizontally-scrollable table on mobile. */
-.pricing-table-mobile { display: none; }
-@media (max-width: 760px) {
-  .pricing-table-desktop { display: none; }
-  .pricing-table-mobile { display: block; }
-}
-
 /* ─── SKIP LINK ─── */
 .skip-link {
   position: absolute;

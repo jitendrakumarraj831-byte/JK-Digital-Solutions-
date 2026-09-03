@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { LanguageProvider } from "@/lib/i18n";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,9 +9,15 @@ const inter = Inter({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://jkdigitalsolutions.in";
-const title = "JK Digital Solutions — Website Development, SEO & Digital Marketing Agency";
+const title = "JK Digital Solutions — Website Development, SEO & Digital Marketing Agency in Bihar";
 const description =
-  "A premium digital agency helping small businesses, schools, hospitals, hotels, restaurants and local brands grow online — website development, SEO, Google Business Profile, Google Ads and digital marketing. Free consultation.";
+  "A premium digital agency helping small businesses, schools, hospitals, hotels, restaurants and local brands across Bihar grow online — serving Patna, Gaya, Muzaffarpur, Bhagalpur, Darbhanga, Purnia, Katihar, Begusarai, Araria, Forbesganj and beyond with website development, SEO, Google Business Profile, Google Ads and digital marketing. Free consultation.";
+
+const biharCities = [
+  "Patna", "Gaya", "Muzaffarpur", "Bhagalpur", "Darbhanga", "Purnia",
+  "Katihar", "Begusarai", "Munger", "Chhapra", "Arrah", "Bettiah",
+  "Saharsa", "Sasaram", "Hajipur", "Siwan", "Motihari", "Araria", "Forbesganj",
+];
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -19,7 +26,17 @@ export const metadata: Metadata = {
     template: "%s | JK Digital Solutions",
   },
   description,
-  keywords: "website development agency, SEO services, Google Business Profile optimization, Google Ads management, digital marketing agency, JK Digital Solutions",
+  keywords: [
+    "digital marketing agency in Bihar",
+    "website development company Bihar",
+    "SEO services Bihar",
+    "Google Business Profile optimization Bihar",
+    "Google Ads management Bihar",
+    "digital marketing agency Patna",
+    "website design Patna",
+    "SEO company Araria Forbesganj",
+    "JK Digital Solutions",
+  ].join(", "),
   authors: [{ name: "JK Digital Solutions" }],
   alternates: { canonical: "/" },
   openGraph: {
@@ -65,7 +82,10 @@ const jsonLd = {
     postalCode: "854318",
     addressCountry: "IN",
   },
-  areaServed: "India",
+  areaServed: [
+    { "@type": "State", name: "Bihar" },
+    ...biharCities.map(name => ({ "@type": "City", name })),
+  ],
   sameAs: [
     "https://instagram.com/jkdigitalsolutions",
     "https://facebook.com/jkdigitalsolutions",
@@ -89,6 +109,49 @@ const jsonLd = {
   ].map(name => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
 };
 
+// Kept in sync with the visible FAQ section (src/components/FAQ.tsx) —
+// structured data must match on-page content per Google's guidelines,
+// and clear Q&A pairs like these are what Google's AI Overviews tend to
+// lift directly into their summaries.
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Do you provide digital marketing services across Bihar?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. JK Digital Solutions works with businesses throughout Bihar — including Patna, Gaya, Muzaffarpur, Bhagalpur, Darbhanga, Purnia, Katihar, Begusarai, Araria and Forbesganj. Everything is managed remotely over WhatsApp and calls, so location is never a barrier.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does a website cost in Bihar?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Website packages with JK Digital Solutions start at ₹8,999. The exact price depends on the number of pages and features you need — message us on WhatsApp for a free, no-obligation quote.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you set up Google Business Profile (Google My Business)?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — Google Business Profile setup and optimisation is one of our most popular services, helping local businesses across Bihar show up in Google Maps and local search results.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How soon do SEO and Google Ads results show?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Local SEO typically shows visible ranking movement in 60–90 days. Google Ads and Google Business Profile optimisation deliver results much faster, usually within 1–2 weeks of launch.",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -97,10 +160,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
       </head>
       <body className={inter.className}>
         <a href="#main" className="skip-link">Skip to content</a>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

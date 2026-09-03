@@ -1,53 +1,71 @@
 "use client";
 import { useState } from "react";
+import { useLanguage, useT } from "@/lib/i18n";
 
+// Kept in sync with the FAQPage JSON-LD in src/app/layout.tsx — the English
+// text here must match what's in that schema, since Google requires
+// structured data to reflect visible on-page content.
 const faqs = [
   {
-    q: "How long does it take to build a website?",
-    a: "A standard 5–10 page website takes 15–30 days. Complex builds — e-commerce, custom portals — take 45–60 days. We agree on the timeline before we start. No surprises.",
+    q: {
+      en: "Do you provide digital marketing services across Bihar?",
+      hi: "क्या आप पूरे बिहार में डिजिटल मार्केटिंग सेवाएं देते हैं?",
+    },
+    a: {
+      en: "Yes. We work with businesses throughout Bihar — including Patna, Gaya, Muzaffarpur, Bhagalpur, Darbhanga, Purnia, Katihar, Begusarai, Araria and Forbesganj. Everything is managed remotely over WhatsApp and calls, so location is never a barrier.",
+      hi: "हां। हम पूरे बिहार में — पटना, गया, मुजफ्फरपुर, भागलपुर, दरभंगा, पूर्णिया, कटिहार, बेगूसराय, अररिया और फारबिसगंज सहित — बिज़नेस के साथ काम करते हैं। सब कुछ व्हाट्सएप और कॉल पर रिमोट से मैनेज होता है, तो स्थान कभी बाधा नहीं है।",
+    },
   },
   {
-    q: "When do SEO results start showing?",
-    a: "Local SEO shows visible movement in 60–90 days. Google Ads and GMB optimisation deliver results in 1–2 weeks. SEO is a long game — but one that pays off for years.",
+    q: {
+      en: "How much does a website cost in Bihar?",
+      hi: "बिहार में वेबसाइट बनाने की कीमत क्या है?",
+    },
+    a: {
+      en: "Website packages start at ₹8,999. The exact price depends on the number of pages and features you need — message us on WhatsApp for a free, no-obligation quote.",
+      hi: "वेबसाइट पैकेज ₹8,999 से शुरू होते हैं। सटीक कीमत पेजों की संख्या और ज़रूरी फीचर्स पर निर्भर करती है — मुफ्त कोटेशन के लिए व्हाट्सएप पर मैसेज करें।",
+    },
   },
   {
-    q: "Do you work with businesses outside our city?",
-    a: "Yes — we work with businesses across India, in every industry from healthcare to hospitality. Location is not a barrier. Everything is managed remotely, and we communicate over WhatsApp and calls.",
+    q: {
+      en: "Do you set up Google Business Profile (Google My Business)?",
+      hi: "क्या आप Google बिज़नेस प्रोफाइल (Google My Business) सेटअप करते हैं?",
+    },
+    a: {
+      en: "Yes — Google Business Profile setup and optimisation is one of our most popular services, helping local businesses across Bihar show up in Google Maps and local search results.",
+      hi: "हां — Google बिज़नेस प्रोफाइल सेटअप और ऑप्टिमाइज़ेशन हमारी सबसे लोकप्रिय सेवाओं में से एक है, जो बिहार भर के लोकल बिज़नेस को Google Maps और लोकल सर्च में दिखने में मदद करती है।",
+    },
   },
   {
-    q: "What's the minimum budget for Google Ads?",
-    a: "We recommend starting with ₹5,000/month in ad spend. Management fee is separate. We'll tell you exactly what to expect at your budget before you spend a rupee.",
-  },
-  {
-    q: "Is there a long-term contract?",
-    a: "No lock-in. We work on monthly billing. We recommend a 3-month commitment for meaningful SEO results, but you can stop any time. No exit penalties.",
-  },
-  {
-    q: "How does reporting work?",
-    a: "Monthly PDF report, weekly WhatsApp updates, and a monthly strategy call. You always know what's working and where your money is going — in plain language.",
-  },
-  {
-    q: "Do you work with schools, hospitals, and other non-retail businesses?",
-    a: "Absolutely. We've built websites and campaigns for schools, hospitals, coaching institutes, hotels, restaurants, interior designers and real estate agents — each with a strategy suited to how their customers actually search.",
+    q: {
+      en: "How soon do SEO and Google Ads results show?",
+      hi: "SEO और Google Ads के नतीजे कितनी जल्दी दिखते हैं?",
+    },
+    a: {
+      en: "Local SEO typically shows visible ranking movement in 60–90 days. Google Ads and Google Business Profile optimisation deliver results much faster, usually within 1–2 weeks of launch.",
+      hi: "लोकल SEO में आमतौर पर 60–90 दिनों में रैंकिंग में स्पष्ट बदलाव दिखता है। Google Ads और Google बिज़नेस प्रोफाइल ऑप्टिमाइज़ेशन के नतीजे कहीं तेज़ आते हैं, आमतौर पर लॉन्च के 1–2 हफ्तों में।",
+    },
   },
 ];
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
+  const { lang } = useLanguage();
+  const t = useT();
 
   return (
     <section id="faq" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap-sm">
-        <div style={{ marginBottom: "64px" }}>
+        <div style={{ marginBottom: "48px" }}>
           <p className="t-label" style={{ marginBottom: "14px" }}>FAQ</p>
           <h2 className="t-h2" style={{ marginBottom: "12px" }}>
-            Frequently asked <span className="accent">questions</span>.
+            {t("Frequently asked", "अक्सर पूछे जाने वाले")} <span className="accent">{t("questions", "सवाल")}</span>.
           </h2>
           <p className="t-body">
-            Still have questions?{" "}
+            {t("Still have questions?", "अभी भी सवाल हैं?")}{" "}
             <a href="https://wa.me/918651070831" target="_blank" rel="noopener noreferrer"
               style={{ color: "#1D4ED8", fontWeight: 600, textDecoration: "none" }}>
-              Ask us on WhatsApp →
+              {t("Ask us on WhatsApp →", "व्हाट्सएप पर पूछें →")}
             </a>
           </p>
         </div>
@@ -58,7 +76,7 @@ export default function FAQ() {
             return (
               <div key={i} style={{
                 borderRadius: "16px",
-                background: isOpen ? "#fff" : "#fff",
+                background: "#fff",
                 border: isOpen ? "1.5px solid #1D4ED8" : "1px solid #E2E8F0",
                 overflow: "hidden",
                 boxShadow: isOpen ? "0 4px 20px rgba(29,78,216,0.08)" : "0 1px 4px rgba(0,0,0,0.03)",
@@ -80,7 +98,7 @@ export default function FAQ() {
                       fontSize: "15px", fontWeight: 600, lineHeight: 1.4,
                       color: isOpen ? "#111827" : "#374151",
                       letterSpacing: "-0.01em",
-                    }}>{f.q}</span>
+                    }}>{lang === "hi" ? f.q.hi : f.q.en}</span>
                     <div style={{
                       width: "30px", height: "30px", borderRadius: "50%", flexShrink: 0,
                       background: isOpen ? "#EFF6FF" : "#F1F5F9",
@@ -108,7 +126,7 @@ export default function FAQ() {
                     <p style={{
                       padding: "0 24px 20px",
                       fontSize: "15px", color: "#4B5563", lineHeight: 1.75, fontWeight: 400,
-                    }}>{f.a}</p>
+                    }}>{lang === "hi" ? f.a.hi : f.a.en}</p>
                   </div>
                 </div>
               </div>

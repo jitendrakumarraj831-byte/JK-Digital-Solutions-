@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { useT } from "@/lib/i18n";
 
 export default function FloatingContacts() {
+  const t = useT();
   const [pastHero, setPastHero] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const scrollTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -45,8 +47,8 @@ export default function FloatingContacts() {
         target="_blank"
         rel="noopener noreferrer"
         className="wa-float"
-        title="Chat on WhatsApp"
-        aria-label="Chat on WhatsApp"
+        title={t("Chat on WhatsApp", "व्हाट्सएप पर बात करें")}
+        aria-label={t("Chat on WhatsApp", "व्हाट्सएप पर बात करें")}
         aria-hidden={!visible}
         tabIndex={visible ? 0 : -1}
         style={floatStyle({})}
@@ -61,8 +63,8 @@ export default function FloatingContacts() {
       <a
         href="tel:+918651070831"
         className="call-float"
-        title="Call us"
-        aria-label="Call us"
+        title={t("Call us", "कॉल करें")}
+        aria-label={t("Call us", "कॉल करें")}
         aria-hidden={!visible}
         tabIndex={visible ? 0 : -1}
         style={floatStyle({})}
