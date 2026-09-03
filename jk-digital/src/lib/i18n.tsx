@@ -18,12 +18,19 @@ function isLang(v: string | null): v is Lang {
   return v === "en" || v === "hi";
 }
 
+// In-memory fallback so toggling still works when localStorage is blocked
+// or throws (e.g. private browsing with site data disabled) — the choice
+// just won't survive a reload in that case.
+let memoryLang: Lang = "en";
+
 function getSnapshot(): Lang {
   try {
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (isLang(stored)) return stored;
-  } catch {}
-  return "en";
+  } catch {
+    return memoryLang;
+  }
+  return memoryLang;
 }
 
 function getServerSnapshot(): Lang {
@@ -43,6 +50,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const lang = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const setLang = useCallback((l: Lang) => {
+    memoryLang = l;
     try {
       window.localStorage.setItem(STORAGE_KEY, l);
     } catch {}
