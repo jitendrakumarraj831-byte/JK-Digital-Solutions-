@@ -1,19 +1,22 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useLanguage, useT } from "@/lib/i18n";
 
 const links = [
-  { label: "Home",      href: "#" },
-  { label: "Services",  href: "#services" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Pricing",   href: "#pricing" },
-  { label: "About",     href: "#why" },
-  { label: "Contact",   href: "#contact" },
+  { en: "Home",      hi: "होम",        href: "#" },
+  { en: "Services",  hi: "सेवाएं",      href: "#services" },
+  { en: "Portfolio", hi: "पोर्टफोलियो", href: "#portfolio" },
+  { en: "Pricing",   hi: "मूल्य",       href: "#pricing" },
+  { en: "About",     hi: "हमारे बारे में", href: "#why" },
+  { en: "Contact",   hi: "संपर्क करें",   href: "#contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { lang, toggleLang } = useLanguage();
+  const t = useT();
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 20);
@@ -73,7 +76,7 @@ export default function Navbar() {
           gap: "4px",
         }}>
           {links.map(l => (
-            <a key={l.label} href={l.href} style={{
+            <a key={l.en} href={l.href} style={{
               padding: "8px 14px",
               borderRadius: "8px",
               fontSize: "13.5px",
@@ -93,13 +96,38 @@ export default function Navbar() {
                 el.style.color = "#4B5563";
                 el.style.background = "transparent";
               }}>
-              {l.label}
+              {lang === "hi" ? l.hi : l.en}
             </a>
           ))}
         </nav>
 
         {/* ── Right side ── */}
         <div style={{ display: "flex", alignItems: "center", gap: "12px", flexShrink: 0 }}>
+
+          {/* Language toggle */}
+          <button
+            onClick={toggleLang}
+            aria-label={lang === "hi" ? "Switch to English" : "हिन्दी में देखें"}
+            style={{
+              display: "flex", alignItems: "center", gap: "2px",
+              padding: "4px", borderRadius: "100px",
+              background: "#EFF6FF", border: "1px solid #BFDBFE",
+              cursor: "pointer", flexShrink: 0,
+            }}>
+            {(["en", "hi"] as const).map(l => (
+              <span key={l} style={{
+                padding: "5px 10px",
+                borderRadius: "100px",
+                fontSize: "12px",
+                fontWeight: 700,
+                color: lang === l ? "#fff" : "#1D4ED8",
+                background: lang === l ? "#1D4ED8" : "transparent",
+                transition: "background 0.18s, color 0.18s",
+              }}>
+                {l === "en" ? "EN" : "हिं"}
+              </span>
+            ))}
+          </button>
 
           {/* Phone — desktop only */}
           <a href="tel:+918651070831" className="desk-phone" style={{
@@ -130,7 +158,7 @@ export default function Navbar() {
             onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.background = "#DCFCE7"; el.style.transform = "translateY(-1px)"; }}
             onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.background = "#F0FDF4"; el.style.transform = "translateY(0)"; }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.847L.055 23.454l5.758-1.51A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.376l-.36-.213-3.716.975.992-3.625-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
-            WhatsApp
+            {t("WhatsApp", "व्हाट्सएप")}
           </a>
 
           {/* Free Consultation CTA — desktop only; the mobile dropdown has its own */}
@@ -155,14 +183,14 @@ export default function Navbar() {
               el.style.transform = "translateY(0)";
               el.style.boxShadow = "0 2px 10px rgba(29,78,216,0.28)";
             }}>
-            Free Consultation
+            {t("Free Consultation", "मुफ्त परामर्श")}
           </a>
 
           {/* Hamburger — mobile only */}
           <button
             onClick={() => setOpen(o => !o)}
             className="mob-ham"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t("Close menu", "मेनू बंद करें") : t("Open menu", "मेनू खोलें")}
             aria-expanded={open}
             aria-controls="mobile-nav"
             style={{
@@ -212,15 +240,40 @@ export default function Navbar() {
           boxShadow: open ? "0 16px 40px rgba(0,0,0,0.07)" : "none",
         }}>
         <div style={{ padding: "8px 24px 20px" }}>
+          {/* Language toggle — mobile */}
+          <div style={{ display: "flex", justifyContent: "center", padding: "12px 0 4px" }}>
+            <button
+              onClick={toggleLang}
+              style={{
+                display: "flex", alignItems: "center", gap: "2px",
+                padding: "4px", borderRadius: "100px",
+                background: "#EFF6FF", border: "1px solid #BFDBFE",
+                cursor: "pointer",
+              }}>
+              {(["en", "hi"] as const).map(l => (
+                <span key={l} style={{
+                  padding: "6px 18px",
+                  borderRadius: "100px",
+                  fontSize: "13px",
+                  fontWeight: 700,
+                  color: lang === l ? "#fff" : "#1D4ED8",
+                  background: lang === l ? "#1D4ED8" : "transparent",
+                  transition: "background 0.18s, color 0.18s",
+                }}>
+                  {l === "en" ? "English" : "हिन्दी"}
+                </span>
+              ))}
+            </button>
+          </div>
           {links.map((l, i) => (
-            <a key={l.label} href={l.href} onClick={() => setOpen(false)} style={{
+            <a key={l.en} href={l.href} onClick={() => setOpen(false)} style={{
               display: "flex", alignItems: "center", justifyContent: "space-between",
               padding: "13px 0",
               borderBottom: i < links.length - 1 ? "1px solid #F5F7FA" : "none",
               fontSize: "15px", fontWeight: 500, color: "#111827",
               textDecoration: "none",
             }}>
-              {l.label}
+              {lang === "hi" ? l.hi : l.en}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#CBD5E1" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           ))}
@@ -232,7 +285,7 @@ export default function Navbar() {
             textDecoration: "none",
             boxShadow: "0 2px 10px rgba(29,78,216,0.3)",
           }}>
-            Get Free Consultation →
+            {t("Get Free Consultation →", "मुफ्त परामर्श लें →")}
           </a>
         </div>
       </nav>

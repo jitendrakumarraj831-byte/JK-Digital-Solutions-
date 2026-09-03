@@ -1,8 +1,9 @@
 "use client";
+import { useLanguage, useT } from "@/lib/i18n";
 
 const categories = [
   {
-    title: "Websites & Development",
+    title: { en: "Websites & Development", hi: "वेबसाइट और डेवलपमेंट" },
     color: "#1D4ED8", bg: "#EFF6FF",
     tools: [
       { name: "Next.js / React", icon: "N" },
@@ -12,7 +13,7 @@ const categories = [
     ],
   },
   {
-    title: "Marketing & Ads",
+    title: { en: "Marketing & Ads", hi: "मार्केटिंग और विज्ञापन" },
     color: "#16A34A", bg: "#F0FDF4",
     tools: [
       { name: "Google Ads", icon: "G" },
@@ -22,7 +23,7 @@ const categories = [
     ],
   },
   {
-    title: "Design & Branding",
+    title: { en: "Design & Branding", hi: "डिज़ाइन और ब्रांडिंग" },
     color: "#9333EA", bg: "#FDF4FF",
     tools: [
       { name: "Figma", icon: "Fg" },
@@ -32,7 +33,7 @@ const categories = [
     ],
   },
   {
-    title: "Automation & CRM",
+    title: { en: "Automation & CRM", hi: "ऑटोमेशन और CRM" },
     color: "#06B6D4", bg: "#ECFEFF",
     tools: [
       { name: "WhatsApp Business API", icon: "WA" },
@@ -44,39 +45,47 @@ const categories = [
 ];
 
 export default function TechStack() {
+  const { lang } = useLanguage();
+  const t = useT();
   return (
     <section id="tech-stack" style={{ padding: "112px 0", background: "#F5F7FA" }}>
       <div className="wrap">
         <div style={{ textAlign: "center", marginBottom: "64px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>Our Technology Stack</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>{t("Our Technology Stack", "हमारा टेक्नोलॉजी स्टैक")}</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            Modern tools. <span className="accent">No shortcuts.</span>
+            {t("Modern tools.", "आधुनिक टूल्स।")} <span className="accent">{t("No shortcuts.", "कोई शॉर्टकट नहीं।")}</span>
           </h2>
           <p className="t-body" style={{ maxWidth: "480px", margin: "0 auto" }}>
-            No outdated templates or bloated plugins — every project runs on current, industry-standard platforms.
+            {t(
+              "No outdated templates or bloated plugins — every project runs on current, industry-standard platforms.",
+              "कोई पुराने टेम्पलेट या भारी-भरकम प्लगइन नहीं — हर प्रोजेक्ट मौजूदा, इंडस्ट्री-स्टैंडर्ड प्लेटफॉर्म पर चलता है।"
+            )}
           </p>
         </div>
 
         <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: "20px" }}>
           {categories.map(cat => (
-            <div key={cat.title} style={{
+            <div key={cat.title.en} className="card" style={{
               background: "#fff", border: "1px solid #E2E8F0", borderRadius: "20px",
               padding: "24px", boxShadow: "0 1px 6px rgba(0,0,0,0.03)",
-            }}>
+              transition: "transform 0.25s, box-shadow 0.25s",
+            }}
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 16px 40px rgba(0,0,0,0.08)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 1px 6px rgba(0,0,0,0.03)"; }}>
               <p style={{
                 fontSize: "11px", fontWeight: 700, color: cat.color,
                 textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "18px",
-              }}>{cat.title}</p>
+              }}>{lang === "hi" ? cat.title.hi : cat.title.en}</p>
               <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                {cat.tools.map(t => (
-                  <div key={t.name} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                {cat.tools.map(tool => (
+                  <div key={tool.name} style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                     <div style={{
                       width: "32px", height: "32px", borderRadius: "9px", flexShrink: 0,
                       background: cat.bg, color: cat.color,
                       display: "flex", alignItems: "center", justifyContent: "center",
                       fontSize: "10px", fontWeight: 900, letterSpacing: "-0.03em",
-                    }} aria-hidden="true">{t.icon}</div>
-                    <span style={{ fontSize: "13.5px", fontWeight: 500, color: "#374151" }}>{t.name}</span>
+                    }} aria-hidden="true">{tool.icon}</div>
+                    <span style={{ fontSize: "13.5px", fontWeight: 500, color: "#374151" }}>{tool.name}</span>
                   </div>
                 ))}
               </div>

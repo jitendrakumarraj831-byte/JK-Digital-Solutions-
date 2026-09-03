@@ -1,17 +1,23 @@
 "use client";
+import { useLanguage, useT } from "@/lib/i18n";
 
 const services = [
   {
     iconBg: "#EFF6FF",
     iconColor: "#1D4ED8",
-    badge: "Most Popular",
+    badge: { en: "Most Popular", hi: "सबसे लोकप्रिय" },
     badgeBg: "#EFF6FF",
     badgeColor: "#1D4ED8",
-    title: "Website Development",
-    tagline: "Your 24/7 online sales representative.",
-    features: ["Mobile-first design", "SEO architecture", "30-day delivery", "1 year free support"],
+    title: { en: "Website Development", hi: "वेबसाइट डेवलपमेंट" },
+    tagline: { en: "Your 24/7 online sales representative.", hi: "आपका 24/7 ऑनलाइन सेल्स प्रतिनिधि।" },
+    features: [
+      { en: "Mobile-first design", hi: "मोबाइल-फर्स्ट डिज़ाइन" },
+      { en: "SEO architecture", hi: "SEO आर्किटेक्चर" },
+      { en: "30-day delivery", hi: "30 दिन में डिलीवरी" },
+      { en: "1 year free support", hi: "1 साल मुफ्त सपोर्ट" },
+    ],
     price: "₹8,999",
-    priceNote: "onwards",
+    priceNote: { en: "onwards", hi: "से शुरू" },
     cardBorder: "#BFDBFE",
     checkColor: "#1D4ED8",
     icon: (
@@ -23,14 +29,19 @@ const services = [
   {
     iconBg: "#F0FDF4",
     iconColor: "#16A34A",
-    badge: "Best ROI",
+    badge: { en: "Best ROI", hi: "बेस्ट ROI" },
     badgeBg: "#F0FDF4",
     badgeColor: "#16A34A",
-    title: "SEO",
-    tagline: "Rank higher. Pay nothing for the click.",
-    features: ["Local + national SEO", "Keyword research", "Monthly reports", "Competitor analysis"],
+    title: { en: "SEO", hi: "SEO" },
+    tagline: { en: "Rank higher. Pay nothing for the click.", hi: "ऊपर रैंक करें। क्लिक के लिए कुछ न दें।" },
+    features: [
+      { en: "Local + national SEO", hi: "लोकल + नेशनल SEO" },
+      { en: "Keyword research", hi: "कीवर्ड रिसर्च" },
+      { en: "Monthly reports", hi: "मासिक रिपोर्ट" },
+      { en: "Competitor analysis", hi: "प्रतिस्पर्धी विश्लेषण" },
+    ],
     price: "₹4,999",
-    priceNote: "/ month",
+    priceNote: { en: "/ month", hi: "/ माह" },
     cardBorder: "#BBF7D0",
     checkColor: "#16A34A",
     icon: (
@@ -42,14 +53,19 @@ const services = [
   {
     iconBg: "#ECFEFF",
     iconColor: "#06B6D4",
-    badge: "Free Setup",
+    badge: { en: "Free Setup", hi: "मुफ्त सेटअप" },
     badgeBg: "#ECFEFF",
     badgeColor: "#06B6D4",
-    title: "Google Business Profile",
-    tagline: "Win local search. Reach customers nearby.",
-    features: ["Complete GMB setup", "Review management", "Photo optimisation", "Local ranking"],
+    title: { en: "Google Business Profile", hi: "Google बिज़नेस प्रोफाइल" },
+    tagline: { en: "Win local search. Reach customers nearby.", hi: "लोकल सर्च जीतें। आस-पास के ग्राहकों तक पहुंचें।" },
+    features: [
+      { en: "Complete GMB setup", hi: "पूरा GMB सेटअप" },
+      { en: "Review management", hi: "रिव्यू मैनेजमेंट" },
+      { en: "Photo optimisation", hi: "फोटो ऑप्टिमाइज़ेशन" },
+      { en: "Local ranking", hi: "लोकल रैंकिंग" },
+    ],
     price: "₹2,499",
-    priceNote: "/ month",
+    priceNote: { en: "/ month", hi: "/ माह" },
     cardBorder: "#A5F3FC",
     checkColor: "#06B6D4",
     icon: (
@@ -61,14 +77,19 @@ const services = [
   {
     iconBg: "#EEF2FF",
     iconColor: "#4F46E5",
-    badge: "Fastest Results",
+    badge: { en: "Fastest Results", hi: "सबसे तेज़ नतीजे" },
     badgeBg: "#EEF2FF",
     badgeColor: "#4F46E5",
-    title: "Google Ads",
-    tagline: "Pay for results, not just impressions.",
-    features: ["Campaign setup", "Bid optimisation", "Ad copywriting", "Weekly reports"],
+    title: { en: "Google Ads", hi: "Google विज्ञापन" },
+    tagline: { en: "Pay for results, not just impressions.", hi: "सिर्फ इंप्रेशन नहीं, नतीजों के लिए भुगतान करें।" },
+    features: [
+      { en: "Campaign setup", hi: "कैंपेन सेटअप" },
+      { en: "Bid optimisation", hi: "बिड ऑप्टिमाइज़ेशन" },
+      { en: "Ad copywriting", hi: "एड कॉपीराइटिंग" },
+      { en: "Weekly reports", hi: "साप्ताहिक रिपोर्ट" },
+    ],
     price: "₹3,999",
-    priceNote: "/ month",
+    priceNote: { en: "/ month", hi: "/ माह" },
     cardBorder: "#C7D2FE",
     checkColor: "#4F46E5",
     icon: (
@@ -80,14 +101,19 @@ const services = [
   {
     iconBg: "#FDF2F8",
     iconColor: "#DB2777",
-    badge: "Trending",
+    badge: { en: "Trending", hi: "ट्रेंडिंग" },
     badgeBg: "#FDF2F8",
     badgeColor: "#DB2777",
-    title: "Social Media Marketing",
-    tagline: "Show up where your customers already are.",
-    features: ["Content calendar", "Reels & graphics", "Community management", "Monthly insights"],
+    title: { en: "Social Media Marketing", hi: "सोशल मीडिया मार्केटिंग" },
+    tagline: { en: "Show up where your customers already are.", hi: "वहां मौजूद रहें जहां आपके ग्राहक पहले से हैं।" },
+    features: [
+      { en: "Content calendar", hi: "कंटेंट कैलेंडर" },
+      { en: "Reels & graphics", hi: "रील्स और ग्राफिक्स" },
+      { en: "Community management", hi: "कम्युनिटी मैनेजमेंट" },
+      { en: "Monthly insights", hi: "मासिक इनसाइट्स" },
+    ],
     price: "₹5,999",
-    priceNote: "/ month",
+    priceNote: { en: "/ month", hi: "/ माह" },
     cardBorder: "#FBCFE8",
     checkColor: "#DB2777",
     icon: (
@@ -99,14 +125,19 @@ const services = [
   {
     iconBg: "#FDF4FF",
     iconColor: "#9333EA",
-    badge: "Build Trust",
+    badge: { en: "Build Trust", hi: "भरोसा बनाएं" },
     badgeBg: "#FDF4FF",
     badgeColor: "#9333EA",
-    title: "Brand Identity",
-    tagline: "A consistent look, everywhere your business appears.",
-    features: ["Brand colour palette", "Typography system", "Brand guideline PDF", "Templates for social & print"],
+    title: { en: "Brand Identity", hi: "ब्रांड आइडेंटिटी" },
+    tagline: { en: "A consistent look, everywhere your business appears.", hi: "आपका बिज़नेस जहां भी दिखे, एक जैसा लुक।" },
+    features: [
+      { en: "Brand colour palette", hi: "ब्रांड कलर पैलेट" },
+      { en: "Typography system", hi: "टाइपोग्राफी सिस्टम" },
+      { en: "Brand guideline PDF", hi: "ब्रांड गाइडलाइन PDF" },
+      { en: "Templates for social & print", hi: "सोशल और प्रिंट टेम्पलेट्स" },
+    ],
     price: "₹6,999",
-    priceNote: "onwards",
+    priceNote: { en: "onwards", hi: "से शुरू" },
     cardBorder: "#E9D5FF",
     checkColor: "#9333EA",
     icon: (
@@ -118,14 +149,19 @@ const services = [
   {
     iconBg: "#FFF1F2",
     iconColor: "#E11D48",
-    badge: "First Impression",
+    badge: { en: "First Impression", hi: "पहला प्रभाव" },
     badgeBg: "#FFF1F2",
     badgeColor: "#E11D48",
-    title: "Logo Design",
-    tagline: "An identity that's remembered.",
-    features: ["3 unique concepts", "Unlimited revisions", "All file formats", "Visiting card design"],
+    title: { en: "Logo Design", hi: "लोगो डिज़ाइन" },
+    tagline: { en: "An identity that's remembered.", hi: "एक ऐसी पहचान जो याद रह जाए।" },
+    features: [
+      { en: "3 unique concepts", hi: "3 यूनिक कॉन्सेप्ट" },
+      { en: "Unlimited revisions", hi: "असीमित रिवीज़न" },
+      { en: "All file formats", hi: "सभी फाइल फॉर्मेट" },
+      { en: "Visiting card design", hi: "विज़िटिंग कार्ड डिज़ाइन" },
+    ],
     price: "₹3,499",
-    priceNote: "onwards",
+    priceNote: { en: "onwards", hi: "से शुरू" },
     cardBorder: "#FECDD3",
     checkColor: "#E11D48",
     icon: (
@@ -137,14 +173,19 @@ const services = [
   {
     iconBg: "#ECFDF5",
     iconColor: "#059669",
-    badge: "Save Time",
+    badge: { en: "Save Time", hi: "समय बचाएं" },
     badgeBg: "#ECFDF5",
     badgeColor: "#059669",
-    title: "Business Automation",
-    tagline: "Follow up on every enquiry — without manual work.",
-    features: ["WhatsApp auto-reply", "Lead capture forms", "CRM setup", "Appointment reminders"],
+    title: { en: "Business Automation", hi: "बिज़नेस ऑटोमेशन" },
+    tagline: { en: "Follow up on every enquiry — without manual work.", hi: "बिना मैनुअल काम के हर पूछताछ पर फॉलो-अप करें।" },
+    features: [
+      { en: "WhatsApp auto-reply", hi: "व्हाट्सएप ऑटो-रिप्लाई" },
+      { en: "Lead capture forms", hi: "लीड कैप्चर फॉर्म" },
+      { en: "CRM setup", hi: "CRM सेटअप" },
+      { en: "Appointment reminders", hi: "अपॉइंटमेंट रिमाइंडर" },
+    ],
     price: "₹6,999",
-    priceNote: "onwards",
+    priceNote: { en: "onwards", hi: "से शुरू" },
     cardBorder: "#A7F3D0",
     checkColor: "#059669",
     icon: (
@@ -156,17 +197,22 @@ const services = [
 ];
 
 export default function Services() {
+  const { lang } = useLanguage();
+  const t = useT();
   return (
     <section id="services" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
         {/* Section header */}
         <div style={{ marginBottom: "72px", maxWidth: "560px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>Our Services</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>{t("Our Services", "हमारी सेवाएं")}</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            Eight services. <span className="accent">One</span> agency.
+            {t("Eight services.", "आठ सेवाएं।")} <span className="accent">{t("One", "एक")}</span> {t("agency.", "एजेंसी।")}
           </h2>
           <p className="t-body">
-            Everything your business needs to grow online — under one roof, one team, one point of contact.
+            {t(
+              "Everything your business needs to grow online — under one roof, one team, one point of contact.",
+              "आपके बिज़नेस को ऑनलाइन बढ़ाने के लिए जो कुछ भी चाहिए — एक ही छत के नीचे, एक टीम, एक ही संपर्क बिंदु।"
+            )}
           </p>
         </div>
 
@@ -194,7 +240,7 @@ export default function Services() {
                 padding: "4px 12px", borderRadius: "100px",
                 background: s.badgeBg,
                 fontSize: "11px", fontWeight: 700, color: s.badgeColor, letterSpacing: "0.04em",
-              }}>{s.badge}</div>
+              }}>{lang === "hi" ? s.badge.hi : s.badge.en}</div>
 
               {/* Icon */}
               <div style={{
@@ -206,13 +252,13 @@ export default function Services() {
                 {s.icon}
               </div>
 
-              <h3 className="t-h3" style={{ marginBottom: "8px" }}>{s.title}</h3>
-              <p style={{ fontSize: "14px", color: s.iconColor, fontWeight: 600, marginBottom: "24px", lineHeight: 1.6 }}>{s.tagline}</p>
+              <h3 className="t-h3" style={{ marginBottom: "8px" }}>{lang === "hi" ? s.title.hi : s.title.en}</h3>
+              <p style={{ fontSize: "14px", color: s.iconColor, fontWeight: 600, marginBottom: "24px", lineHeight: 1.6 }}>{lang === "hi" ? s.tagline.hi : s.tagline.en}</p>
 
               {/* Features */}
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "28px" }}>
                 {s.features.map(f => (
-                  <div key={f} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                  <div key={f.en} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                     <div style={{
                       width: "16px", height: "16px", borderRadius: "50%",
                       background: s.iconBg, flexShrink: 0,
@@ -220,7 +266,7 @@ export default function Services() {
                     }}>
                       <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke={s.checkColor} strokeWidth="3.5" strokeLinecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
-                    <span style={{ fontSize: "13px", color: "#475569", fontWeight: 500 }}>{f}</span>
+                    <span style={{ fontSize: "13px", color: "#475569", fontWeight: 500 }}>{lang === "hi" ? f.hi : f.en}</span>
                   </div>
                 ))}
               </div>
@@ -232,7 +278,7 @@ export default function Services() {
                 marginTop: "auto",
               }}>
                 <div>
-                  <div style={{ fontSize: "11px", color: "#6B7280", fontWeight: 600, marginBottom: "2px", textTransform: "uppercase", letterSpacing: "0.06em" }}>{s.priceNote}</div>
+                  <div style={{ fontSize: "11px", color: "#6B7280", fontWeight: 600, marginBottom: "2px", textTransform: "uppercase", letterSpacing: "0.06em" }}>{lang === "hi" ? s.priceNote.hi : s.priceNote.en}</div>
                   <div style={{ fontSize: "28px", fontWeight: 700, color: "#111827", letterSpacing: "-0.02em", lineHeight: 1 }}>{s.price}</div>
                 </div>
                 <a href="#contact" style={{
@@ -244,7 +290,7 @@ export default function Services() {
                 }}
                   onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.8"}
                   onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}>
-                  Get started →
+                  {t("Get started →", "शुरू करें →")}
                 </a>
               </div>
             </div>

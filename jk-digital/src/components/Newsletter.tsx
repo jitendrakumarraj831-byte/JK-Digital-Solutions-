@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
+import { useT } from "@/lib/i18n";
 
 export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const t = useT();
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,9 +32,9 @@ export default function Newsletter() {
             }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
-            <h3 className="t-h3" style={{ marginBottom: "8px" }}>Monthly growth tips — straight to your inbox.</h3>
+            <h3 className="t-h3" style={{ marginBottom: "8px" }}>{t("Monthly growth tips — straight to your inbox.", "मासिक ग्रोथ टिप्स — सीधे आपके इनबॉक्स में।")}</h3>
             <p style={{ fontSize: "14px", color: "#4B5563", lineHeight: 1.7 }}>
-              Practical tips on SEO, Google Ads and local marketing. No spam, unsubscribe any time.
+              {t("Practical tips on SEO, Google Ads and local marketing. No spam, unsubscribe any time.", "SEO, Google Ads और लोकल मार्केटिंग पर व्यावहारिक टिप्स। कोई स्पैम नहीं, कभी भी अनसब्सक्राइब करें।")}
             </p>
           </div>
 
@@ -43,22 +45,22 @@ export default function Newsletter() {
               background: "#F0FDF4", border: "1px solid #BBF7D0",
             }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="3" strokeLinecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span role="status" style={{ fontSize: "14px", fontWeight: 600, color: "#16A34A" }}>Subscribed! Thank you.</span>
+              <span role="status" style={{ fontSize: "14px", fontWeight: 600, color: "#16A34A" }}>{t("Subscribed! Thank you.", "सब्सक्राइब हो गया! धन्यवाद।")}</span>
             </div>
           ) : (
             <form onSubmit={onSubmit} style={{ display: "flex", gap: "10px", flexWrap: "wrap", flex: "0 1 380px" }}>
               <input
                 type="email"
                 required
-                aria-label="Email address"
+                aria-label={t("Email address", "ईमेल पता")}
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                placeholder="Your email address"
+                placeholder={t("Your email address", "आपका ईमेल पता")}
                 className="inp"
                 style={{ flex: "1 1 200px" }}
               />
               <button type="submit" className="btn btn-primary" style={{ whiteSpace: "nowrap" }}>
-                Subscribe
+                {t("Subscribe", "सब्सक्राइब करें")}
               </button>
             </form>
           )}

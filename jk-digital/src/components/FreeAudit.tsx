@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
+import { useLanguage, useT } from "@/lib/i18n";
 
 const checks = [
-  "Website speed & mobile experience",
-  "Google ranking for your key search terms",
-  "Google Business Profile completeness",
-  "3 quick wins you can act on this week",
+  { en: "Website speed & mobile experience", hi: "वेबसाइट स्पीड और मोबाइल अनुभव" },
+  { en: "Google ranking for your key search terms", hi: "आपके मुख्य सर्च टर्म के लिए Google रैंकिंग" },
+  { en: "Google Business Profile completeness", hi: "Google बिज़नेस प्रोफाइल की पूर्णता" },
+  { en: "3 quick wins you can act on this week", hi: "3 त्वरित सुधार जिन पर आप इसी हफ्ते काम कर सकते हैं" },
 ];
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -14,6 +15,8 @@ export default function FreeAudit() {
   const [form, setForm] = useState({ name: "", phone: "", website: "" });
   const [status, setStatus] = useState<Status>("idle");
   const [msg, setMsg] = useState("");
+  const { lang } = useLanguage();
+  const t = useT();
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setForm(p => ({ ...p, [e.target.name]: e.target.value }));
@@ -37,9 +40,9 @@ export default function FreeAudit() {
         setStatus("success"); setMsg(data.message);
         setForm({ name: "", phone: "", website: "" });
       } else {
-        setStatus("error"); setMsg(data.error || "Something went wrong. Please try again.");
+        setStatus("error"); setMsg(data.error || t("Something went wrong. Please try again.", "कुछ गलत हो गया। कृपया फिर से कोशिश करें।"));
       }
-    } catch { setStatus("error"); setMsg("Network error. Please try again."); }
+    } catch { setStatus("error"); setMsg(t("Network error. Please try again.", "नेटवर्क में समस्या। कृपया फिर से कोशिश करें।")); }
   };
 
   const labelStyle: React.CSSProperties = {
@@ -56,24 +59,27 @@ export default function FreeAudit() {
         }} className="audit-grid">
           {/* Left — pitch */}
           <div>
-            <p className="t-label" style={{ marginBottom: "14px" }}>Free Website Audit</p>
+            <p className="t-label" style={{ marginBottom: "14px" }}>{t("Free Website Audit", "मुफ्त वेबसाइट ऑडिट")}</p>
             <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-              Find out what&apos;s costing you <span className="accent">customers</span>.
+              {t("Find out what's costing you", "जानें आपको क्या")} <span className="accent">{t("customers", "ग्राहक गंवा रहा है")}</span>.
             </h2>
             <p className="t-body" style={{ marginBottom: "32px", maxWidth: "420px" }}>
-              In 24 hours, we&apos;ll send a short, honest review of your website and Google presence — no obligation, no sales pressure.
+              {t(
+                "In 24 hours, we'll send a short, honest review of your website and Google presence — no obligation, no sales pressure.",
+                "24 घंटों में, हम आपकी वेबसाइट और Google उपस्थिति की एक संक्षिप्त, ईमानदार समीक्षा भेजेंगे — कोई बाध्यता नहीं, कोई बिक्री दबाव नहीं।"
+              )}
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               {checks.map(c => (
-                <div key={c} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <div key={c.en} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <div style={{
                     width: "20px", height: "20px", borderRadius: "50%", flexShrink: 0,
                     background: "#EFF6FF", display: "flex", alignItems: "center", justifyContent: "center",
                   }}>
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" strokeWidth="3.5" strokeLinecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                   </div>
-                  <span style={{ fontSize: "14.5px", color: "#374151", fontWeight: 500 }}>{c}</span>
+                  <span style={{ fontSize: "14.5px", color: "#374151", fontWeight: 500 }}>{lang === "hi" ? c.hi : c.en}</span>
                 </div>
               ))}
             </div>
@@ -86,15 +92,15 @@ export default function FreeAudit() {
           }}>
             <form onSubmit={onSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
               <div>
-                <label htmlFor="fa-name" style={labelStyle}>Your name *</label>
-                <input id="fa-name" type="text" name="name" value={form.name} onChange={onChange} required placeholder="Full name" className="inp" />
+                <label htmlFor="fa-name" style={labelStyle}>{t("Your name *", "आपका नाम *")}</label>
+                <input id="fa-name" type="text" name="name" value={form.name} onChange={onChange} required placeholder={t("Full name", "पूरा नाम")} className="inp" />
               </div>
               <div>
-                <label htmlFor="fa-phone" style={labelStyle}>WhatsApp number *</label>
-                <input id="fa-phone" type="tel" name="phone" value={form.phone} onChange={onChange} required placeholder="10 digits" maxLength={10} className="inp" />
+                <label htmlFor="fa-phone" style={labelStyle}>{t("WhatsApp number *", "व्हाट्सएप नंबर *")}</label>
+                <input id="fa-phone" type="tel" name="phone" value={form.phone} onChange={onChange} required placeholder={t("10 digits", "10 अंक")} maxLength={10} className="inp" />
               </div>
               <div>
-                <label htmlFor="fa-website" style={labelStyle}>Website URL (if you have one)</label>
+                <label htmlFor="fa-website" style={labelStyle}>{t("Website URL (if you have one)", "वेबसाइट URL (अगर है तो)")}</label>
                 <input id="fa-website" type="text" name="website" value={form.website} onChange={onChange} placeholder="yourbusiness.in" className="inp" />
               </div>
 
@@ -113,11 +119,11 @@ export default function FreeAudit() {
                 width: "100%", cursor: status === "loading" ? "not-allowed" : "pointer",
                 opacity: status === "loading" ? 0.6 : 1,
               }}>
-                {status === "loading" ? "Sending..." : "Get My Free Audit →"}
+                {status === "loading" ? t("Sending...", "भेजा जा रहा है...") : t("Get My Free Audit →", "मेरा मुफ्त ऑडिट पाएं →")}
               </button>
 
               <p style={{ textAlign: "center", fontSize: "12px", color: "#6B7280", fontWeight: 500 }}>
-                100% free. No credit card. Takes about 2 minutes.
+                {t("100% free. No credit card. Takes about 2 minutes.", "100% मुफ्त। कोई क्रेडिट कार्ड नहीं। लगभग 2 मिनट लगेंगे।")}
               </p>
             </form>
           </div>

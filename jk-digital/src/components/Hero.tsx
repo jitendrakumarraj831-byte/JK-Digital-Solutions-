@@ -1,6 +1,8 @@
 "use client";
+import { useT } from "@/lib/i18n";
 
 export default function Hero() {
+  const t = useT();
   return (
     <section className="hero-section" style={{
       minHeight: "100vh",
@@ -57,7 +59,7 @@ export default function Hero() {
               letterSpacing: "-0.01em",
             }}>
               <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#1D4ED8", display: "inline-block" }} />
-              Full-Service Digital Partner · 200+ Businesses Grown
+              {t("Full-Service Digital Partner · 200+ Businesses Grown", "फुल-सर्विस डिजिटल पार्टनर · 200+ बिज़नेस को ग्रो किया")}
             </div>
 
             {/* Headline */}
@@ -69,10 +71,10 @@ export default function Hero() {
               color: "#111827",
               marginBottom: "24px",
             }}>
-              Turn Google searches{" "}
-              <span style={{ color: "#1D4ED8" }}>into customers</span>
+              {t("Turn Google searches", "Google सर्च को")}{" "}
+              <span style={{ color: "#1D4ED8" }}>{t("into customers", "ग्राहकों में बदलें")}</span>
               <br />
-              — every single day.
+              {t("— every single day.", "— रोज़, हर दिन।")}
             </h1>
 
             {/* Sub-headline */}
@@ -84,7 +86,10 @@ export default function Hero() {
               marginBottom: "32px",
               fontWeight: 400,
             }}>
-              One dedicated team for your website, SEO and ads — with clear timelines, transparent reporting, and no lock-in contracts. That&apos;s why 200+ businesses stay with us long after the first project ends.
+              {t(
+                "One dedicated team for your website, SEO and ads — with clear timelines, transparent reporting, and no lock-in contracts. That's why 200+ businesses stay with us long after the first project ends.",
+                "आपकी वेबसाइट, SEO और विज्ञापनों के लिए एक समर्पित टीम — साफ़ टाइमलाइन, पारदर्शी रिपोर्टिंग और बिना किसी लॉक-इन कॉन्ट्रैक्ट के। यही कारण है कि 200+ बिज़नेस पहले प्रोजेक्ट के बाद भी हमारे साथ बने रहते हैं।"
+              )}
             </p>
 
             {/* CTAs */}
@@ -99,7 +104,7 @@ export default function Hero() {
               }}
                 onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(-2px)"; el.style.boxShadow = "0 8px 28px rgba(29,78,216,0.4)"; }}
                 onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.transform = "translateY(0)"; el.style.boxShadow = "0 4px 18px rgba(29,78,216,0.32)"; }}>
-                Get a Free Consultation
+                {t("Get a Free Consultation", "मुफ्त परामर्श पाएं")}
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
               <a href="https://wa.me/918651070831?text=Hi! I'd like to grow my business online." target="_blank" rel="noopener noreferrer" style={{
@@ -116,7 +121,7 @@ export default function Hero() {
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
                   <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.116 1.524 5.847L.055 23.454l5.758-1.51A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.376l-.36-.213-3.716.975.992-3.625-.234-.373A9.818 9.818 0 1112 21.818z"/>
                 </svg>
-                Chat on WhatsApp
+                {t("Chat on WhatsApp", "व्हाट्सएप पर बात करें")}
               </a>
             </div>
 
@@ -141,7 +146,7 @@ export default function Hero() {
                   {[1,2,3,4,5].map(i => <span key={i} style={{ color: "#F59E0B", fontSize: "14px" }}>★</span>)}
                 </div>
                 <p style={{ fontSize: "13px", color: "#4B5563", margin: 0, fontWeight: 500 }}>
-                  Rated <strong style={{ color: "#111827" }}>4.9/5</strong> by 200+ happy clients
+                  {t("Rated", "रेटिंग")} <strong style={{ color: "#111827" }}>4.9/5</strong> {t("by 200+ happy clients", "200+ खुश ग्राहकों द्वारा")}
                 </p>
               </div>
             </div>
@@ -278,9 +283,9 @@ export default function Hero() {
                   </div>
                   {/* GMB body */}
                   <div style={{ padding: "8px 7px" }}>
-                    <div style={{ fontSize: "8px", fontWeight: 800, color: "#0F172A", marginBottom: "6px", letterSpacing: "-0.02em" }}>Google Business Profile</div>
+                    <div style={{ fontSize: "8px", fontWeight: 800, color: "#0F172A", marginBottom: "6px", letterSpacing: "-0.02em" }}>{t("Google Business Profile", "Google बिज़नेस प्रोफाइल")}</div>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4px", marginBottom: "7px" }}>
-                      {[["📞","Call","#EFF6FF","#1D4ED8"],["🗺️","Route","#F0FDF4","#16A34A"]].map(([icon, label, bg, color]) => (
+                      {[["📞", t("Call", "कॉल"), "#EFF6FF", "#1D4ED8"], ["🗺️", t("Route", "रास्ता"), "#F0FDF4", "#16A34A"]].map(([icon, label, bg, color]) => (
                         <div key={label as string} style={{ background: bg as string, borderRadius: "7px", padding: "5px 4px", textAlign: "center" }}>
                           <div style={{ fontSize: "11px", marginBottom: "2px" }}>{icon}</div>
                           <div style={{ fontSize: "8px", color: color as string, fontWeight: 700 }}>{label}</div>
@@ -288,8 +293,8 @@ export default function Hero() {
                       ))}
                     </div>
                     {[
-                      ["RS", "Excellent service, got 3x more leads!", "#EFF6FF"],
-                      ["AP", "Best digital agency in Bihar.", "#F0FDF4"],
+                      ["RS", t("Excellent service, got 3x more leads!", "बेहतरीन सेवा, 3x ज़्यादा लीड्स मिलीं!"), "#EFF6FF"],
+                      ["AP", t("Best digital agency in Bihar.", "बिहार की सबसे अच्छी डिजिटल एजेंसी।"), "#F0FDF4"],
                     ].map(([init, text, bg]) => (
                       <div key={init} style={{ display: "flex", gap: "4px", marginBottom: "5px" }}>
                         <div style={{ width: "14px", height: "14px", borderRadius: "50%", background: bg, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "6px", fontWeight: 800, color: "#1D4ED8" }}>{init}</div>
@@ -314,7 +319,7 @@ export default function Hero() {
               animation: "heroFloat 6s ease-in-out infinite 0.5s",
             }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "12px" }}>
-                <span style={{ fontSize: "12px", fontWeight: 700, color: "#111827" }}>Monthly Leads</span>
+                <span style={{ fontSize: "12px", fontWeight: 700, color: "#111827" }}>{t("Monthly Leads", "मासिक लीड्स")}</span>
                 <span style={{ fontSize: "11px", fontWeight: 700, color: "#16A34A", background: "#F0FDF4", padding: "2px 8px", borderRadius: "100px" }}>↑ 180%</span>
               </div>
               {/* Bar chart */}
@@ -328,7 +333,7 @@ export default function Hero() {
                 ))}
               </div>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                {[["40+","Leads/mo","#111827"],["5×","ROI","#4F46E5"],["₹2L+","Revenue","#16A34A"]].map(([v, l, c]) => (
+                {[["40+", t("Leads/mo", "लीड्स/माह"), "#111827"], ["5×", "ROI", "#4F46E5"], ["₹2L+", t("Revenue", "आय"), "#16A34A"]].map(([v, l, c]) => (
                   <div key={l} style={{ textAlign: "center" }}>
                     <div style={{ fontSize: "14px", fontWeight: 800, color: c }}>{v}</div>
                     <div style={{ fontSize: "9px", color: "#94A3B8", marginTop: "1px" }}>{l}</div>
@@ -355,7 +360,7 @@ export default function Hero() {
                 }}>⭐</div>
                 <div>
                   <div style={{ fontSize: "18px", fontWeight: 700, color: "#111827", letterSpacing: "-0.02em", lineHeight: 1 }}>4.9 / 5</div>
-                  <div style={{ fontSize: "11px", color: "#94A3B8", marginTop: "1px" }}>Google Rating</div>
+                  <div style={{ fontSize: "11px", color: "#94A3B8", marginTop: "1px" }}>{t("Google Rating", "Google रेटिंग")}</div>
                 </div>
               </div>
               {/* Star row */}
@@ -371,7 +376,7 @@ export default function Hero() {
                   </div>
                 </div>
               ))}
-              <p style={{ fontSize: "10px", color: "#94A3B8", margin: "6px 0 0", textAlign: "right" }}>200+ verified reviews</p>
+              <p style={{ fontSize: "10px", color: "#94A3B8", margin: "6px 0 0", textAlign: "right" }}>{t("200+ verified reviews", "200+ सत्यापित समीक्षाएं")}</p>
             </div>
 
           </div>{/* end hero-right */}

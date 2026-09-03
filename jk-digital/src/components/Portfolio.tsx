@@ -1,14 +1,15 @@
 "use client";
+import { useLanguage, useT } from "@/lib/i18n";
 
 const projects = [
   {
     name: "Dr. Sharma Dental Clinic",
     url: "drsharmadental.in",
-    location: "Araria, Bihar",
-    tag: "Healthcare",
-    service: "SEO + GMB",
-    r1: { n: "#1", l: "Google rank" },
-    r2: { n: "+180%", l: "New patients" },
+    location: { en: "Araria, Bihar", hi: "अररिया, बिहार" },
+    tag: { en: "Healthcare", hi: "स्वास्थ्य सेवा" },
+    service: { en: "SEO + GMB", hi: "SEO + GMB" },
+    r1: { n: "#1", l: { en: "Google rank", hi: "Google रैंक" } },
+    r2: { n: "+180%", l: { en: "New patients", hi: "नए मरीज़" } },
     accentColor: "#06B6D4",
     accentBg: "#ECFEFF",
     tagBg: "#ECFEFF",
@@ -17,11 +18,11 @@ const projects = [
   {
     name: "Rajdhani Restaurant",
     url: "rajdhanieats.in",
-    location: "Forbesganj, Bihar",
-    tag: "Restaurant",
-    service: "GMB + Website",
-    r1: { n: "4.8★", l: "Rating" },
-    r2: { n: "3×",   l: "Online orders" },
+    location: { en: "Forbesganj, Bihar", hi: "फारबिसगंज, बिहार" },
+    tag: { en: "Restaurant", hi: "रेस्टोरेंट" },
+    service: { en: "GMB + Website", hi: "GMB + वेबसाइट" },
+    r1: { n: "4.8★", l: { en: "Rating", hi: "रेटिंग" } },
+    r2: { n: "3×",   l: { en: "Online orders", hi: "ऑनलाइन ऑर्डर" } },
     accentColor: "#D97706",
     accentBg: "#FFFBEB",
     tagBg: "#FFFBEB",
@@ -30,11 +31,11 @@ const projects = [
   {
     name: "Bright Future Academy",
     url: "brightfutureacademy.in",
-    location: "Forbesganj, Bihar",
-    tag: "Education",
-    service: "Ads + Website",
-    r1: { n: "120+", l: "New admissions" },
-    r2: { n: "+250%", l: "Lead growth" },
+    location: { en: "Forbesganj, Bihar", hi: "फारबिसगंज, बिहार" },
+    tag: { en: "Education", hi: "शिक्षा" },
+    service: { en: "Ads + Website", hi: "विज्ञापन + वेबसाइट" },
+    r1: { n: "120+", l: { en: "New admissions", hi: "नए एडमिशन" } },
+    r2: { n: "+250%", l: { en: "Lead growth", hi: "लीड ग्रोथ" } },
     accentColor: "#4F46E5",
     accentBg: "#EEF2FF",
     tagBg: "#EEF2FF",
@@ -43,11 +44,11 @@ const projects = [
   {
     name: "Agarwal Properties",
     url: "agarwalproperties.in",
-    location: "Araria, Bihar",
-    tag: "Real Estate",
-    service: "Ads + SEO",
-    r1: { n: "40+",  l: "Leads / month" },
-    r2: { n: "5×",   l: "ROI on ads" },
+    location: { en: "Araria, Bihar", hi: "अररिया, बिहार" },
+    tag: { en: "Real Estate", hi: "रियल एस्टेट" },
+    service: { en: "Ads + SEO", hi: "विज्ञापन + SEO" },
+    r1: { n: "40+",  l: { en: "Leads / month", hi: "लीड्स / माह" } },
+    r2: { n: "5×",   l: { en: "ROI on ads", hi: "विज्ञापन पर ROI" } },
     accentColor: "#16A34A",
     accentBg: "#F0FDF4",
     tagBg: "#F0FDF4",
@@ -56,11 +57,11 @@ const projects = [
   {
     name: "Glamour Beauty Studio",
     url: "glamourbeauty.in",
-    location: "Forbesganj, Bihar",
-    tag: "Beauty & Salon",
-    service: "GMB + Content",
-    r1: { n: "200+", l: "Monthly bookings" },
-    r2: { n: "4.9★", l: "Rating" },
+    location: { en: "Forbesganj, Bihar", hi: "फारबिसगंज, बिहार" },
+    tag: { en: "Beauty & Salon", hi: "ब्यूटी और सैलून" },
+    service: { en: "GMB + Content", hi: "GMB + कंटेंट" },
+    r1: { n: "200+", l: { en: "Monthly bookings", hi: "मासिक बुकिंग" } },
+    r2: { n: "4.9★", l: { en: "Rating", hi: "रेटिंग" } },
     accentColor: "#DB2777",
     accentBg: "#FDF2F8",
     tagBg: "#FDF2F8",
@@ -69,11 +70,11 @@ const projects = [
   {
     name: "Hotel Sunrise Palace",
     url: "hotelsunrisepalace.in",
-    location: "Araria, Bihar",
-    tag: "Hospitality",
-    service: "Website + SEO",
-    r1: { n: "85%",  l: "Occupancy rate" },
-    r2: { n: "+140%", l: "Direct bookings" },
+    location: { en: "Araria, Bihar", hi: "अररिया, बिहार" },
+    tag: { en: "Hospitality", hi: "हॉस्पिटैलिटी" },
+    service: { en: "Website + SEO", hi: "वेबसाइट + SEO" },
+    r1: { n: "85%",  l: { en: "Occupancy rate", hi: "ऑक्युपेंसी दर" } },
+    r2: { n: "+140%", l: { en: "Direct bookings", hi: "डायरेक्ट बुकिंग" } },
     accentColor: "#1D4ED8",
     accentBg: "#EFF6FF",
     tagBg: "#EFF6FF",
@@ -82,20 +83,25 @@ const projects = [
 ];
 
 export default function Portfolio() {
+  const { lang } = useLanguage();
+  const t = useT();
   return (
     <section id="portfolio" style={{ padding: "112px 0", background: "#FCFCFD" }}>
       <div className="wrap">
         <div style={{ marginBottom: "48px", maxWidth: "560px" }}>
-          <p className="t-label" style={{ marginBottom: "14px" }}>Our Work</p>
+          <p className="t-label" style={{ marginBottom: "14px" }}>{t("Our Work", "हमारा काम")}</p>
           <h2 className="t-h2" style={{ marginBottom: "16px" }}>
-            Real businesses. Real <span className="accent-cyan">results</span>.
+            {t("Real businesses. Real", "असली बिज़नेस। असली")} <span className="accent-cyan">{t("results", "नतीजे")}</span>.
           </h2>
           <p className="t-body">
-            From clinics to coaching centres — measured growth, not just promises.
+            {t("From clinics to coaching centres — measured growth, not just promises.", "क्लिनिक से लेकर कोचिंग सेंटर तक — मापी गई ग्रोथ, सिर्फ वादे नहीं।")}
           </p>
         </div>
         <p style={{ fontSize: "12.5px", color: "#6B7280", fontStyle: "italic", marginBottom: "24px" }}>
-          Project names and figures below are illustrative examples representing the type of results we deliver.
+          {t(
+            "Project names and figures below are illustrative examples representing the type of results we deliver.",
+            "नीचे दिए गए प्रोजेक्ट नाम और आंकड़े उदाहरण मात्र हैं जो हमारे नतीजों के प्रकार को दर्शाते हैं।"
+          )}
         </p>
 
         <div className="auto-grid-mobile" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))", gap: "20px" }}>
@@ -168,33 +174,33 @@ export default function Portfolio() {
               }}>
                 <div>
                   <div style={{ fontSize: "15px", fontWeight: 700, color: "#111827", letterSpacing: "-0.01em", marginBottom: "3px" }}>{p.name}</div>
-                  <p style={{ fontSize: "12px", color: "#6B7280", fontWeight: 500 }}>{p.location}</p>
+                  <p style={{ fontSize: "12px", color: "#6B7280", fontWeight: 500 }}>{lang === "hi" ? p.location.hi : p.location.en}</p>
                 </div>
                 <span style={{
                   fontSize: "11px", fontWeight: 700, color: p.tagColor,
                   padding: "4px 10px", borderRadius: "100px",
                   background: "#fff", border: `1px solid ${p.accentColor}25`,
                   whiteSpace: "nowrap",
-                }}>{p.tag}</span>
+                }}>{lang === "hi" ? p.tag.hi : p.tag.en}</span>
               </div>
 
               {/* Results */}
               <div style={{ padding: "20px" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "16px" }}>
                   {[p.r1, p.r2].map(r => (
-                    <div key={r.l} style={{
+                    <div key={r.l.en} style={{
                       padding: "16px 14px", borderRadius: "12px", textAlign: "center",
                       background: p.accentBg,
                       border: `1px solid ${p.accentColor}18`,
                     }}>
                       <div style={{ fontSize: "22px", fontWeight: 700, color: p.accentColor, letterSpacing: "-0.02em" }}>{r.n}</div>
-                      <div style={{ fontSize: "11px", color: "#6B7280", marginTop: "3px", fontWeight: 500 }}>{r.l}</div>
+                      <div style={{ fontSize: "11px", color: "#6B7280", marginTop: "3px", fontWeight: 500 }}>{lang === "hi" ? r.l.hi : r.l.en}</div>
                     </div>
                   ))}
                 </div>
                 <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                   <p style={{ fontSize: "12px", color: "#6B7280", fontWeight: 500 }}>
-                    Service: <span style={{ color: p.accentColor, fontWeight: 600 }}>{p.service}</span>
+                    {t("Service:", "सेवा:")} <span style={{ color: p.accentColor, fontWeight: 600 }}>{lang === "hi" ? p.service.hi : p.service.en}</span>
                   </p>
                   <a href="#contact" style={{
                     fontSize: "12px", fontWeight: 600, color: p.accentColor,
@@ -202,7 +208,7 @@ export default function Portfolio() {
                   }}
                     onMouseEnter={e => (e.currentTarget as HTMLElement).style.opacity = "0.7"}
                     onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = "1"}>
-                    Similar results →
+                    {t("Similar results →", "ऐसे ही नतीजे →")}
                   </a>
                 </div>
               </div>
@@ -212,7 +218,7 @@ export default function Portfolio() {
 
         <div style={{ marginTop: "56px", textAlign: "center" }}>
           <a href="#contact" className="btn btn-primary btn-lg">
-            Start Your Success Story →
+            {t("Start Your Success Story →", "अपनी सफलता की कहानी शुरू करें →")}
           </a>
         </div>
       </div>
