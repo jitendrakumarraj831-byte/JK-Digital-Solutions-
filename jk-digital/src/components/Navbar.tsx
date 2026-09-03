@@ -4,12 +4,11 @@ import Image from "next/image";
 import { useLanguage, useT } from "@/lib/i18n";
 
 const links = [
-  { en: "Home",      hi: "होम",        href: "#" },
-  { en: "Services",  hi: "सेवाएं",      href: "#services" },
-  { en: "Portfolio", hi: "पोर्टफोलियो", href: "#portfolio" },
-  { en: "Pricing",   hi: "मूल्य",       href: "#pricing" },
-  { en: "About",     hi: "हमारे बारे में", href: "#why" },
-  { en: "Contact",   hi: "संपर्क करें",   href: "#contact" },
+  { en: "Home",         hi: "होम",             href: "#" },
+  { en: "Services",     hi: "सेवाएं",           href: "#services" },
+  { en: "About",        hi: "हमारे बारे में",    href: "#why" },
+  { en: "Testimonials", hi: "प्रशंसापत्र",      href: "#testimonials" },
+  { en: "Contact",      hi: "संपर्क करें",       href: "#contact" },
 ];
 
 export default function Navbar() {

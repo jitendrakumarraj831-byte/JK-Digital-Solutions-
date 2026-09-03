@@ -16,20 +16,10 @@ const cols = [
   {
     title: { en: "Quick Links", hi: "त्वरित लिंक" },
     links: [
-      { en: "Home",       hi: "होम",             href: "#" },
-      { en: "About Us",   hi: "हमारे बारे में",  href: "#why" },
-      { en: "Portfolio",  hi: "पोर्टफोलियो",     href: "#portfolio" },
-      { en: "Pricing",    hi: "मूल्य",           href: "#pricing" },
-      { en: "Contact",    hi: "संपर्क करें",      href: "#contact" },
-    ],
-  },
-  {
-    title: { en: "Resources", hi: "संसाधन" },
-    links: [
-      { en: "Case Studies", hi: "केस स्टडीज",      href: "#case-studies" },
+      { en: "Home",         hi: "होम",             href: "#" },
+      { en: "About Us",     hi: "हमारे बारे में",  href: "#why" },
       { en: "Testimonials", hi: "प्रशंसापत्र",     href: "#testimonials" },
-      { en: "Blog",         hi: "ब्लॉग",           href: "#blog" },
-      { en: "FAQ",          hi: "सामान्य प्रश्न",  href: "#faq" },
+      { en: "Contact",      hi: "संपर्क करें",      href: "#contact" },
     ],
   },
   {
@@ -52,7 +42,7 @@ export default function Footer() {
         {/* Main grid */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr",
+          gridTemplateColumns: "2fr 1fr 1fr 1fr",
           gap: "48px 32px",
           marginBottom: "56px",
         }} className="footer-grid">
