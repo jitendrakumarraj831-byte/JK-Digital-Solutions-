@@ -19,6 +19,7 @@ const cols = [
       { en: "Home",         hi: "होम",             href: "#" },
       { en: "About Us",     hi: "हमारे बारे में",  href: "#why" },
       { en: "Testimonials", hi: "प्रशंसापत्र",     href: "#testimonials" },
+      { en: "FAQ",          hi: "सामान्य प्रश्न",   href: "#faq" },
       { en: "Contact",      hi: "संपर्क करें",      href: "#contact" },
     ],
   },
@@ -61,10 +62,16 @@ export default function Footer() {
               <span style={{ fontWeight: 700, fontSize: "16px", color: "#fff", letterSpacing: "-0.02em" }}>JK Digital Solutions</span>
             </a>
 
-            <p style={{ fontSize: "14px", color: "#94A3B8", lineHeight: 1.7, maxWidth: "240px", marginBottom: "28px" }}>
+            <p style={{ fontSize: "14px", color: "#94A3B8", lineHeight: 1.7, maxWidth: "260px", marginBottom: "10px" }}>
               {t(
-                "A premium digital agency helping small businesses, schools, hospitals, hotels and local brands grow online.",
-                "एक प्रीमियम डिजिटल एजेंसी जो छोटे बिज़नेस, स्कूल, अस्पताल, होटल और लोकल ब्रांड को ऑनलाइन बढ़ने में मदद करती है।"
+                "A premium digital agency helping small businesses, schools, hospitals, hotels and local brands across Bihar grow online.",
+                "एक प्रीमियम डिजिटल एजेंसी जो पूरे बिहार में छोटे बिज़नेस, स्कूल, अस्पताल, होटल और लोकल ब्रांड को ऑनलाइन बढ़ने में मदद करती है।"
+              )}
+            </p>
+            <p style={{ fontSize: "12.5px", color: "#64748B", lineHeight: 1.7, maxWidth: "260px", marginBottom: "28px" }}>
+              {t(
+                "Serving Patna, Gaya, Muzaffarpur, Bhagalpur, Darbhanga, Purnia, Araria, Forbesganj & across Bihar.",
+                "पटना, गया, मुजफ्फरपुर, भागलपुर, दरभंगा, पूर्णिया, अररिया, फारबिसगंज व पूरे बिहार में सेवाएं।"
               )}
             </p>
 

@@ -59,7 +59,7 @@ export default function Hero() {
               letterSpacing: "-0.01em",
             }}>
               <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#1D4ED8", display: "inline-block" }} />
-              {t("Full-Service Digital Partner · 200+ Businesses Grown", "फुल-सर्विस डिजिटल पार्टनर · 200+ बिज़नेस को ग्रो किया")}
+              {t("Bihar's Full-Service Digital Partner · 200+ Businesses Grown", "बिहार का फुल-सर्विस डिजिटल पार्टनर · 200+ बिज़नेस को ग्रो किया")}
             </div>
 
             {/* Headline */}
@@ -87,8 +87,8 @@ export default function Hero() {
               fontWeight: 400,
             }}>
               {t(
-                "One dedicated team for your website, SEO and ads — with clear timelines, transparent reporting, and no lock-in contracts. That's why 200+ businesses stay with us long after the first project ends.",
-                "आपकी वेबसाइट, SEO और विज्ञापनों के लिए एक समर्पित टीम — साफ़ टाइमलाइन, पारदर्शी रिपोर्टिंग और बिना किसी लॉक-इन कॉन्ट्रैक्ट के। यही कारण है कि 200+ बिज़नेस पहले प्रोजेक्ट के बाद भी हमारे साथ बने रहते हैं।"
+                "One dedicated team for your website, SEO and ads — serving businesses across Bihar, from Patna to Purnia, with clear timelines and no lock-in contracts. That's why 200+ businesses stay with us long after the first project ends.",
+                "आपकी वेबसाइट, SEO और विज्ञापनों के लिए एक समर्पित टीम — पटना से पूर्णिया तक, पूरे बिहार के बिज़नेस की सेवा में, साफ़ टाइमलाइन और बिना किसी लॉक-इन कॉन्ट्रैक्ट के। यही कारण है कि 200+ बिज़नेस पहले प्रोजेक्ट के बाद भी हमारे साथ बने रहते हैं।"
               )}
             </p>
 
